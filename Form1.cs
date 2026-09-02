@@ -1,3 +1,7 @@
+using System.DirectoryServices;
+using System.Reflection.Emit;
+using Label = System.Windows.Forms.Label;
+
 namespace SonicTracker
 {
     public partial class Form1 : Form
@@ -5,7 +9,52 @@ namespace SonicTracker
         public Form1()
         {
             InitializeComponent();
+
+            searchableLabels = new List<Label>
+            {
+                lblSonic1,
+                lblSonic2,
+                lblSonicCD
+            };
+
             FinalizeLoad();
+        }
+
+        public List<Label> searchableLabels;
+        private void tbSearch_TextChanged(object sender, EventArgs e)
+        {
+            flpSearchResults.Visible = tbSearch.Text != "";
+            flpSearchResults.Controls.Clear();
+
+            string search = tbSearch.Text.Trim();
+
+            if (string.IsNullOrEmpty(search))
+                return;
+
+            foreach (Label label in searchableLabels)
+            {
+                if (label.Text.Contains(search, StringComparison.OrdinalIgnoreCase))
+                {
+                    Button result = new Button
+                    {
+                        Text = label.Text,
+                        AutoSize = true
+                    };
+
+                    result.Click += (s, e) =>
+                    {
+                        label.Focus();
+
+                        if (label.Parent is ScrollableControl scrollableParent)
+                        {
+                            scrollableParent.AutoScrollPosition = new Point(0, label.Top);
+                        }
+                        flpSearchResults.Visible = false;
+                    };
+
+                    flpSearchResults.Controls.Add(result);
+                }
+            }
         }
 
         private void LoadCheckedItems(CheckedListBox listBox, string checkedItems)

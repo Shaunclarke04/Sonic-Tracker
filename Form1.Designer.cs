@@ -36,10 +36,12 @@
             progBarSonicTheHedgehog1 = new ProgressBar();
             progBarSonicTheHedgehog2 = new ProgressBar();
             PanelContent = new Panel();
+            flpSearchResults = new FlowLayoutPanel();
             progBarSonicCD = new ProgressBar();
             clbSonicCD = new CheckedListBox();
-            label2 = new Label();
+            lblSonicCD = new Label();
             PanelHeader = new Panel();
+            tbSearch = new TextBox();
             PanelFooter = new Panel();
             linkLabel3 = new LinkLabel();
             linkLabel2 = new LinkLabel();
@@ -67,6 +69,7 @@
             lblSonic1.Font = new Font("Roboto Medium", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblSonic1.ImageAlign = ContentAlignment.TopCenter;
             lblSonic1.Location = new Point(12, 3);
+            lblSonic1.Margin = new Padding(0, 0, 3, 0);
             lblSonic1.Name = "lblSonic1";
             lblSonic1.Size = new Size(249, 29);
             lblSonic1.TabIndex = 2;
@@ -89,6 +92,7 @@
             lblSonic2.AutoSize = true;
             lblSonic2.Font = new Font("Roboto Medium", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblSonic2.Location = new Point(12, 179);
+            lblSonic2.Margin = new Padding(0, 0, 3, 0);
             lblSonic2.Name = "lblSonic2";
             lblSonic2.Size = new Size(271, 29);
             lblSonic2.TabIndex = 4;
@@ -126,7 +130,7 @@
             PanelContent.AutoScrollMinSize = new Size(0, 2000);
             PanelContent.Controls.Add(progBarSonicCD);
             PanelContent.Controls.Add(clbSonicCD);
-            PanelContent.Controls.Add(label2);
+            PanelContent.Controls.Add(lblSonicCD);
             PanelContent.Controls.Add(lblSonic1);
             PanelContent.Controls.Add(clbSonicTheHedgehog1);
             PanelContent.Controls.Add(lblSonic2);
@@ -134,10 +138,23 @@
             PanelContent.Controls.Add(progBarSonicTheHedgehog1);
             PanelContent.Controls.Add(progBarSonicTheHedgehog2);
             PanelContent.Dock = DockStyle.Fill;
-            PanelContent.Location = new Point(0, 72);
+            PanelContent.Location = new Point(0, 90);
             PanelContent.Name = "PanelContent";
-            PanelContent.Size = new Size(334, 487);
+            PanelContent.Size = new Size(335, 469);
             PanelContent.TabIndex = 8;
+            // 
+            // flpSearchResults
+            // 
+            flpSearchResults.Anchor = AnchorStyles.Top;
+            flpSearchResults.AutoSize = true;
+            flpSearchResults.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            flpSearchResults.Location = new Point(15, 90);
+            flpSearchResults.MaximumSize = new Size(300, 0);
+            flpSearchResults.MinimumSize = new Size(300, 10);
+            flpSearchResults.Name = "flpSearchResults";
+            flpSearchResults.Size = new Size(300, 10);
+            flpSearchResults.TabIndex = 11;
+            flpSearchResults.Visible = false;
             // 
             // progBarSonicCD
             // 
@@ -158,24 +175,34 @@
             clbSonicCD.TabIndex = 9;
             clbSonicCD.SelectedIndexChanged += clbSonicCD_SelectedIndexChanged;
             // 
-            // label2
+            // lblSonicCD
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Roboto Medium", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(12, 363);
-            label2.Name = "label2";
-            label2.Size = new Size(119, 29);
-            label2.TabIndex = 8;
-            label2.Text = "Sonic CD";
+            lblSonicCD.AutoSize = true;
+            lblSonicCD.Font = new Font("Roboto Medium", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSonicCD.Location = new Point(12, 363);
+            lblSonicCD.Margin = new Padding(0, 0, 3, 0);
+            lblSonicCD.Name = "lblSonicCD";
+            lblSonicCD.Size = new Size(119, 29);
+            lblSonicCD.TabIndex = 8;
+            lblSonicCD.Text = "Sonic CD";
             // 
             // PanelHeader
             // 
+            PanelHeader.Controls.Add(tbSearch);
             PanelHeader.Controls.Add(lblTitle);
             PanelHeader.Dock = DockStyle.Top;
             PanelHeader.Location = new Point(0, 0);
             PanelHeader.Name = "PanelHeader";
-            PanelHeader.Size = new Size(334, 72);
+            PanelHeader.Size = new Size(335, 90);
             PanelHeader.TabIndex = 9;
+            // 
+            // tbSearch
+            // 
+            tbSearch.Location = new Point(12, 58);
+            tbSearch.Name = "tbSearch";
+            tbSearch.Size = new Size(303, 23);
+            tbSearch.TabIndex = 1;
+            tbSearch.TextChanged += tbSearch_TextChanged;
             // 
             // PanelFooter
             // 
@@ -186,7 +213,7 @@
             PanelFooter.Dock = DockStyle.Bottom;
             PanelFooter.Location = new Point(0, 559);
             PanelFooter.Name = "PanelFooter";
-            PanelFooter.Size = new Size(334, 132);
+            PanelFooter.Size = new Size(335, 132);
             PanelFooter.TabIndex = 8;
             // 
             // linkLabel3
@@ -198,7 +225,7 @@
             linkLabel3.TabIndex = 3;
             linkLabel3.TabStop = true;
             linkLabel3.Text = "View Source On Github";
-            linkLabel3.LinkClicked += this.linkLabel3_LinkClicked;
+            linkLabel3.LinkClicked += linkLabel3_LinkClicked;
             // 
             // linkLabel2
             // 
@@ -217,7 +244,7 @@
             label1.Font = new Font("Roboto", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(334, 75);
+            label1.Size = new Size(335, 87);
             label1.TabIndex = 0;
             label1.Text = "Not affiliated with Sega or Sonic.\r\n\r\nSonic The Hedgehog is a trademark of SegaSammy\r\n";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -237,7 +264,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(334, 691);
+            ClientSize = new Size(335, 691);
+            Controls.Add(flpSearchResults);
             Controls.Add(PanelContent);
             Controls.Add(PanelFooter);
             Controls.Add(PanelHeader);
@@ -250,6 +278,7 @@
             PanelFooter.ResumeLayout(false);
             PanelFooter.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -269,7 +298,9 @@
         private LinkLabel linkLabel2;
         private LinkLabel linkLabel3;
         private CheckedListBox clbSonicCD;
-        private Label label2;
+        private Label lblSonicCD;
         private ProgressBar progBarSonicCD;
+        private TextBox tbSearch;
+        private FlowLayoutPanel flpSearchResults;
     }
 }
