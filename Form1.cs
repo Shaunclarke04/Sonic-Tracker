@@ -10,17 +10,21 @@ namespace SonicTracker
         {
             InitializeComponent();
 
+            //Initialize the list of searchable labels
             searchableLabels = new List<Label>
             {
                 lblSonic1,
                 lblSonic2,
-                lblSonicCD
+                lblSonicCD,
+                lblSonic3AndKnuckles
             };
 
+            //update UI based on saved settings
             FinalizeLoad();
         }
 
         public List<Label> searchableLabels;
+        //initialise search results flow layout panel
         private void tbSearch_TextChanged(object sender, EventArgs e)
         {
             flpSearchResults.Visible = tbSearch.Text != "";
@@ -31,6 +35,7 @@ namespace SonicTracker
             if (string.IsNullOrEmpty(search))
                 return;
 
+            //check each label for a match and create a button for each match
             foreach (Label label in searchableLabels)
             {
                 if (label.Text.Contains(search, StringComparison.OrdinalIgnoreCase))
@@ -41,6 +46,7 @@ namespace SonicTracker
                         AutoSize = true
                     };
 
+                    //jump to label and hide search results when result is clicked
                     result.Click += (s, e) =>
                     {
                         label.Focus();
@@ -52,11 +58,13 @@ namespace SonicTracker
                         flpSearchResults.Visible = false;
                     };
 
+                    //add result button to search results flow layout panel
                     flpSearchResults.Controls.Add(result);
                 }
             }
         }
 
+        //load checked items from settings into the checked list boxes
         private void LoadCheckedItems(CheckedListBox listBox, string checkedItems)
         {
             if (!string.IsNullOrEmpty(checkedItems))
@@ -73,6 +81,7 @@ namespace SonicTracker
             }
         }
 
+        //update progress bars based on checked items in the checked list boxes
         public void updateProgessBars(CheckedListBox listBox, ProgressBar progressBar)
         {
             int totalItems = listBox.Items.Count;
@@ -81,14 +90,20 @@ namespace SonicTracker
         }
         public void FinalizeLoad()
         {
+            //load checked items from settings
             LoadCheckedItems(clbSonicTheHedgehog1, Properties.Settings.Default.SonicTheHedgehog1CheckedItems);
-            updateProgessBars(clbSonicTheHedgehog1, progBarSonicTheHedgehog1);
             LoadCheckedItems(clbSonicTheHedgehog2, Properties.Settings.Default.SonicTheHedgehog2CheckedItems);
-            updateProgessBars(clbSonicTheHedgehog2, progBarSonicTheHedgehog2);
             LoadCheckedItems(clbSonicCD, Properties.Settings.Default.SonicCDCheckedItems);
+            LoadCheckedItems(clbSonic3AndKnuckles, Properties.Settings.Default.Sonic3AndKnucklesCheckedItems);
+
+            //update progress bars
+            updateProgessBars(clbSonicTheHedgehog1, progBarSonicTheHedgehog1);
+            updateProgessBars(clbSonicTheHedgehog2, progBarSonicTheHedgehog2);
             updateProgessBars(clbSonicCD, progBarSonicCD);
+            updateProgessBars(clbSonic3AndKnuckles, progBarSonic3AndKnuckles);
         }
 
+        //save checked items to settings when a checked list box item is changed
         private void clbSonicTheHedgehog1_SelectedIndexChanged(object sender, EventArgs e)
         {
             var checkedItems = clbSonicTheHedgehog1.CheckedIndices.Cast<int>().ToArray();
@@ -111,6 +126,14 @@ namespace SonicTracker
             Properties.Settings.Default.SonicCDCheckedItems = string.Join(",", checkedItems);
             Properties.Settings.Default.Save();
             updateProgessBars(clbSonicCD, progBarSonicCD);
+        }
+
+        private void clbSonic3AndKnuckles_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var checkedItems = clbSonic3AndKnuckles.CheckedIndices.Cast<int>().ToArray();
+            Properties.Settings.Default.Sonic3AndKnucklesCheckedItems = string.Join(",", checkedItems);
+            Properties.Settings.Default.Save();
+            updateProgessBars(clbSonic3AndKnuckles, progBarSonic3AndKnuckles);
         }
     }
 }

@@ -6,5 +6,6 @@ Track your progress in Sonic games with SonicTracker! This tool tracks which sta
 - Sonic the Hedgehog
 - Sonic the Hedgehog 2
 - Sonic CD
+- Sonic 3 & Knuckles
 
 ### more games coming soon -- focusing on mainline for now -- might add tabs for spinoffs and sub-series

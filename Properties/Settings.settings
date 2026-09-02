@@ -11,5 +11,8 @@
     <Setting Name="SonicCDCheckedItems" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="Sonic3AndKnucklesCheckedItems" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>
