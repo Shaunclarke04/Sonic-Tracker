@@ -70,5 +70,77 @@ namespace SonicTracker.Properties {
                 this["Sonic3AndKnucklesCheckedItems"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string SonicAndTailsCheckedItems {
+            get {
+                return ((string)(this["SonicAndTailsCheckedItems"]));
+            }
+            set {
+                this["SonicAndTailsCheckedItems"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string SonicAndTails2CheckedItems {
+            get {
+                return ((string)(this["SonicAndTails2CheckedItems"]));
+            }
+            set {
+                this["SonicAndTails2CheckedItems"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string KnucklesChaotixCheckedItems {
+            get {
+                return ((string)(this["KnucklesChaotixCheckedItems"]));
+            }
+            set {
+                this["KnucklesChaotixCheckedItems"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string TailsAdventureCheckedItems {
+            get {
+                return ((string)(this["TailsAdventureCheckedItems"]));
+            }
+            set {
+                this["TailsAdventureCheckedItems"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string SonicBlastCheckedItems {
+            get {
+                return ((string)(this["SonicBlastCheckedItems"]));
+            }
+            set {
+                this["SonicBlastCheckedItems"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Sonic3DBlastCheckedItems {
+            get {
+                return ((string)(this["Sonic3DBlastCheckedItems"]));
+            }
+            set {
+                this["Sonic3DBlastCheckedItems"] = value;
+            }
+        }
     }
 }

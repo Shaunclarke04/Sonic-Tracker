@@ -6,6 +6,12 @@ Track your progress in Sonic games with SonicTracker! This tool tracks which sta
 - Sonic the Hedgehog
 - Sonic the Hedgehog 2
 - Sonic CD
+- Sonic Chaos // Sonic & Tails
 - Sonic 3 & Knuckles
+- Sonic Triple Trouble // Sonic & Tails 2
+- Knuckles' Chaotix
+- Tails Adventure
+- Sonic Blast // G Sonic 
+- Sonic 3D Blast // Sonic 3D: Flickies' Island
 
-### more games coming soon -- focusing on mainline for now -- might add tabs for spinoffs and sub-series
+### more games coming soon
