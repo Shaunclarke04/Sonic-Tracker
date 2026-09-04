@@ -29,6 +29,16 @@ namespace SonicTracker
             FinalizeLoad();
         }
 
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            Form2 form = new Form2(this);
+            form.Show();
+        }
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Sonic Tracker v0.1\n\nDeveloped by: Shaun Clarke\n\nThis application is a personal project and is not affiliated with or endorsed by SEGA, Sonic Team or any other company.\n\nAll rights to the Sonic the Hedgehog franchise and its characters are owned by SEGA.\n\nSee footer links for more details", "About Sonic Tracker", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
         public List<Label> searchableLabels;
         //initialise search results flow layout panel
         private void tbSearch_TextChanged(object sender, EventArgs e)
@@ -85,7 +95,29 @@ namespace SonicTracker
                     }
                 }
             }
+
         }
+        
+        //update progress bars and labels based on checked items in the checked list boxes
+        private void UpdateProgress(
+            CheckedListBox clb,
+            ProgressBar progBar,
+            Label label,
+            string gameTitle)
+        {
+            string progressReadout;
+            updateProgessBars(clb, progBar);
+
+            //check user preference for progress display and update label accordingly
+            if (Properties.Settings.Default.PreferredFraction)
+                progressReadout = clb.CheckedItems.Count.ToString() + "/" + clb.Items.Count.ToString();
+            else
+                progressReadout = progBar.Value.ToString() + "%";
+
+            //update label text with game title and progress readout
+            label.Text = gameTitle + " - " + progressReadout;
+        }
+
 
         //update progress bars based on checked items in the checked list boxes
         public void updateProgessBars(CheckedListBox listBox, ProgressBar progressBar)
@@ -94,6 +126,8 @@ namespace SonicTracker
             int checkedItems = listBox.CheckedItems.Count;
             progressBar.Value = totalItems > 0 ? (checkedItems * 100) / totalItems : 0;
         }
+
+        //load progress and checked items from settings when the form is loaded
         public void FinalizeLoad()
         {
             //load checked items from settings
@@ -108,17 +142,17 @@ namespace SonicTracker
             LoadCheckedItems(clbSonicBlast, Properties.Settings.Default.SonicBlastCheckedItems);
             LoadCheckedItems(clbSonic3DBlast, Properties.Settings.Default.Sonic3DBlastCheckedItems);
 
-            //update progress bars
-            updateProgessBars(clbSonicTheHedgehog1, progBarSonicTheHedgehog1);
-            updateProgessBars(clbSonicTheHedgehog2, progBarSonicTheHedgehog2);
-            updateProgessBars(clbSonicCD, progBarSonicCD);
-            updateProgessBars(clbSonic3AndKnuckles, progBarSonic3AndKnuckles);
-            updateProgessBars(clbSonicAndTails, progBarSonicAndTails);
-            updateProgessBars(clbSonicAndTails2, progBarSonicAndTails2);
-            updateProgessBars(clbKnucklesChaotix, progBarKnucklesChaotix);
-            updateProgessBars(clbTailsAdventure, progBarTailsAdventure);
-            updateProgessBars(clbSonicBlast, progBarSonicBlast);
-            updateProgessBars(clbSonic3DBlast, progBarSonic3DBlast);
+            //update progress 
+            UpdateProgress(clbSonicTheHedgehog1, progBarSonicTheHedgehog1, lblSonic1, "Sonic the Hedgehog");
+            UpdateProgress(clbSonicTheHedgehog2, progBarSonicTheHedgehog2, lblSonic2, "Sonic the Hedgehog 2");
+            UpdateProgress(clbSonicCD, progBarSonicCD, lblSonicCD, "Sonic CD");
+            UpdateProgress(clbSonic3AndKnuckles, progBarSonic3AndKnuckles, lblSonic3AndKnuckles, "Sonic 3 and Knuckles");
+            UpdateProgress(clbSonicAndTails, progBarSonicAndTails, lblSonicAndTails, "Sonic and Tails");
+            UpdateProgress(clbSonicAndTails2, progBarSonicAndTails2, lblSonicAndTails2, "Sonic and Tails 2");
+            UpdateProgress(clbKnucklesChaotix, progBarKnucklesChaotix, lblKnucklesChaotix, "Knuckles Chaotix");
+            UpdateProgress(clbTailsAdventure, progBarTailsAdventure, lblTailsAdventure, "Tails Adventure");
+            UpdateProgress(clbSonicBlast, progBarSonicBlast, lblSonicBlast, "Sonic Blast");
+            UpdateProgress(clbSonic3DBlast, progBarSonic3DBlast, lblSonic3DBlast, "Sonic 3D Blast");
         }
 
         //save checked items to settings when a checked list box item is changed
@@ -127,7 +161,7 @@ namespace SonicTracker
             var checkedItems = clbSonicTheHedgehog1.CheckedIndices.Cast<int>().ToArray();
             Properties.Settings.Default.SonicTheHedgehog1CheckedItems = string.Join(",", checkedItems);
             Properties.Settings.Default.Save();
-            updateProgessBars(clbSonicTheHedgehog1, progBarSonicTheHedgehog1);
+            UpdateProgress(clbSonicTheHedgehog1, progBarSonicTheHedgehog1, lblSonic1, "Sonic the Hedgehog");
         }
 
         private void clbSonicTheHedgehog2_SelectedIndexChanged(object sender, EventArgs e)
@@ -135,7 +169,7 @@ namespace SonicTracker
             var checkedItems = clbSonicTheHedgehog2.CheckedIndices.Cast<int>().ToArray();
             Properties.Settings.Default.SonicTheHedgehog2CheckedItems = string.Join(",", checkedItems);
             Properties.Settings.Default.Save();
-            updateProgessBars(clbSonicTheHedgehog2, progBarSonicTheHedgehog2);
+            UpdateProgress(clbSonicTheHedgehog2, progBarSonicTheHedgehog2, lblSonic2, "Sonic the Hedgehog 2");
         }
 
         private void clbSonicCD_SelectedIndexChanged(object sender, EventArgs e)
@@ -143,7 +177,7 @@ namespace SonicTracker
             var checkedItems = clbSonicCD.CheckedIndices.Cast<int>().ToArray();
             Properties.Settings.Default.SonicCDCheckedItems = string.Join(",", checkedItems);
             Properties.Settings.Default.Save();
-            updateProgessBars(clbSonicCD, progBarSonicCD);
+            UpdateProgress(clbSonicCD, progBarSonicCD, lblSonicCD, "Sonic CD");
         }
 
         private void clbSonic3AndKnuckles_SelectedIndexChanged(object sender, EventArgs e)
@@ -151,49 +185,49 @@ namespace SonicTracker
             var checkedItems = clbSonic3AndKnuckles.CheckedIndices.Cast<int>().ToArray();
             Properties.Settings.Default.Sonic3AndKnucklesCheckedItems = string.Join(",", checkedItems);
             Properties.Settings.Default.Save();
-            updateProgessBars(clbSonic3AndKnuckles, progBarSonic3AndKnuckles);
+            UpdateProgress(clbSonic3AndKnuckles, progBarSonic3AndKnuckles, lblSonic3AndKnuckles, "Sonic 3 & Knuckles");
         }
         private void clbSonicAndTails_SelectedIndexChanged(object sender, EventArgs e)
         {
             var checkedItems = clbSonicAndTails.CheckedIndices.Cast<int>().ToArray();
             Properties.Settings.Default.SonicAndTailsCheckedItems = string.Join(",", checkedItems);
             Properties.Settings.Default.Save();
-            updateProgessBars(clbSonicAndTails, progBarSonicAndTails);
+            UpdateProgress(clbSonicAndTails, progBarSonicAndTails, lblSonicAndTails, "Sonic & Tails");
         }
         private void clbSonicAndTails2_SelectedIndexChanged(object sender, EventArgs e)
         {
             var checkedItems = clbSonicAndTails2.CheckedIndices.Cast<int>().ToArray();
             Properties.Settings.Default.SonicAndTails2CheckedItems = string.Join(",", checkedItems);
             Properties.Settings.Default.Save();
-            updateProgessBars(clbSonicAndTails2, progBarSonicAndTails2);
+            UpdateProgress(clbSonicAndTails2, progBarSonicAndTails2, lblSonicAndTails2, "Sonic & Tails 2");
         }
         private void clbKnucklesChaotix_SelectedIndexChanged(object sender, EventArgs e)
         {
             var checkedItems = clbKnucklesChaotix.CheckedIndices.Cast<int>().ToArray();
             Properties.Settings.Default.KnucklesChaotixCheckedItems = string.Join(",", checkedItems);
             Properties.Settings.Default.Save();
-            updateProgessBars(clbKnucklesChaotix, progBarKnucklesChaotix);
+            UpdateProgress(clbKnucklesChaotix, progBarKnucklesChaotix, lblKnucklesChaotix, "Knuckles Chaotix");
         }
         private void clbTailsAdventure_SelectedIndexChanged(object sender, EventArgs e)
         {
             var checkedItems = clbTailsAdventure.CheckedIndices.Cast<int>().ToArray();
             Properties.Settings.Default.TailsAdventureCheckedItems = string.Join(",", checkedItems);
             Properties.Settings.Default.Save();
-            updateProgessBars(clbTailsAdventure, progBarTailsAdventure);
+            UpdateProgress(clbTailsAdventure, progBarTailsAdventure, lblTailsAdventure, "Tails Adventure");
         }
         private void clbSonicBlast_SelectedIndexChanged(object sender, EventArgs e)
         {
             var checkedItems = clbSonicBlast.CheckedIndices.Cast<int>().ToArray();
             Properties.Settings.Default.SonicBlastCheckedItems = string.Join(",", checkedItems);
             Properties.Settings.Default.Save();
-            updateProgessBars(clbSonicBlast, progBarSonicBlast);
+            UpdateProgress(clbSonicBlast, progBarSonicBlast, lblSonicBlast, "Sonic Blast");
         }
         private void clbSonic3DBlast_SelectedIndexChanged(object sender, EventArgs e)
         {
             var checkedItems = clbSonic3DBlast.CheckedIndices.Cast<int>().ToArray();
             Properties.Settings.Default.Sonic3DBlastCheckedItems = string.Join(",", checkedItems);
             Properties.Settings.Default.Save();
-            updateProgessBars(clbSonic3DBlast, progBarSonic3DBlast);
+            UpdateProgress(clbSonic3DBlast, progBarSonic3DBlast, lblSonic3DBlast, "Sonic 3D Blast");
         }
     }
 }

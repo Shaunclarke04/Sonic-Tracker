@@ -142,5 +142,17 @@ namespace SonicTracker.Properties {
                 this["Sonic3DBlastCheckedItems"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool PreferredFraction {
+            get {
+                return ((bool)(this["PreferredFraction"]));
+            }
+            set {
+                this["PreferredFraction"] = value;
+            }
+        }
     }
 }

@@ -62,6 +62,8 @@
             lblSonicCD = new Label();
             flpSearchResults = new FlowLayoutPanel();
             PanelHeader = new Panel();
+            btnInfo = new PictureBox();
+            btnSettings = new PictureBox();
             tbSearch = new TextBox();
             PanelFooter = new Panel();
             linkLabel3 = new LinkLabel();
@@ -70,6 +72,8 @@
             linkLabel1 = new LinkLabel();
             PanelContent.SuspendLayout();
             PanelHeader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)btnInfo).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnSettings).BeginInit();
             PanelFooter.SuspendLayout();
             SuspendLayout();
             // 
@@ -78,7 +82,7 @@
             lblTitle.Anchor = AnchorStyles.None;
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Roboto Black", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitle.Location = new Point(42, 0);
+            lblTitle.Location = new Point(62, 0);
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new Size(312, 58);
             lblTitle.TabIndex = 0;
@@ -106,7 +110,7 @@
             clbSonicTheHedgehog1.Items.AddRange(new object[] { "Green Hill Zone (Act 1)", "Green Hill Zone (Act 4)", "Green Hill Zone (Act 3)", "Marble Zone (Act 1)", "Marble Zone (Act 2)", "Marble Zone (Act 3)", "Spring Yard Zone (Act 1)", "Spring Yard Zone (Act 2)", "Spring Yard Zone (Act 3)", "Labrynth Zone (Act 1)", "Labrynth Zone (Act 2)", "Labrynth Zone (Act 3)", "Star Light Zone (Act 1)", "Star Light Zone (Act 2)", "Star Light Zone (Act 3)", "Scrap Brain Zone (Act 1)", "Scrap Brain Zone (Act 2)", "Scrap Brain Zone (Act 3)", "Final Boss" });
             clbSonicTheHedgehog1.Location = new Point(12, 35);
             clbSonicTheHedgehog1.Name = "clbSonicTheHedgehog1";
-            clbSonicTheHedgehog1.Size = new Size(353, 92);
+            clbSonicTheHedgehog1.Size = new Size(393, 92);
             clbSonicTheHedgehog1.TabIndex = 3;
             clbSonicTheHedgehog1.SelectedIndexChanged += clbSonicTheHedgehog1_SelectedIndexChanged;
             // 
@@ -131,7 +135,7 @@
             clbSonicTheHedgehog2.Items.AddRange(new object[] { "Emerald Hill Zone (Act 1)", "Emerald Hill Zone (Act 2)", "Chemical Plant Zone (Act 1)", "Chemical Plant Zone (Act 2)", "Aquatic Ruin Zone (Act 1)", "Aquatic Ruin Zone (Act 2)", "Casino Night Zone (Act 1)", "Casino Night Zone (Act 2)", "Hill Top Zone (Act 1)", "Hill Top Zone (Act 2)", "Mystic Cave Zone (Act 1)", "Mystic Cave Zone (Act 2)", "Oil Ocean Zone (Act 1)", "Oil Ocean Zone (Act 2)", "Metropolis Zone (Act 1)", "Metropolis Zone (Act 2)", "Metropolis Zone (Act 3)", "Sky Chase Zone", "Wing Fortress Zone", "Death Egg Zone" });
             clbSonicTheHedgehog2.Location = new Point(12, 191);
             clbSonicTheHedgehog2.Name = "clbSonicTheHedgehog2";
-            clbSonicTheHedgehog2.Size = new Size(353, 92);
+            clbSonicTheHedgehog2.Size = new Size(393, 92);
             clbSonicTheHedgehog2.TabIndex = 5;
             clbSonicTheHedgehog2.SelectedIndexChanged += clbSonicTheHedgehog2_SelectedIndexChanged;
             // 
@@ -140,7 +144,7 @@
             progBarSonicTheHedgehog1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             progBarSonicTheHedgehog1.Location = new Point(12, 133);
             progBarSonicTheHedgehog1.Name = "progBarSonicTheHedgehog1";
-            progBarSonicTheHedgehog1.Size = new Size(353, 23);
+            progBarSonicTheHedgehog1.Size = new Size(393, 23);
             progBarSonicTheHedgehog1.TabIndex = 6;
             // 
             // progBarSonicTheHedgehog2
@@ -148,7 +152,7 @@
             progBarSonicTheHedgehog2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             progBarSonicTheHedgehog2.Location = new Point(12, 289);
             progBarSonicTheHedgehog2.Name = "progBarSonicTheHedgehog2";
-            progBarSonicTheHedgehog2.Size = new Size(353, 23);
+            progBarSonicTheHedgehog2.Size = new Size(393, 23);
             progBarSonicTheHedgehog2.TabIndex = 7;
             // 
             // PanelContent
@@ -188,7 +192,7 @@
             PanelContent.Dock = DockStyle.Fill;
             PanelContent.Location = new Point(0, 90);
             PanelContent.Name = "PanelContent";
-            PanelContent.Size = new Size(394, 469);
+            PanelContent.Size = new Size(434, 469);
             PanelContent.TabIndex = 8;
             // 
             // progBarSonic3DBlast
@@ -196,7 +200,7 @@
             progBarSonic3DBlast.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             progBarSonic3DBlast.Location = new Point(12, 1653);
             progBarSonic3DBlast.Name = "progBarSonic3DBlast";
-            progBarSonic3DBlast.Size = new Size(353, 23);
+            progBarSonic3DBlast.Size = new Size(393, 23);
             progBarSonic3DBlast.TabIndex = 31;
             // 
             // clbSonic3DBlast
@@ -209,7 +213,7 @@
             clbSonic3DBlast.Items.AddRange(new object[] { "Green Grove Zone (Act 1)", "Green Grove Zone (Act 2)", "Green Grove Zone (Act 3)", "Rusty Ruin Zone (Act 1)", "Rusty Ruin Zone (Act 2)", "Rusty Ruin Zone (Act 3)", "Spring Stadium Zone (Act 1)", "Spring Stadium Zone (Act 2)", "Spring Stadium Zone (Act 3)", "Diamond Dust Zone (Act 1)", "Diamond Dust Zone (Act 2)", "Diamond Dust Zone (Act 3)", "Volcano Valley Zone (Act 1)", "Volcano Valley Zone (Act 2)", "Volcano Valley Zone (Act 3)", "Gene Gadget Zone (Act 1)", "Gene Gadget Zone (Act 2)", "Gene Gadget Zone (Act 3)", "Panic Puppet Zone (Act 1)", "Panic Puppet Zone (Act 2)", "Panic Puppet Zone (Act 3)", "The Final Fight" });
             clbSonic3DBlast.Location = new Point(12, 1555);
             clbSonic3DBlast.Name = "clbSonic3DBlast";
-            clbSonic3DBlast.Size = new Size(353, 92);
+            clbSonic3DBlast.Size = new Size(393, 92);
             clbSonic3DBlast.TabIndex = 30;
             clbSonic3DBlast.SelectedIndexChanged += clbSonic3DBlast_SelectedIndexChanged;
             // 
@@ -229,7 +233,7 @@
             progBarSonicBlast.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             progBarSonicBlast.Location = new Point(12, 1468);
             progBarSonicBlast.Name = "progBarSonicBlast";
-            progBarSonicBlast.Size = new Size(353, 23);
+            progBarSonicBlast.Size = new Size(393, 23);
             progBarSonicBlast.TabIndex = 28;
             // 
             // clbSonicBlast
@@ -242,7 +246,7 @@
             clbSonicBlast.Items.AddRange(new object[] { "Green Hill Zone (Act 1)", "Green Hill Zone (Act 2)", "Green Hill Zone (Act 3)", "Yellow Desert Zone (Act 1)", "Yellow Desert Zone (Act 2)", "Yellow Desert Zone (Act 3)", "Red Volcano Zone (Act 1)", "Red Volcano Zone (Act 2)", "Red Volcano Zone (Act 3)", "Blue Marine Zone (Act 1)", "Blue Marine Zone (Act 2)", "Blue Marine Zone (Act 3)", "Silver Castle Zone (Act 1)", "Silver Castle Zone (Act 2)", "Silver Castle Zone (Act 3)", "Final Boss" });
             clbSonicBlast.Location = new Point(12, 1370);
             clbSonicBlast.Name = "clbSonicBlast";
-            clbSonicBlast.Size = new Size(353, 92);
+            clbSonicBlast.Size = new Size(393, 92);
             clbSonicBlast.TabIndex = 27;
             clbSonicBlast.SelectedIndexChanged += clbSonicBlast_SelectedIndexChanged;
             // 
@@ -262,7 +266,7 @@
             progBarTailsAdventure.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             progBarTailsAdventure.Location = new Point(12, 1283);
             progBarTailsAdventure.Name = "progBarTailsAdventure";
-            progBarTailsAdventure.Size = new Size(353, 23);
+            progBarTailsAdventure.Size = new Size(393, 23);
             progBarTailsAdventure.TabIndex = 25;
             // 
             // clbTailsAdventure
@@ -275,7 +279,7 @@
             clbTailsAdventure.Items.AddRange(new object[] { "Poloy Forest", "Volcanic Tunnel", "Polly Mountain 1", "Lake Rocky", "Cavern Island", "Green Island", "Lake Crystal", "Polly Mountain 2", "Caron Forest", "Coco Island", "Battle Fortress 1", "Battle Fortress 2" });
             clbTailsAdventure.Location = new Point(12, 1185);
             clbTailsAdventure.Name = "clbTailsAdventure";
-            clbTailsAdventure.Size = new Size(353, 92);
+            clbTailsAdventure.Size = new Size(393, 92);
             clbTailsAdventure.TabIndex = 24;
             clbTailsAdventure.SelectedIndexChanged += clbTailsAdventure_SelectedIndexChanged;
             // 
@@ -295,7 +299,7 @@
             progBarKnucklesChaotix.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             progBarKnucklesChaotix.Location = new Point(12, 1127);
             progBarKnucklesChaotix.Name = "progBarKnucklesChaotix";
-            progBarKnucklesChaotix.Size = new Size(353, 23);
+            progBarKnucklesChaotix.Size = new Size(393, 23);
             progBarKnucklesChaotix.TabIndex = 22;
             // 
             // clbKnucklesChaotix
@@ -308,7 +312,7 @@
             clbKnucklesChaotix.Items.AddRange(new object[] { "Botanic Base (Level 1)", "Botanic Base (Level 2)", "Botanic Base (Level 3)", "Botanic Base (Level 4)", "Botanic Base (Level 5)", "Speed Slider (Level 1)", "Speed Slider (Level 2)", "Speed Slider (Level 3)", "Speed Slider (Level 4)", "Speed Slider (Level 5)", "Amazing Arena (Level 1)", "Amazing Arena (Level 2)", "Amazing Arena (Level 3)", "Amazing Arena (Level 4)", "Amazing Arena (Level 5)", "Marina Madness (Level 1)", "Marina Madness (Level 2)", "Marina Madness (Level 3)", "Marina Madness (Level 4)", "Marina Madness (Level 5)", "Techno Tower (Level 1)", "Techno Tower (Level 2)", "Techno Tower (Level 3)", "Techno Tower (Level 4)", "Techno Tower (Level 5)", "Metal Sonic", "Metal Sonic Kai" });
             clbKnucklesChaotix.Location = new Point(12, 1029);
             clbKnucklesChaotix.Name = "clbKnucklesChaotix";
-            clbKnucklesChaotix.Size = new Size(353, 92);
+            clbKnucklesChaotix.Size = new Size(393, 92);
             clbKnucklesChaotix.TabIndex = 21;
             clbKnucklesChaotix.SelectedIndexChanged += clbKnucklesChaotix_SelectedIndexChanged;
             // 
@@ -328,7 +332,7 @@
             progBarSonicAndTails2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             progBarSonicAndTails2.Location = new Point(12, 971);
             progBarSonicAndTails2.Name = "progBarSonicAndTails2";
-            progBarSonicAndTails2.Size = new Size(353, 23);
+            progBarSonicAndTails2.Size = new Size(393, 23);
             progBarSonicAndTails2.TabIndex = 19;
             // 
             // clbSonicAndTails2
@@ -341,7 +345,7 @@
             clbSonicAndTails2.Items.AddRange(new object[] { "Great Turquoise Zone (Act 1)", "Great Turquoise Zone (Act 2)", "Great Turquoise Zone (Act 3)", "Sunset Park Zone (Act 1)", "Sunset Park Zone (Act 2)", "Sunset Park Zone (Act 3)", "Meta Junglira Zone (Act 1)", "Meta Junglira Zone (Act 2)", "Meta Junglira Zone (Act 3)", "Robotnik Winter Zone (Act 1)", "Robotnik Winter Zone (Act 2)", "Robotnik Winter Zone (Act 3)", "Tidal Plant Zone (Act 1)", "Tidal Plant Zone (Act 2)", "Tidal Plant Zone (Act 3)", "Atomic Destroyer Zone (Act 1)", "Atomic Destroyer Zone (Act 2)", "Atomic Destroyer Zone (Act 3)" });
             clbSonicAndTails2.Location = new Point(12, 873);
             clbSonicAndTails2.Name = "clbSonicAndTails2";
-            clbSonicAndTails2.Size = new Size(353, 92);
+            clbSonicAndTails2.Size = new Size(393, 92);
             clbSonicAndTails2.TabIndex = 18;
             // 
             // lblSonicAndTails2
@@ -361,7 +365,7 @@
             progBarSonicAndTails.ForeColor = SystemColors.InactiveBorder;
             progBarSonicAndTails.Location = new Point(12, 630);
             progBarSonicAndTails.Name = "progBarSonicAndTails";
-            progBarSonicAndTails.Size = new Size(353, 23);
+            progBarSonicAndTails.Size = new Size(393, 23);
             progBarSonicAndTails.TabIndex = 16;
             // 
             // clbSonicAndTails
@@ -374,7 +378,7 @@
             clbSonicAndTails.Items.AddRange(new object[] { "Turquoise Hill Zone (Act 1)", "Turquoise Hill Zone (Act 2)", "Turquoise Hill Zone (Act 3)", "Gigapolis Zone (Act 1)", "Gigapolis Zone (Act 2)", "Gigapolis Zone (Act 3)", "Sleeping Egg Zone (Act 1)", "Sleeping Egg Zone (Act 2)", "Sleeping Egg Zone (Act 3)", "Mecha Green Hill Zone (Act 1)", "Mecha Green Hill Zone (Act 2)", "Mecha Green Hill Zone (Act 3)", "Aqua Planet Zone (Act 1)", "Aqua Planet Zone (Act 2)", "Aqua Planet Zone (Act 3)", "Electric Egg Zone (Act 1)", "Electric Egg Zone (Act 2)", "Electric Egg Zone (Act 3)" });
             clbSonicAndTails.Location = new Point(12, 532);
             clbSonicAndTails.Name = "clbSonicAndTails";
-            clbSonicAndTails.Size = new Size(353, 92);
+            clbSonicAndTails.Size = new Size(393, 92);
             clbSonicAndTails.TabIndex = 15;
             clbSonicAndTails.SelectedIndexChanged += clbSonicAndTails_SelectedIndexChanged;
             // 
@@ -394,7 +398,7 @@
             progBarSonic3AndKnuckles.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             progBarSonic3AndKnuckles.Location = new Point(15, 786);
             progBarSonic3AndKnuckles.Name = "progBarSonic3AndKnuckles";
-            progBarSonic3AndKnuckles.Size = new Size(350, 23);
+            progBarSonic3AndKnuckles.Size = new Size(390, 23);
             progBarSonic3AndKnuckles.TabIndex = 13;
             // 
             // clbSonic3AndKnuckles
@@ -407,7 +411,7 @@
             clbSonic3AndKnuckles.Items.AddRange(new object[] { "Angel Island Zone (Act 1) - Sonic 3", "Angel Island Zone (Act 2) - Sonic 3", "Hydrocity Zone (Act 1) - Sonic 3", "Hydrocity Zone (Act 2) - Sonic 3", "Marble Garden Zone (Act 1) - Sonic 3", "Marble Garden Zone (Act 2) - Sonic 3", "Carnival Night Zone (Act 1) - Sonic 3", "Carnival Night Zone (Act 2) - Sonic 3", "IceCap Zone (Act 1) - Sonic 3", "IceCap Zone (Act 2) - Sonic 3", "Launch Base Zone (Act 1) - Sonic 3", "Launch Base Zone (Act 2) - Sonic 3", "Mushroom Hill Zone (Act 1) - Sonic & Knuckles", "Mushroom Hill Zone (Act 2) - Sonic & Knuckles", "Flying Battery Zone (Act 1) - Sonic & Knuckles", "Flying Battery Zone (Act 2) - Sonic & Knuckles", "Sandopolis Zone (Act 1) - Sonic & Knuckles", "Sandopolis Zone (Act 2) - Sonic & Knuckles", "Lava Reef Zone (Act 1) - Sonic & Knuckles", "Lava Reef Zone (Act 2) - Sonic & Knuckles", "Hidden Palace Zone - Sonic & Knuckles", "Sky Sanctuary Zone - Sonic & Knuckles", "Death Egg Zone (Act 1) - Sonic & Knuckles", "Death Egg Zone (Act 2) - Sonic & Knuckles", "The Doomsday Zone - Sonic & Knuckles" });
             clbSonic3AndKnuckles.Location = new Point(12, 688);
             clbSonic3AndKnuckles.Name = "clbSonic3AndKnuckles";
-            clbSonic3AndKnuckles.Size = new Size(353, 92);
+            clbSonic3AndKnuckles.Size = new Size(393, 92);
             clbSonic3AndKnuckles.TabIndex = 12;
             clbSonic3AndKnuckles.SelectedIndexChanged += clbSonic3AndKnuckles_SelectedIndexChanged;
             // 
@@ -427,7 +431,7 @@
             progBarSonicCD.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             progBarSonicCD.Location = new Point(12, 445);
             progBarSonicCD.Name = "progBarSonicCD";
-            progBarSonicCD.Size = new Size(353, 23);
+            progBarSonicCD.Size = new Size(393, 23);
             progBarSonicCD.TabIndex = 10;
             // 
             // clbSonicCD
@@ -440,7 +444,7 @@
             clbSonicCD.Items.AddRange(new object[] { "Palmtree Panic (Present)", "Palmtree Panic (Good Future)", "Palmtree Panic (Bad Future)", "Collision Chaos (Present)", "Collision Chaos (Good Future)", "Collision Chaos (Bad Future)", "Tidal Tempest (Present)", "Tidal Tempest (Good Future)", "Tidal Tempest (Bad Future)", "Quartz Quadrant (Present)", "Quartz Quadrant (Good Future)", "Quartz Quadrant (Bad Future)", "Wacky Workbench (Present)", "Wacky Workbench (Good Future)", "Wacky Workbench (Bad Future)", "Stardust Speedway (Present)", "Stardust Speedway (Good Future)", "Stardust Speedway (Bad Future)", "Metallic Madness (Present)", "Metallic Madness (Good Future)", "Metallic Madness (Bad Future)", "Final Fever" });
             clbSonicCD.Location = new Point(12, 347);
             clbSonicCD.Name = "clbSonicCD";
-            clbSonicCD.Size = new Size(353, 92);
+            clbSonicCD.Size = new Size(393, 92);
             clbSonicCD.TabIndex = 9;
             clbSonicCD.SelectedIndexChanged += clbSonicCD_SelectedIndexChanged;
             // 
@@ -469,13 +473,38 @@
             // 
             // PanelHeader
             // 
+            PanelHeader.Controls.Add(btnInfo);
+            PanelHeader.Controls.Add(btnSettings);
             PanelHeader.Controls.Add(tbSearch);
             PanelHeader.Controls.Add(lblTitle);
             PanelHeader.Dock = DockStyle.Top;
             PanelHeader.Location = new Point(0, 0);
             PanelHeader.Name = "PanelHeader";
-            PanelHeader.Size = new Size(394, 90);
+            PanelHeader.Size = new Size(434, 90);
             PanelHeader.TabIndex = 9;
+            // 
+            // btnInfo
+            // 
+            btnInfo.Image = Properties.Resources.ic_fluent_info_24_filled;
+            btnInfo.Location = new Point(12, 12);
+            btnInfo.Name = "btnInfo";
+            btnInfo.Size = new Size(35, 35);
+            btnInfo.SizeMode = PictureBoxSizeMode.Zoom;
+            btnInfo.TabIndex = 3;
+            btnInfo.TabStop = false;
+            btnInfo.Click += btnInfo_Click;
+            // 
+            // btnSettings
+            // 
+            btnSettings.Anchor = AnchorStyles.Right;
+            btnSettings.Image = Properties.Resources.ic_fluent_settings_24_filled;
+            btnSettings.Location = new Point(387, 12);
+            btnSettings.Name = "btnSettings";
+            btnSettings.Size = new Size(35, 35);
+            btnSettings.SizeMode = PictureBoxSizeMode.Zoom;
+            btnSettings.TabIndex = 2;
+            btnSettings.TabStop = false;
+            btnSettings.Click += btnSettings_Click;
             // 
             // tbSearch
             // 
@@ -483,7 +512,7 @@
             tbSearch.Location = new Point(12, 58);
             tbSearch.Name = "tbSearch";
             tbSearch.PlaceholderText = "Search";
-            tbSearch.Size = new Size(362, 23);
+            tbSearch.Size = new Size(402, 23);
             tbSearch.TabIndex = 1;
             tbSearch.TextChanged += tbSearch_TextChanged;
             // 
@@ -496,14 +525,14 @@
             PanelFooter.Dock = DockStyle.Bottom;
             PanelFooter.Location = new Point(0, 559);
             PanelFooter.Name = "PanelFooter";
-            PanelFooter.Size = new Size(394, 132);
+            PanelFooter.Size = new Size(434, 132);
             PanelFooter.TabIndex = 8;
             // 
             // linkLabel3
             // 
             linkLabel3.Anchor = AnchorStyles.Bottom;
             linkLabel3.AutoSize = true;
-            linkLabel3.Location = new Point(135, 109);
+            linkLabel3.Location = new Point(155, 109);
             linkLabel3.Name = "linkLabel3";
             linkLabel3.Size = new Size(129, 15);
             linkLabel3.TabIndex = 3;
@@ -515,7 +544,7 @@
             // 
             linkLabel2.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             linkLabel2.AutoSize = true;
-            linkLabel2.Location = new Point(249, 87);
+            linkLabel2.Location = new Point(289, 87);
             linkLabel2.Name = "linkLabel2";
             linkLabel2.Size = new Size(133, 15);
             linkLabel2.TabIndex = 2;
@@ -529,9 +558,9 @@
             label1.Font = new Font("Roboto", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(394, 87);
+            label1.Size = new Size(434, 87);
             label1.TabIndex = 0;
-            label1.Text = "Not affiliated with Sega or Sonic.\r\n\r\nSonic The Hedgehog is a trademark of SegaSammy\r\n";
+            label1.Text = "Not affiliated with SEGA or Sonic Team.\r\n\r\nSonic The Hedgehog is a trademark of SEGA.\r\n";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // linkLabel1
@@ -550,7 +579,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(394, 691);
+            ClientSize = new Size(434, 691);
             Controls.Add(flpSearchResults);
             Controls.Add(PanelContent);
             Controls.Add(PanelFooter);
@@ -562,6 +591,8 @@
             PanelContent.PerformLayout();
             PanelHeader.ResumeLayout(false);
             PanelHeader.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)btnInfo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnSettings).EndInit();
             PanelFooter.ResumeLayout(false);
             PanelFooter.PerformLayout();
             ResumeLayout(false);
@@ -610,5 +641,7 @@
         private ProgressBar progBarSonic3DBlast;
         private CheckedListBox clbSonic3DBlast;
         private Label lblSonic3DBlast;
+        private PictureBox btnSettings;
+        private PictureBox btnInfo;
     }
 }

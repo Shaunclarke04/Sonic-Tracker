@@ -15,3 +15,7 @@ Track your progress in Sonic games with SonicTracker! This tool tracks which sta
 - Sonic 3D Blast // Sonic 3D: Flickies' Island
 
 ### more games coming soon
+
+## More Features
+- Percentage/Fractional readout of completed stages (coming soon)
+
