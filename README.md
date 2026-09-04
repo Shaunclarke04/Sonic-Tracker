@@ -17,5 +17,8 @@ Track your progress in Sonic games with SonicTracker! This tool tracks which sta
 ### more games coming soon
 
 ## More Features
-- Percentage/Fractional readout of completed stages (coming soon)
-
+- Dynamic progress bar with Percentage/Fractional readout of completed stages in each game; configurable in settings
+- Locally saved data in `%appdata%/../local/SonicTracker`
+- Quickly search for and jump to any game
+- Resizable and responsive UI
+- automatic updates (on full release)
