@@ -211,6 +211,7 @@
             clbSonic3DBlast.Name = "clbSonic3DBlast";
             clbSonic3DBlast.Size = new Size(353, 92);
             clbSonic3DBlast.TabIndex = 30;
+            clbSonic3DBlast.SelectedIndexChanged += clbSonic3DBlast_SelectedIndexChanged;
             // 
             // lblSonic3DBlast
             // 
@@ -243,6 +244,7 @@
             clbSonicBlast.Name = "clbSonicBlast";
             clbSonicBlast.Size = new Size(353, 92);
             clbSonicBlast.TabIndex = 27;
+            clbSonicBlast.SelectedIndexChanged += clbSonicBlast_SelectedIndexChanged;
             // 
             // lblSonicBlast
             // 
@@ -275,6 +277,7 @@
             clbTailsAdventure.Name = "clbTailsAdventure";
             clbTailsAdventure.Size = new Size(353, 92);
             clbTailsAdventure.TabIndex = 24;
+            clbTailsAdventure.SelectedIndexChanged += clbTailsAdventure_SelectedIndexChanged;
             // 
             // lblTailsAdventure
             // 
@@ -307,6 +310,7 @@
             clbKnucklesChaotix.Name = "clbKnucklesChaotix";
             clbKnucklesChaotix.Size = new Size(353, 92);
             clbKnucklesChaotix.TabIndex = 21;
+            clbKnucklesChaotix.SelectedIndexChanged += clbKnucklesChaotix_SelectedIndexChanged;
             // 
             // lblKnucklesChaotix
             // 
@@ -372,6 +376,7 @@
             clbSonicAndTails.Name = "clbSonicAndTails";
             clbSonicAndTails.Size = new Size(353, 92);
             clbSonicAndTails.TabIndex = 15;
+            clbSonicAndTails.SelectedIndexChanged += clbSonicAndTails_SelectedIndexChanged;
             // 
             // lblSonicAndTails
             // 
