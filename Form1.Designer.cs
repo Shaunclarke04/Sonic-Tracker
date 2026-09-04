@@ -107,7 +107,7 @@
             clbSonicTheHedgehog1.Font = new Font("Roboto", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             clbSonicTheHedgehog1.FormattingEnabled = true;
             clbSonicTheHedgehog1.HorizontalScrollbar = true;
-            clbSonicTheHedgehog1.Items.AddRange(new object[] { "Green Hill Zone (Act 1)", "Green Hill Zone (Act 4)", "Green Hill Zone (Act 3)", "Marble Zone (Act 1)", "Marble Zone (Act 2)", "Marble Zone (Act 3)", "Spring Yard Zone (Act 1)", "Spring Yard Zone (Act 2)", "Spring Yard Zone (Act 3)", "Labrynth Zone (Act 1)", "Labrynth Zone (Act 2)", "Labrynth Zone (Act 3)", "Star Light Zone (Act 1)", "Star Light Zone (Act 2)", "Star Light Zone (Act 3)", "Scrap Brain Zone (Act 1)", "Scrap Brain Zone (Act 2)", "Scrap Brain Zone (Act 3)", "Final Boss" });
+            clbSonicTheHedgehog1.Items.AddRange(new object[] { "Green Hill Zone (Act 1)", "Green Hill Zone (Act 2)", "Green Hill Zone (Act 3)", "Marble Zone (Act 1)", "Marble Zone (Act 2)", "Marble Zone (Act 3)", "Spring Yard Zone (Act 1)", "Spring Yard Zone (Act 2)", "Spring Yard Zone (Act 3)", "Labrynth Zone (Act 1)", "Labrynth Zone (Act 2)", "Labrynth Zone (Act 3)", "Star Light Zone (Act 1)", "Star Light Zone (Act 2)", "Star Light Zone (Act 3)", "Scrap Brain Zone (Act 1)", "Scrap Brain Zone (Act 2)", "Scrap Brain Zone (Act 3)", "Final Boss" });
             clbSonicTheHedgehog1.Location = new Point(12, 35);
             clbSonicTheHedgehog1.Name = "clbSonicTheHedgehog1";
             clbSonicTheHedgehog1.Size = new Size(443, 92);
