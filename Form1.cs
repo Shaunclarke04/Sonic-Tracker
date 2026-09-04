@@ -147,12 +147,12 @@ namespace SonicTracker
             UpdateProgress(clbSonicTheHedgehog2, progBarSonicTheHedgehog2, lblSonic2, "Sonic the Hedgehog 2");
             UpdateProgress(clbSonicCD, progBarSonicCD, lblSonicCD, "Sonic CD");
             UpdateProgress(clbSonic3AndKnuckles, progBarSonic3AndKnuckles, lblSonic3AndKnuckles, "Sonic 3 and Knuckles");
-            UpdateProgress(clbSonicAndTails, progBarSonicAndTails, lblSonicAndTails, "Sonic and Tails");
-            UpdateProgress(clbSonicAndTails2, progBarSonicAndTails2, lblSonicAndTails2, "Sonic and Tails 2");
+            UpdateProgress(clbSonicAndTails, progBarSonicAndTails, lblSonicAndTails, "Sonic Chaos (EU/US)\nSonic && Tails (JP)");
+            UpdateProgress(clbSonicAndTails2, progBarSonicAndTails2, lblSonicAndTails2, "Sonic Triple Trouble (EU/US)\nSonic && Tails 2 (JP)");
             UpdateProgress(clbKnucklesChaotix, progBarKnucklesChaotix, lblKnucklesChaotix, "Knuckles Chaotix");
             UpdateProgress(clbTailsAdventure, progBarTailsAdventure, lblTailsAdventure, "Tails Adventure");
-            UpdateProgress(clbSonicBlast, progBarSonicBlast, lblSonicBlast, "Sonic Blast");
-            UpdateProgress(clbSonic3DBlast, progBarSonic3DBlast, lblSonic3DBlast, "Sonic 3D Blast");
+            UpdateProgress(clbSonicBlast, progBarSonicBlast, lblSonicBlast, "Sonic Blast (EU/US)\nG Sonic (JP)");
+            UpdateProgress(clbSonic3DBlast, progBarSonic3DBlast, lblSonic3DBlast, "Sonic 3D Blast (EU/US)\nSonic 3D: Flickies' Island (JP)");
         }
 
         //save checked items to settings when a checked list box item is changed
@@ -192,14 +192,14 @@ namespace SonicTracker
             var checkedItems = clbSonicAndTails.CheckedIndices.Cast<int>().ToArray();
             Properties.Settings.Default.SonicAndTailsCheckedItems = string.Join(",", checkedItems);
             Properties.Settings.Default.Save();
-            UpdateProgress(clbSonicAndTails, progBarSonicAndTails, lblSonicAndTails, "Sonic & Tails");
+            UpdateProgress(clbSonicAndTails, progBarSonicAndTails, lblSonicAndTails, "Sonic Chaos (EU/US)\nSonic && Tails (JP)");
         }
         private void clbSonicAndTails2_SelectedIndexChanged(object sender, EventArgs e)
         {
             var checkedItems = clbSonicAndTails2.CheckedIndices.Cast<int>().ToArray();
             Properties.Settings.Default.SonicAndTails2CheckedItems = string.Join(",", checkedItems);
             Properties.Settings.Default.Save();
-            UpdateProgress(clbSonicAndTails2, progBarSonicAndTails2, lblSonicAndTails2, "Sonic & Tails 2");
+            UpdateProgress(clbSonicAndTails2, progBarSonicAndTails2, lblSonicAndTails2, "Sonic Triple Trouble (EU/US)\nSonic && Tails 2 (JP)");
         }
         private void clbKnucklesChaotix_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -220,14 +220,14 @@ namespace SonicTracker
             var checkedItems = clbSonicBlast.CheckedIndices.Cast<int>().ToArray();
             Properties.Settings.Default.SonicBlastCheckedItems = string.Join(",", checkedItems);
             Properties.Settings.Default.Save();
-            UpdateProgress(clbSonicBlast, progBarSonicBlast, lblSonicBlast, "Sonic Blast");
+            UpdateProgress(clbSonicBlast, progBarSonicBlast, lblSonicBlast, "Sonic Blast (EU/US)\nG Sonic (JP)");
         }
         private void clbSonic3DBlast_SelectedIndexChanged(object sender, EventArgs e)
         {
             var checkedItems = clbSonic3DBlast.CheckedIndices.Cast<int>().ToArray();
             Properties.Settings.Default.Sonic3DBlastCheckedItems = string.Join(",", checkedItems);
             Properties.Settings.Default.Save();
-            UpdateProgress(clbSonic3DBlast, progBarSonic3DBlast, lblSonic3DBlast, "Sonic 3D Blast");
+            UpdateProgress(clbSonic3DBlast, progBarSonic3DBlast, lblSonic3DBlast, "Sonic 3D Blast (EU/US)\nSonic 3D: Flickies' Island (JP)");
         }
     }
 }
