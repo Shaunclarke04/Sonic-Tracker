@@ -171,7 +171,6 @@ namespace SonicTracker
             Properties.Settings.Default.Save();
             UpdateProgress(clbSonicTheHedgehog2, progBarSonicTheHedgehog2, lblSonic2, "Sonic the Hedgehog 2");
         }
-
         private void clbSonicCD_SelectedIndexChanged(object sender, EventArgs e)
         {
             var checkedItems = clbSonicCD.CheckedIndices.Cast<int>().ToArray();
@@ -179,7 +178,6 @@ namespace SonicTracker
             Properties.Settings.Default.Save();
             UpdateProgress(clbSonicCD, progBarSonicCD, lblSonicCD, "Sonic CD");
         }
-
         private void clbSonic3AndKnuckles_SelectedIndexChanged(object sender, EventArgs e)
         {
             var checkedItems = clbSonic3AndKnuckles.CheckedIndices.Cast<int>().ToArray();
