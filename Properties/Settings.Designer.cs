@@ -154,5 +154,173 @@ namespace SonicTracker.Properties {
                 this["PreferredFraction"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string SonicPocketAdventureCheckedItems {
+            get {
+                return ((string)(this["SonicPocketAdventureCheckedItems"]));
+            }
+            set {
+                this["SonicPocketAdventureCheckedItems"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string SonicAdventureCheckedItems {
+            get {
+                return ((string)(this["SonicAdventureCheckedItems"]));
+            }
+            set {
+                this["SonicAdventureCheckedItems"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string SonicAdventure2CheckedItems {
+            get {
+                return ((string)(this["SonicAdventure2CheckedItems"]));
+            }
+            set {
+                this["SonicAdventure2CheckedItems"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string SonicAdvanceCheckedItems {
+            get {
+                return ((string)(this["SonicAdvanceCheckedItems"]));
+            }
+            set {
+                this["SonicAdvanceCheckedItems"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string SonicAdvance2CheckedItems {
+            get {
+                return ((string)(this["SonicAdvance2CheckedItems"]));
+            }
+            set {
+                this["SonicAdvance2CheckedItems"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string SonicHeroesCheckedItems {
+            get {
+                return ((string)(this["SonicHeroesCheckedItems"]));
+            }
+            set {
+                this["SonicHeroesCheckedItems"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string SonicAdvance3CheckedItems {
+            get {
+                return ((string)(this["SonicAdvance3CheckedItems"]));
+            }
+            set {
+                this["SonicAdvance3CheckedItems"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string SonicRushCheckedItems {
+            get {
+                return ((string)(this["SonicRushCheckedItems"]));
+            }
+            set {
+                this["SonicRushCheckedItems"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ShadowTheHedgehogCheckedItems {
+            get {
+                return ((string)(this["ShadowTheHedgehogCheckedItems"]));
+            }
+            set {
+                this["ShadowTheHedgehogCheckedItems"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Sonic06CheckedItems {
+            get {
+                return ((string)(this["Sonic06CheckedItems"]));
+            }
+            set {
+                this["Sonic06CheckedItems"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string SonicRushAdventureCheckedItems {
+            get {
+                return ((string)(this["SonicRushAdventureCheckedItems"]));
+            }
+            set {
+                this["SonicRushAdventureCheckedItems"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string SonicSecretRingsCheckedItems {
+            get {
+                return ((string)(this["SonicSecretRingsCheckedItems"]));
+            }
+            set {
+                this["SonicSecretRingsCheckedItems"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string SonicUnleashedPS2CheckedItems {
+            get {
+                return ((string)(this["SonicUnleashedPS2CheckedItems"]));
+            }
+            set {
+                this["SonicUnleashedPS2CheckedItems"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string SonicUnleashedPS3CheckedItems {
+            get {
+                return ((string)(this["SonicUnleashedPS3CheckedItems"]));
+            }
+            set {
+                this["SonicUnleashedPS3CheckedItems"] = value;
+            }
+        }
     }
 }

@@ -22,7 +22,21 @@ namespace SonicTracker
                 lblKnucklesChaotix,
                 lblTailsAdventure,
                 lblSonicBlast,
-                lblSonic3DBlast
+                lblSonic3DBlast,
+                lblSonicPocketAdventure,
+                lblSonicAdventure,
+                lblSonicAdventure2,
+                lblSonicAdvance,
+                lblSonicAdvance2,
+                lblSonicHeroes,
+                lblSonicAdvance3,
+                lblSonicRush,
+                lblShadowTheHedgehog,
+                lblSonic06,
+                lblSonicSecretRings,
+                lblSonicRushAdventure,
+                lblSonicUnleashedPS2,
+                lblSonicUnleashedPS3,
             };
 
             //update UI based on saved settings
@@ -97,13 +111,9 @@ namespace SonicTracker
             }
 
         }
-        
+
         //update progress bars and labels based on checked items in the checked list boxes
-        private void UpdateProgress(
-            CheckedListBox clb,
-            ProgressBar progBar,
-            Label label,
-            string gameTitle)
+        private void UpdateProgress(CheckedListBox clb, ProgressBar progBar, Label label, string gameTitle)
         {
             string progressReadout;
             updateProgessBars(clb, progBar);
@@ -141,6 +151,20 @@ namespace SonicTracker
             LoadCheckedItems(clbTailsAdventure, Properties.Settings.Default.TailsAdventureCheckedItems);
             LoadCheckedItems(clbSonicBlast, Properties.Settings.Default.SonicBlastCheckedItems);
             LoadCheckedItems(clbSonic3DBlast, Properties.Settings.Default.Sonic3DBlastCheckedItems);
+            LoadCheckedItems(clbSonicPocketAdventure, Properties.Settings.Default.SonicPocketAdventureCheckedItems);
+            LoadCheckedItems(clbSonicAdventure, Properties.Settings.Default.SonicAdventureCheckedItems);
+            LoadCheckedItems(clbSonicAdventure2, Properties.Settings.Default.SonicAdventure2CheckedItems);
+            LoadCheckedItems(clbSonicAdvance, Properties.Settings.Default.SonicAdvanceCheckedItems);
+            LoadCheckedItems(clbSonicAdvance2, Properties.Settings.Default.SonicAdvance2CheckedItems);
+            LoadCheckedItems(clbSonicHeroes, Properties.Settings.Default.SonicHeroesCheckedItems);
+            LoadCheckedItems(clbSonicAdvance3, Properties.Settings.Default.SonicAdvance3CheckedItems);
+            LoadCheckedItems(clbSonicRush, Properties.Settings.Default.SonicRushCheckedItems);
+            LoadCheckedItems(clbShadowTheHedgehog, Properties.Settings.Default.ShadowTheHedgehogCheckedItems);
+            LoadCheckedItems(clbSonic06, Properties.Settings.Default.Sonic06CheckedItems);
+            LoadCheckedItems(clbSonicSecretRings, Properties.Settings.Default.SonicSecretRingsCheckedItems);
+            LoadCheckedItems(clbSonicRushAdventure, Properties.Settings.Default.SonicRushAdventureCheckedItems);
+            LoadCheckedItems(clbSonicUnleashedPS2, Properties.Settings.Default.SonicUnleashedPS2CheckedItems);
+            LoadCheckedItems(clbSonicUnleashedPS3, Properties.Settings.Default.SonicUnleashedPS3CheckedItems);
 
             //update progress 
             UpdateProgress(clbSonicTheHedgehog1, progBarSonicTheHedgehog1, lblSonic1, "Sonic the Hedgehog");
@@ -153,6 +177,20 @@ namespace SonicTracker
             UpdateProgress(clbTailsAdventure, progBarTailsAdventure, lblTailsAdventure, "Tails Adventure");
             UpdateProgress(clbSonicBlast, progBarSonicBlast, lblSonicBlast, "Sonic Blast (EU/US)\nG Sonic (JP)");
             UpdateProgress(clbSonic3DBlast, progBarSonic3DBlast, lblSonic3DBlast, "Sonic 3D Blast (EU/US)\nSonic 3D: Flickies' Island (JP)");
+            UpdateProgress(clbSonicPocketAdventure, progBarSonicPocketAdventure, lblSonicPocketAdventure, "Sonic Pocket Adventure");
+            UpdateProgress(clbSonicAdventure, progBarSonicAdventure, lblSonicAdventure, "Sonic Adventure");
+            UpdateProgress(clbSonicAdventure2, progBarSonicAdventure2, lblSonicAdventure2, "Sonic Adventure 2");
+            UpdateProgress(clbSonicAdvance, progBarSonicAdvance, lblSonicAdvance, "Sonic Advance");
+            UpdateProgress(clbSonicAdvance2, progBarSonicAdvance2, lblSonicAdvance2, "Sonic Advance 2");
+            UpdateProgress(clbSonicHeroes, progBarSonicHeroes, lblSonicHeroes, "Sonic Heroes");
+            UpdateProgress(clbSonicAdvance3, progBarSonicAdvance3, lblSonicAdvance3, "Sonic Advance 3");
+            UpdateProgress(clbSonicRush, progBarSonicRush, lblSonicRush, "Sonic Rush");
+            UpdateProgress(clbShadowTheHedgehog, progBarShadowTheHedgehog, lblShadowTheHedgehog, "Shadow The Hedgehog");
+            UpdateProgress(clbSonic06, progBarSonic06, lblSonic06, "Sonic the Hedgehog // Sonic '06");
+            UpdateProgress(clbSonicSecretRings, progBarSonicSecretRings, lblSonicSecretRings, "Sonic and the Secret Rings");
+            UpdateProgress(clbSonicRushAdventure, progBarSonicRushAdventure, lblSonicRushAdventure, "Sonic Rush Adventure");
+            UpdateProgress(clbSonicUnleashedPS2, progBarSonicUnleashedPS2, lblSonicUnleashedPS2, "Sonic Unleashed (PS2/Wii");
+            UpdateProgress(clbSonicUnleashedPS3, progBarSonicUnleashedPS3, lblSonicUnleashedPS3, "Sonic Unleashed (PS3/X360)");
         }
 
         //save checked items to settings when a checked list box item is changed
@@ -163,7 +201,6 @@ namespace SonicTracker
             Properties.Settings.Default.Save();
             UpdateProgress(clbSonicTheHedgehog1, progBarSonicTheHedgehog1, lblSonic1, "Sonic the Hedgehog");
         }
-
         private void clbSonicTheHedgehog2_SelectedIndexChanged(object sender, EventArgs e)
         {
             var checkedItems = clbSonicTheHedgehog2.CheckedIndices.Cast<int>().ToArray();
@@ -226,6 +263,104 @@ namespace SonicTracker
             Properties.Settings.Default.Sonic3DBlastCheckedItems = string.Join(",", checkedItems);
             Properties.Settings.Default.Save();
             UpdateProgress(clbSonic3DBlast, progBarSonic3DBlast, lblSonic3DBlast, "Sonic 3D Blast (EU/US)\nSonic 3D: Flickies' Island (JP)");
+        }
+        private void clbSonicPocketAdventure_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var checkedItems = clbSonicPocketAdventure.CheckedIndices.Cast<int>().ToArray();
+            Properties.Settings.Default.SonicPocketAdventureCheckedItems = string.Join(",", checkedItems);
+            Properties.Settings.Default.Save();
+            UpdateProgress(clbSonicPocketAdventure, progBarSonicPocketAdventure, lblSonicPocketAdventure, "Sonic Pocket Adventure");
+        }
+        private void clbSonicAdventure_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var checkedItems = clbSonicAdventure.CheckedIndices.Cast<int>().ToArray();
+            Properties.Settings.Default.SonicAdventureCheckedItems = string.Join(",", checkedItems);
+            Properties.Settings.Default.Save();
+            UpdateProgress(clbSonicAdventure, progBarSonicAdventure, lblSonicAdventure, "Sonic Adventure");
+        }
+        private void clbSonicAdventure2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var checkedItems = clbSonicAdventure2.CheckedIndices.Cast<int>().ToArray();
+            Properties.Settings.Default.SonicAdventure2CheckedItems = string.Join(",", checkedItems);
+            Properties.Settings.Default.Save();
+            UpdateProgress(clbSonicAdventure2, progBarSonicAdventure2, lblSonicAdventure2, "Sonic Adventure 2");
+        }
+        private void clbSonicAdvance_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var checkedItems = clbSonicAdvance.CheckedIndices.Cast<int>().ToArray();
+            Properties.Settings.Default.SonicAdvanceCheckedItems = string.Join(",", checkedItems);
+            Properties.Settings.Default.Save();
+            UpdateProgress(clbSonicAdvance, progBarSonicAdvance, lblSonicAdvance, "Sonic Advance");
+        }
+        private void clbSonicAdvance2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var checkedItems = clbSonicAdvance2.CheckedIndices.Cast<int>().ToArray();
+            Properties.Settings.Default.SonicAdvance2CheckedItems = string.Join(",", checkedItems);
+            Properties.Settings.Default.Save();
+            UpdateProgress(clbSonicAdvance2, progBarSonicAdvance2, lblSonicAdvance2, "Sonic Advance 2");
+        }
+        private void clbSonicHeroes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var checkedItems = clbSonicHeroes.CheckedIndices.Cast<int>().ToArray();
+            Properties.Settings.Default.SonicHeroesCheckedItems = string.Join(",", checkedItems);
+            Properties.Settings.Default.Save();
+            UpdateProgress(clbSonicHeroes, progBarSonicHeroes, lblSonicHeroes, "Sonic Heroes");
+        }
+        private void clbSonicAdvance3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var checkedItems = clbSonicAdvance3.CheckedIndices.Cast<int>().ToArray();
+            Properties.Settings.Default.SonicAdvance3CheckedItems = string.Join(",", checkedItems);
+            Properties.Settings.Default.Save();
+            UpdateProgress(clbSonicAdvance3, progBarSonicAdvance3, lblSonicAdvance3, "Sonic Advance 3");
+        }
+        private void clbSonicRush_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var checkedItems = clbSonicRush.CheckedIndices.Cast<int>().ToArray();
+            Properties.Settings.Default.SonicRushCheckedItems = string.Join(",", checkedItems);
+            Properties.Settings.Default.Save();
+            UpdateProgress(clbSonicRush, progBarSonicRush, lblSonicRush, "Sonic Rush");
+        }
+        private void clbShadowTheHedgehog_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var checkedItems = clbShadowTheHedgehog.CheckedIndices.Cast<int>().ToArray();
+            Properties.Settings.Default.ShadowTheHedgehogCheckedItems = string.Join(",", checkedItems);
+            Properties.Settings.Default.Save();
+            UpdateProgress(clbShadowTheHedgehog, progBarShadowTheHedgehog, lblShadowTheHedgehog, "Shadow The Hedgehog");
+        }
+        private void clbSonic06_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var checkedItems = clbSonic06.CheckedIndices.Cast<int>().ToArray();
+            Properties.Settings.Default.Sonic06CheckedItems = string.Join(",", checkedItems);
+            Properties.Settings.Default.Save();
+            UpdateProgress(clbSonic06, progBarSonic06, lblSonic06, "Sonic the Hedgehog // Sonic '06");
+        }
+        private void clbSonicSecretRings_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var checkedItems = clbSonicSecretRings.CheckedIndices.Cast<int>().ToArray();
+            Properties.Settings.Default.SonicSecretRingsCheckedItems = string.Join(",", checkedItems);
+            Properties.Settings.Default.Save();
+            UpdateProgress(clbSonicSecretRings, progBarSonicSecretRings, lblSonicSecretRings, "Sonic and the Secret Rings");
+        }
+        private void clbSonicRushAdventure_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var checkedItems = clbSonicRushAdventure.CheckedIndices.Cast<int>().ToArray();
+            Properties.Settings.Default.SonicRushAdventureCheckedItems = string.Join(",", checkedItems);
+            Properties.Settings.Default.Save();
+            UpdateProgress(clbSonicRushAdventure, progBarSonicRushAdventure, lblSonicRushAdventure, "Sonic Rush Adventure");
+        }
+        private void clbSonicUnleashedPS2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var checkedItems = clbSonicUnleashedPS2.CheckedIndices.Cast<int>().ToArray();
+            Properties.Settings.Default.SonicUnleashedPS2CheckedItems = string.Join(",", checkedItems);
+            Properties.Settings.Default.Save();
+            UpdateProgress(clbSonicUnleashedPS2, progBarSonicUnleashedPS2, lblSonicUnleashedPS2, "Sonic Unleashed (PS2/Wii)");
+        }
+        private void clbSonicUnleashedPS3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var checkedItems = clbSonicUnleashedPS3.CheckedIndices.Cast<int>().ToArray();
+            Properties.Settings.Default.SonicUnleashedPS3CheckedItems = string.Join(",", checkedItems);
+            Properties.Settings.Default.Save();
+            UpdateProgress(clbSonicUnleashedPS3, progBarSonicUnleashedPS3, lblSonicUnleashedPS3, "Sonic Unleashed (PS3/X360)");
         }
     }
 }

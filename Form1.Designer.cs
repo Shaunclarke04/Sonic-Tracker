@@ -36,6 +36,48 @@
             progBarSonicTheHedgehog1 = new ProgressBar();
             progBarSonicTheHedgehog2 = new ProgressBar();
             PanelContent = new Panel();
+            progBarSonicUnleashedPS3 = new ProgressBar();
+            clbSonicUnleashedPS3 = new CheckedListBox();
+            lblSonicUnleashedPS3 = new Label();
+            progBarSonicUnleashedPS2 = new ProgressBar();
+            clbSonicUnleashedPS2 = new CheckedListBox();
+            lblSonicUnleashedPS2 = new Label();
+            progBarSonicSecretRings = new ProgressBar();
+            clbSonicSecretRings = new CheckedListBox();
+            lblSonicSecretRings = new Label();
+            progBarSonicRushAdventure = new ProgressBar();
+            clbSonicRushAdventure = new CheckedListBox();
+            lblSonicRushAdventure = new Label();
+            progBarSonic06 = new ProgressBar();
+            clbSonic06 = new CheckedListBox();
+            lblSonic06 = new Label();
+            progBarShadowTheHedgehog = new ProgressBar();
+            clbShadowTheHedgehog = new CheckedListBox();
+            lblShadowTheHedgehog = new Label();
+            progBarSonicRush = new ProgressBar();
+            clbSonicRush = new CheckedListBox();
+            lblSonicRush = new Label();
+            progBarSonicAdvance3 = new ProgressBar();
+            clbSonicAdvance3 = new CheckedListBox();
+            lblSonicAdvance3 = new Label();
+            progBarSonicHeroes = new ProgressBar();
+            clbSonicHeroes = new CheckedListBox();
+            lblSonicHeroes = new Label();
+            progBarSonicAdvance2 = new ProgressBar();
+            clbSonicAdvance2 = new CheckedListBox();
+            lblSonicAdvance2 = new Label();
+            progBarSonicAdvance = new ProgressBar();
+            clbSonicAdvance = new CheckedListBox();
+            lblSonicAdvance = new Label();
+            progBarSonicAdventure2 = new ProgressBar();
+            clbSonicAdventure2 = new CheckedListBox();
+            lblSonicAdventure2 = new Label();
+            progBarSonicAdventure = new ProgressBar();
+            clbSonicAdventure = new CheckedListBox();
+            lblSonicAdventure = new Label();
+            progBarSonicPocketAdventure = new ProgressBar();
+            clbSonicPocketAdventure = new CheckedListBox();
+            lblSonicPocketAdventure = new Label();
             progBarSonic3DBlast = new ProgressBar();
             clbSonic3DBlast = new CheckedListBox();
             lblSonic3DBlast = new Label();
@@ -158,7 +200,49 @@
             // PanelContent
             // 
             PanelContent.AutoScroll = true;
-            PanelContent.AutoScrollMinSize = new Size(0, 2000);
+            PanelContent.AutoScrollMinSize = new Size(0, 5000);
+            PanelContent.Controls.Add(progBarSonicUnleashedPS3);
+            PanelContent.Controls.Add(clbSonicUnleashedPS3);
+            PanelContent.Controls.Add(lblSonicUnleashedPS3);
+            PanelContent.Controls.Add(progBarSonicUnleashedPS2);
+            PanelContent.Controls.Add(clbSonicUnleashedPS2);
+            PanelContent.Controls.Add(lblSonicUnleashedPS2);
+            PanelContent.Controls.Add(progBarSonicSecretRings);
+            PanelContent.Controls.Add(clbSonicSecretRings);
+            PanelContent.Controls.Add(lblSonicSecretRings);
+            PanelContent.Controls.Add(progBarSonicRushAdventure);
+            PanelContent.Controls.Add(clbSonicRushAdventure);
+            PanelContent.Controls.Add(lblSonicRushAdventure);
+            PanelContent.Controls.Add(progBarSonic06);
+            PanelContent.Controls.Add(clbSonic06);
+            PanelContent.Controls.Add(lblSonic06);
+            PanelContent.Controls.Add(progBarShadowTheHedgehog);
+            PanelContent.Controls.Add(clbShadowTheHedgehog);
+            PanelContent.Controls.Add(lblShadowTheHedgehog);
+            PanelContent.Controls.Add(progBarSonicRush);
+            PanelContent.Controls.Add(clbSonicRush);
+            PanelContent.Controls.Add(lblSonicRush);
+            PanelContent.Controls.Add(progBarSonicAdvance3);
+            PanelContent.Controls.Add(clbSonicAdvance3);
+            PanelContent.Controls.Add(lblSonicAdvance3);
+            PanelContent.Controls.Add(progBarSonicHeroes);
+            PanelContent.Controls.Add(clbSonicHeroes);
+            PanelContent.Controls.Add(lblSonicHeroes);
+            PanelContent.Controls.Add(progBarSonicAdvance2);
+            PanelContent.Controls.Add(clbSonicAdvance2);
+            PanelContent.Controls.Add(lblSonicAdvance2);
+            PanelContent.Controls.Add(progBarSonicAdvance);
+            PanelContent.Controls.Add(clbSonicAdvance);
+            PanelContent.Controls.Add(lblSonicAdvance);
+            PanelContent.Controls.Add(progBarSonicAdventure2);
+            PanelContent.Controls.Add(clbSonicAdventure2);
+            PanelContent.Controls.Add(lblSonicAdventure2);
+            PanelContent.Controls.Add(progBarSonicAdventure);
+            PanelContent.Controls.Add(clbSonicAdventure);
+            PanelContent.Controls.Add(lblSonicAdventure);
+            PanelContent.Controls.Add(progBarSonicPocketAdventure);
+            PanelContent.Controls.Add(clbSonicPocketAdventure);
+            PanelContent.Controls.Add(lblSonicPocketAdventure);
             PanelContent.Controls.Add(progBarSonic3DBlast);
             PanelContent.Controls.Add(clbSonic3DBlast);
             PanelContent.Controls.Add(lblSonic3DBlast);
@@ -194,6 +278,468 @@
             PanelContent.Name = "PanelContent";
             PanelContent.Size = new Size(484, 469);
             PanelContent.TabIndex = 8;
+            // 
+            // progBarSonicUnleashedPS3
+            // 
+            progBarSonicUnleashedPS3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            progBarSonicUnleashedPS3.Location = new Point(9, 3837);
+            progBarSonicUnleashedPS3.Name = "progBarSonicUnleashedPS3";
+            progBarSonicUnleashedPS3.Size = new Size(443, 23);
+            progBarSonicUnleashedPS3.TabIndex = 73;
+            // 
+            // clbSonicUnleashedPS3
+            // 
+            clbSonicUnleashedPS3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            clbSonicUnleashedPS3.CheckOnClick = true;
+            clbSonicUnleashedPS3.Font = new Font("Roboto", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            clbSonicUnleashedPS3.FormattingEnabled = true;
+            clbSonicUnleashedPS3.HorizontalScrollbar = true;
+            clbSonicUnleashedPS3.Items.AddRange(new object[] { "Windmill Isle (Day)", "Windmill Isle (Night)", "Tornado Defense (Act 1)", "Savannah Citadel (Day)", "Savannah Citadel (Night)", "Egg Beetle", "Rooftop Run (Night)", "Cool Edge (Day)", "Dragon Road (Night)", "Rooftop Run (Day)", "Dragon Road (Day)", "Dark Gaia Phoenix", "Cool Edge (Night)", "Dark Moray", "Arid Sands (Day)", "Arid Sands (Night)", "Dark Guardian", "Skyscraper Scamper (Day)", "Skyscraper Scamper (Night)", "Jungle Joyride (Day)", "Jungle Joyride (Night)", "Egg Lancer", "Tornado Defense (Act 2)", "Eggmanland", "Egg Dragoon", "Dark Gaia" });
+            clbSonicUnleashedPS3.Location = new Point(9, 3739);
+            clbSonicUnleashedPS3.Name = "clbSonicUnleashedPS3";
+            clbSonicUnleashedPS3.Size = new Size(443, 92);
+            clbSonicUnleashedPS3.TabIndex = 72;
+            clbSonicUnleashedPS3.SelectedIndexChanged += clbSonicUnleashedPS3_SelectedIndexChanged;
+            // 
+            // lblSonicUnleashedPS3
+            // 
+            lblSonicUnleashedPS3.AutoSize = true;
+            lblSonicUnleashedPS3.Font = new Font("Roboto Medium", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSonicUnleashedPS3.Location = new Point(9, 3707);
+            lblSonicUnleashedPS3.Margin = new Padding(0, 0, 3, 0);
+            lblSonicUnleashedPS3.Name = "lblSonicUnleashedPS3";
+            lblSonicUnleashedPS3.Size = new Size(350, 29);
+            lblSonicUnleashedPS3.TabIndex = 71;
+            lblSonicUnleashedPS3.Text = "Sonic Unleashed (PS3/X360)";
+            // 
+            // progBarSonicUnleashedPS2
+            // 
+            progBarSonicUnleashedPS2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            progBarSonicUnleashedPS2.Location = new Point(9, 3681);
+            progBarSonicUnleashedPS2.Name = "progBarSonicUnleashedPS2";
+            progBarSonicUnleashedPS2.Size = new Size(443, 23);
+            progBarSonicUnleashedPS2.TabIndex = 70;
+            // 
+            // clbSonicUnleashedPS2
+            // 
+            clbSonicUnleashedPS2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            clbSonicUnleashedPS2.CheckOnClick = true;
+            clbSonicUnleashedPS2.Font = new Font("Roboto", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            clbSonicUnleashedPS2.FormattingEnabled = true;
+            clbSonicUnleashedPS2.HorizontalScrollbar = true;
+            clbSonicUnleashedPS2.Items.AddRange(new object[] { "Windmill Isle (Day)", "Windmill Isle (Night)", "Egg Beetle", "Cool Edge (Day)", "Rooftop Run (Night)", "Dragon Road (Night)", "Dark Gaia Phoenix", "Rooftop Run (Day)", "Dragon Road (Day)", "Egg Devil Ray", "Cool Edge (Night)", "Dark Moray", "Arid Sands (Day)", "Jungle Joyride (Night)", "Arid Sands (Night)", "Dark Guardian", "Jungle Joyride (Day)", "Egg Lancer", "Eggmanland (Day)", "Eggmanland (Night)", "Egg Dragoon", "Dark Gaia", "Perfect Dark Gaia" });
+            clbSonicUnleashedPS2.Location = new Point(9, 3583);
+            clbSonicUnleashedPS2.Name = "clbSonicUnleashedPS2";
+            clbSonicUnleashedPS2.Size = new Size(443, 92);
+            clbSonicUnleashedPS2.TabIndex = 69;
+            clbSonicUnleashedPS2.SelectedIndexChanged += clbSonicUnleashedPS2_SelectedIndexChanged;
+            // 
+            // lblSonicUnleashedPS2
+            // 
+            lblSonicUnleashedPS2.AutoSize = true;
+            lblSonicUnleashedPS2.Font = new Font("Roboto Medium", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSonicUnleashedPS2.Location = new Point(9, 3551);
+            lblSonicUnleashedPS2.Margin = new Padding(0, 0, 3, 0);
+            lblSonicUnleashedPS2.Name = "lblSonicUnleashedPS2";
+            lblSonicUnleashedPS2.Size = new Size(325, 29);
+            lblSonicUnleashedPS2.TabIndex = 68;
+            lblSonicUnleashedPS2.Text = "Sonic Unleashed (PS2/Wii)";
+            // 
+            // progBarSonicSecretRings
+            // 
+            progBarSonicSecretRings.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            progBarSonicSecretRings.Location = new Point(9, 3369);
+            progBarSonicSecretRings.Name = "progBarSonicSecretRings";
+            progBarSonicSecretRings.Size = new Size(443, 23);
+            progBarSonicSecretRings.TabIndex = 67;
+            // 
+            // clbSonicSecretRings
+            // 
+            clbSonicSecretRings.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            clbSonicSecretRings.CheckOnClick = true;
+            clbSonicSecretRings.Font = new Font("Roboto", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            clbSonicSecretRings.FormattingEnabled = true;
+            clbSonicSecretRings.HorizontalScrollbar = true;
+            clbSonicSecretRings.Items.AddRange(new object[] { "Lost Prologue", "Sand Oasis", "Dinosaur Jungle", "Evil Foundry", "Levitated Ruin", "Pirate Storm", "Skeleton Dome", "Night Palace" });
+            clbSonicSecretRings.Location = new Point(9, 3271);
+            clbSonicSecretRings.Name = "clbSonicSecretRings";
+            clbSonicSecretRings.Size = new Size(443, 92);
+            clbSonicSecretRings.TabIndex = 66;
+            clbSonicSecretRings.SelectedIndexChanged += clbSonicSecretRings_SelectedIndexChanged;
+            // 
+            // lblSonicSecretRings
+            // 
+            lblSonicSecretRings.AutoSize = true;
+            lblSonicSecretRings.Font = new Font("Roboto Medium", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSonicSecretRings.Location = new Point(9, 3239);
+            lblSonicSecretRings.Margin = new Padding(0, 0, 3, 0);
+            lblSonicSecretRings.Name = "lblSonicSecretRings";
+            lblSonicSecretRings.Size = new Size(326, 29);
+            lblSonicSecretRings.TabIndex = 65;
+            lblSonicSecretRings.Text = "Sonic and the Secret Rings";
+            // 
+            // progBarSonicRushAdventure
+            // 
+            progBarSonicRushAdventure.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            progBarSonicRushAdventure.Location = new Point(9, 3525);
+            progBarSonicRushAdventure.Name = "progBarSonicRushAdventure";
+            progBarSonicRushAdventure.Size = new Size(443, 23);
+            progBarSonicRushAdventure.TabIndex = 64;
+            // 
+            // clbSonicRushAdventure
+            // 
+            clbSonicRushAdventure.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            clbSonicRushAdventure.CheckOnClick = true;
+            clbSonicRushAdventure.Font = new Font("Roboto", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            clbSonicRushAdventure.FormattingEnabled = true;
+            clbSonicRushAdventure.HorizontalScrollbar = true;
+            clbSonicRushAdventure.Items.AddRange(new object[] { "Plant Kingdom (Act 1)", "Plant Kingdom (Act 2)", "Machine Labyrinth (Act 1)", "Machine Labyrinth (Act 2)", "Coral Cave (Act 1)", "Coral Cave (Act 2)", "Haunted Ship (Act 1)", "Haunted Ship (Act 2)", "Sky Babylon (Act 1)", "Sky Babylon (Act 2)", "Pirate's Island", "Blizzard Peaks", "Hidden Island", "Big Swell", "Sky Sanctuary" });
+            clbSonicRushAdventure.Location = new Point(9, 3427);
+            clbSonicRushAdventure.Name = "clbSonicRushAdventure";
+            clbSonicRushAdventure.Size = new Size(443, 92);
+            clbSonicRushAdventure.TabIndex = 63;
+            clbSonicRushAdventure.SelectedIndexChanged += clbSonicRushAdventure_SelectedIndexChanged;
+            // 
+            // lblSonicRushAdventure
+            // 
+            lblSonicRushAdventure.AutoSize = true;
+            lblSonicRushAdventure.Font = new Font("Roboto Medium", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSonicRushAdventure.Location = new Point(9, 3395);
+            lblSonicRushAdventure.Margin = new Padding(0, 0, 3, 0);
+            lblSonicRushAdventure.Name = "lblSonicRushAdventure";
+            lblSonicRushAdventure.Size = new Size(268, 29);
+            lblSonicRushAdventure.TabIndex = 62;
+            lblSonicRushAdventure.Text = "Sonic Rush Adventure";
+            // 
+            // progBarSonic06
+            // 
+            progBarSonic06.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            progBarSonic06.Location = new Point(9, 3213);
+            progBarSonic06.Name = "progBarSonic06";
+            progBarSonic06.Size = new Size(443, 23);
+            progBarSonic06.TabIndex = 61;
+            // 
+            // clbSonic06
+            // 
+            clbSonic06.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            clbSonic06.CheckOnClick = true;
+            clbSonic06.Font = new Font("Roboto", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            clbSonic06.FormattingEnabled = true;
+            clbSonic06.HorizontalScrollbar = true;
+            clbSonic06.Items.AddRange(new object[] { "Wave Ocean (Sonic)", "Dusty Desert (Sonic)", "White Acropolis (Sonic)", "Crisis City (Sonic)", "Flame Core (Sonic)", "Radical Train (Sonic)", "Tropical Jungle (Sonic)", "Kingdom Valley (Sonic)", "Aquatic Base (Sonic)", "White Acropolis (Shadow)", "Kingdom Valley (Shadow)", "Crisis City (Shadow)", "Flame Core (Shadow)", "Tropical Jungle (Shadow)", "Radical Train (Shadow)", "Aquatic Base (Shadow)", "Wave Ocean (Shadow)", "Dusty Desert (Shadow)", "Crisis City (Silver)", "Tropical Jungle (Silver)", "Wave Ocean (Silver)", "Dusty Desert (Silver)", "White Acropolis (Silver)", "Radical Train (Silver)", "Aquatic Base (Silver)", "Kingdom Valley (Silver)", "Flame Core (Silver)", "End of the World" });
+            clbSonic06.Location = new Point(9, 3115);
+            clbSonic06.Name = "clbSonic06";
+            clbSonic06.Size = new Size(443, 92);
+            clbSonic06.TabIndex = 60;
+            clbSonic06.SelectedIndexChanged += clbSonic06_SelectedIndexChanged;
+            // 
+            // lblSonic06
+            // 
+            lblSonic06.AutoSize = true;
+            lblSonic06.Font = new Font("Roboto Medium", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSonic06.Location = new Point(9, 3083);
+            lblSonic06.Margin = new Padding(0, 0, 3, 0);
+            lblSonic06.Name = "lblSonic06";
+            lblSonic06.Size = new Size(395, 29);
+            lblSonic06.TabIndex = 59;
+            lblSonic06.Text = "Sonic The Hedgehog // Sonic '06";
+            // 
+            // progBarShadowTheHedgehog
+            // 
+            progBarShadowTheHedgehog.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            progBarShadowTheHedgehog.Location = new Point(9, 3057);
+            progBarShadowTheHedgehog.Name = "progBarShadowTheHedgehog";
+            progBarShadowTheHedgehog.Size = new Size(443, 23);
+            progBarShadowTheHedgehog.TabIndex = 58;
+            // 
+            // clbShadowTheHedgehog
+            // 
+            clbShadowTheHedgehog.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            clbShadowTheHedgehog.CheckOnClick = true;
+            clbShadowTheHedgehog.Font = new Font("Roboto", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            clbShadowTheHedgehog.FormattingEnabled = true;
+            clbShadowTheHedgehog.HorizontalScrollbar = true;
+            clbShadowTheHedgehog.Items.AddRange(new object[] { "Westopolis", "Digital Circuit", "Glyphic Canyon", "Lethal Highway", "Cryptic Castle", "Prison Island", "Circus Park", "Central City", "The Doom", "Sky Troops", "Mad Matrix", "Death Ruins", "The ARK", "Air Fleet", "Iron Jungle", "Space Gadget", "Lost Impact", "GUN Fortress", "Black Comet", "Lava Shelter", "Cosmic Fall", "Final Haunt", "The Last Way" });
+            clbShadowTheHedgehog.Location = new Point(9, 2959);
+            clbShadowTheHedgehog.Name = "clbShadowTheHedgehog";
+            clbShadowTheHedgehog.Size = new Size(443, 92);
+            clbShadowTheHedgehog.TabIndex = 57;
+            clbShadowTheHedgehog.SelectedIndexChanged += clbShadowTheHedgehog_SelectedIndexChanged;
+            // 
+            // lblShadowTheHedgehog
+            // 
+            lblShadowTheHedgehog.AutoSize = true;
+            lblShadowTheHedgehog.Font = new Font("Roboto Medium", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblShadowTheHedgehog.Location = new Point(9, 2927);
+            lblShadowTheHedgehog.Margin = new Padding(0, 0, 3, 0);
+            lblShadowTheHedgehog.Name = "lblShadowTheHedgehog";
+            lblShadowTheHedgehog.Size = new Size(282, 29);
+            lblShadowTheHedgehog.TabIndex = 56;
+            lblShadowTheHedgehog.Text = "Shadow The Hedgehog";
+            // 
+            // progBarSonicRush
+            // 
+            progBarSonicRush.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            progBarSonicRush.Location = new Point(9, 2901);
+            progBarSonicRush.Name = "progBarSonicRush";
+            progBarSonicRush.Size = new Size(443, 23);
+            progBarSonicRush.TabIndex = 55;
+            // 
+            // clbSonicRush
+            // 
+            clbSonicRush.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            clbSonicRush.CheckOnClick = true;
+            clbSonicRush.Font = new Font("Roboto", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            clbSonicRush.FormattingEnabled = true;
+            clbSonicRush.HorizontalScrollbar = true;
+            clbSonicRush.Items.AddRange(new object[] { "Leaf Storm (Act 1)", "Leaf Storm (Act 2)", "Water Palace (Act 1)", "Water Palace (Act 2)", "Mirage Road (Act 1)", "Mirage Road (Act 2)", "Night Carnival (Act 1)", "Night Carnival (Act 2)", "Huge Crisis (Act 1)", "Huge Crisis (Act 2)", "Altitude Limit (Act 1)", "Altitude Limit (Act 2)", "Dead Line (Act 1)", "Dead Line (Act 2)", "Exception" });
+            clbSonicRush.Location = new Point(9, 2803);
+            clbSonicRush.Name = "clbSonicRush";
+            clbSonicRush.Size = new Size(443, 92);
+            clbSonicRush.TabIndex = 54;
+            clbSonicRush.SelectedIndexChanged += clbSonicRush_SelectedIndexChanged;
+            // 
+            // lblSonicRush
+            // 
+            lblSonicRush.AutoSize = true;
+            lblSonicRush.Font = new Font("Roboto Medium", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSonicRush.Location = new Point(9, 2771);
+            lblSonicRush.Margin = new Padding(0, 0, 3, 0);
+            lblSonicRush.Name = "lblSonicRush";
+            lblSonicRush.Size = new Size(142, 29);
+            lblSonicRush.TabIndex = 53;
+            lblSonicRush.Text = "Sonic Rush";
+            // 
+            // progBarSonicAdvance3
+            // 
+            progBarSonicAdvance3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            progBarSonicAdvance3.Location = new Point(9, 2745);
+            progBarSonicAdvance3.Name = "progBarSonicAdvance3";
+            progBarSonicAdvance3.Size = new Size(443, 23);
+            progBarSonicAdvance3.TabIndex = 52;
+            // 
+            // clbSonicAdvance3
+            // 
+            clbSonicAdvance3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            clbSonicAdvance3.CheckOnClick = true;
+            clbSonicAdvance3.Font = new Font("Roboto", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            clbSonicAdvance3.FormattingEnabled = true;
+            clbSonicAdvance3.HorizontalScrollbar = true;
+            clbSonicAdvance3.Items.AddRange(new object[] { "Route 99 (Act 1)", "Route 99 (Act 2)", "Route 99 (Act 3)", "Sunset Hill (Act 1)", "Sunset Hill (Act 2)", "Sunset Hill (Act 3)", "Ocean Base (Act 1)", "Ocean Base (Act 2)", "Ocean Base (Act 3)", "Toy Kingdom (Act 1)", "Toy Kingdom (Act 2)", "Toy Kingdom (Act 3)", "Twinkle Snow (Act 1)", "Twinkle Snow (Act 2)", "Twinkle Snow (Act 3)", "Cyber Track (Act 1)", "Cyber Track (Act 2)", "Cyber Track (Act 3)", "Chaos Angel (Act 1)", "Chaos Angel (Act 2)", "Chaos Angel (Act 3)", "Altar Emerald", "Nonaggression" });
+            clbSonicAdvance3.Location = new Point(9, 2647);
+            clbSonicAdvance3.Name = "clbSonicAdvance3";
+            clbSonicAdvance3.Size = new Size(443, 92);
+            clbSonicAdvance3.TabIndex = 51;
+            clbSonicAdvance3.SelectedIndexChanged += clbSonicAdvance3_SelectedIndexChanged;
+            // 
+            // lblSonicAdvance3
+            // 
+            lblSonicAdvance3.AutoSize = true;
+            lblSonicAdvance3.Font = new Font("Roboto Medium", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSonicAdvance3.Location = new Point(9, 2615);
+            lblSonicAdvance3.Margin = new Padding(0, 0, 3, 0);
+            lblSonicAdvance3.Name = "lblSonicAdvance3";
+            lblSonicAdvance3.Size = new Size(208, 29);
+            lblSonicAdvance3.TabIndex = 50;
+            lblSonicAdvance3.Text = "Sonic Advance 3";
+            // 
+            // progBarSonicHeroes
+            // 
+            progBarSonicHeroes.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            progBarSonicHeroes.Location = new Point(9, 2589);
+            progBarSonicHeroes.Name = "progBarSonicHeroes";
+            progBarSonicHeroes.Size = new Size(443, 23);
+            progBarSonicHeroes.TabIndex = 49;
+            // 
+            // clbSonicHeroes
+            // 
+            clbSonicHeroes.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            clbSonicHeroes.CheckOnClick = true;
+            clbSonicHeroes.Font = new Font("Roboto", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            clbSonicHeroes.FormattingEnabled = true;
+            clbSonicHeroes.HorizontalScrollbar = true;
+            clbSonicHeroes.Items.AddRange(new object[] { "Seaside Hill (Team Sonic)", "Ocean Palace (Team Sonic)", "Grand Metropolis (Team Sonic)", "Power Plant (Team Sonic)", "Casino Park (Team Sonic)", "BINGO Highway (Team Sonic)", "Rail Canyon (Team Sonic)", "Bullet Station (Team Sonic)", "Frog Forest (Team Sonic)", "Lost Jungle (Team Sonic)", "Hang Castle (Team Sonic)", "Mystic Mansion (Team Sonic)", "Egg Fleet (Team Sonic)", "Final Fortress (Team Sonic)", "Seaside Hill (Team Dark)", "Ocean Palace (Team Dark)", "Grand Metropolis (Team Dark)", "Power Plant (Team Dark)", "Casino Park (Team Dark)", "BINGO Highway (Team Dark)", "Rail Canyon (Team Dark)", "Bullet Station (Team Dark)", "Frog Forest (Team Dark)", "Lost Jungle (Team Dark)", "Hang Castle (Team Dark)", "Mystic Mansion (Team Dark)", "Egg Fleet (Team Dark)", "Final Fortress (Team Dark)", "Seaside Hill (Team Rose)", "Ocean Palace (Team Rose)", "Grand Metropolis (Team Rose)", "Power Plant (Team Rose)", "Casino Park (Team Rose)", "BINGO Highway (Team Rose)", "Rail Canyon (Team Rose)", "Bullet Station (Team Rose)", "Frog Forest (Team Rose)", "Lost Jungle (Team Rose)", "Hang Castle (Team Rose)", "Mystic Mansion (Team Rose)", "Egg Fleet (Team Rose)", "Final Fortress (Team Rose)", "Seaside Hill (Team Chaotix)", "Ocean Palace (Team Chaotix)", "Grand Metropolis (Team Chaotix)", "Power Plant (Team Chaotix)", "Casino Park (Team Chaotix)", "BINGO Highway (Team Chaotix)", "Rail Canyon (Team Chaotix)", "Bullet Station (Team Chaotix)", "Frog Forest (Team Chaotix)", "Lost Jungle (Team Chaotix)", "Hang Castle (Team Chaotix)", "Mystic Mansion (Team Chaotix)", "Egg Fleet (Team Chaotix)", "Final Fortress (Team Chaotix)" });
+            clbSonicHeroes.Location = new Point(9, 2491);
+            clbSonicHeroes.Name = "clbSonicHeroes";
+            clbSonicHeroes.Size = new Size(443, 92);
+            clbSonicHeroes.TabIndex = 48;
+            clbSonicHeroes.SelectedIndexChanged += clbSonicHeroes_SelectedIndexChanged;
+            // 
+            // lblSonicHeroes
+            // 
+            lblSonicHeroes.AutoSize = true;
+            lblSonicHeroes.Font = new Font("Roboto Medium", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSonicHeroes.Location = new Point(9, 2459);
+            lblSonicHeroes.Margin = new Padding(0, 0, 3, 0);
+            lblSonicHeroes.Name = "lblSonicHeroes";
+            lblSonicHeroes.Size = new Size(168, 29);
+            lblSonicHeroes.TabIndex = 47;
+            lblSonicHeroes.Text = "Sonic Heroes";
+            // 
+            // progBarSonicAdvance2
+            // 
+            progBarSonicAdvance2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            progBarSonicAdvance2.Location = new Point(9, 2433);
+            progBarSonicAdvance2.Name = "progBarSonicAdvance2";
+            progBarSonicAdvance2.Size = new Size(443, 23);
+            progBarSonicAdvance2.TabIndex = 46;
+            // 
+            // clbSonicAdvance2
+            // 
+            clbSonicAdvance2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            clbSonicAdvance2.CheckOnClick = true;
+            clbSonicAdvance2.Font = new Font("Roboto", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            clbSonicAdvance2.FormattingEnabled = true;
+            clbSonicAdvance2.HorizontalScrollbar = true;
+            clbSonicAdvance2.Items.AddRange(new object[] { "Leaf Forest Zone (Act 1)", "Leaf Forest Zone (Act 2)", "Hot Crater Zone (Act 1)", "Hot Crater Zone (Act 2)", "Music Plant Zone (Act 1)", "Music Plant Zone (Act 2)", "Ice Paradise Zone (Act 1)", "Ice Paradise Zone (Act 2)", "Sky Canyon Zone (Act 1)", "Sky Canyon Zone (Act 2)", "Techno Base Zone (Act 1)", "Techno Base Zone (Act 2)", "Egg Utopia Zone (Act 1)", "Egg Utopia Zone (Act 2)", "XX Zone", "True Area 53" });
+            clbSonicAdvance2.Location = new Point(9, 2335);
+            clbSonicAdvance2.Name = "clbSonicAdvance2";
+            clbSonicAdvance2.Size = new Size(443, 92);
+            clbSonicAdvance2.TabIndex = 45;
+            clbSonicAdvance2.SelectedIndexChanged += clbSonicAdvance2_SelectedIndexChanged;
+            // 
+            // lblSonicAdvance2
+            // 
+            lblSonicAdvance2.AutoSize = true;
+            lblSonicAdvance2.Font = new Font("Roboto Medium", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSonicAdvance2.Location = new Point(9, 2303);
+            lblSonicAdvance2.Margin = new Padding(0, 0, 3, 0);
+            lblSonicAdvance2.Name = "lblSonicAdvance2";
+            lblSonicAdvance2.Size = new Size(208, 29);
+            lblSonicAdvance2.TabIndex = 44;
+            lblSonicAdvance2.Text = "Sonic Advance 2";
+            // 
+            // progBarSonicAdvance
+            // 
+            progBarSonicAdvance.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            progBarSonicAdvance.Location = new Point(12, 2277);
+            progBarSonicAdvance.Name = "progBarSonicAdvance";
+            progBarSonicAdvance.Size = new Size(443, 23);
+            progBarSonicAdvance.TabIndex = 43;
+            // 
+            // clbSonicAdvance
+            // 
+            clbSonicAdvance.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            clbSonicAdvance.CheckOnClick = true;
+            clbSonicAdvance.Font = new Font("Roboto", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            clbSonicAdvance.FormattingEnabled = true;
+            clbSonicAdvance.HorizontalScrollbar = true;
+            clbSonicAdvance.Items.AddRange(new object[] { "Neo Green Hill Zone (Act 1)", "Neo Green Hill Zone (Act 2)", "Secret Base Zone (Act 1)", "Secret Base Zone (Act 2)", "Casino Paradise Zone (Act 1)", "Casino Paradise Zone (Act 2)", "Ice Mountain Zone (Act 1)", "Ice Mountain Zone (Act 2)", "Angel Island Zone (Act 1)", "Angel Island Zone (Act 2)", "Egg Rocket Zone", "Cosmic Angel Zone", "X-Zone", "The Moon Zone" });
+            clbSonicAdvance.Location = new Point(12, 2179);
+            clbSonicAdvance.Name = "clbSonicAdvance";
+            clbSonicAdvance.Size = new Size(443, 92);
+            clbSonicAdvance.TabIndex = 42;
+            clbSonicAdvance.SelectedIndexChanged += clbSonicAdvance_SelectedIndexChanged;
+            // 
+            // lblSonicAdvance
+            // 
+            lblSonicAdvance.AutoSize = true;
+            lblSonicAdvance.Font = new Font("Roboto Medium", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSonicAdvance.Location = new Point(12, 2147);
+            lblSonicAdvance.Margin = new Padding(0, 0, 3, 0);
+            lblSonicAdvance.Name = "lblSonicAdvance";
+            lblSonicAdvance.Size = new Size(186, 29);
+            lblSonicAdvance.TabIndex = 41;
+            lblSonicAdvance.Text = "Sonic Advance";
+            // 
+            // progBarSonicAdventure2
+            // 
+            progBarSonicAdventure2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            progBarSonicAdventure2.Location = new Point(12, 2121);
+            progBarSonicAdventure2.Name = "progBarSonicAdventure2";
+            progBarSonicAdventure2.Size = new Size(443, 23);
+            progBarSonicAdventure2.TabIndex = 40;
+            // 
+            // clbSonicAdventure2
+            // 
+            clbSonicAdventure2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            clbSonicAdventure2.CheckOnClick = true;
+            clbSonicAdventure2.Font = new Font("Roboto", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            clbSonicAdventure2.FormattingEnabled = true;
+            clbSonicAdventure2.HorizontalScrollbar = true;
+            clbSonicAdventure2.Items.AddRange(new object[] { "City Escape (Sonic)", "Metal Harbor (Sonic)", "Green Forest (Sonic)", "Pyramid Cave (Sonic)", "Crazy Gadget (Sonic)", "Final Rush (Sonic)", "Cannon's Core (Sonic)", "Prison Lane (Tails)", "Mission Street (Tails)", "Route 101 (Tails)", "Hidden Base (Tails)", "Eternal Engine (Tails)", "Cannon's Core (Tails)", "Wild Canyon (Knuckles)", "Pumpkin Hill (Knuckles)", "Aquatic Mine (Knuckles)", "Death Chamber (Knuckles)", "Meteor Herd (Knuckles)", "Cannon's Core (Knuckles)", "Radical Highway (Shadow)", "White Jungle (Shadow)", "Sky Rail (Shadow)", "Final Chase (Shadow)", "Iron Gate (Eggman)", "Sand Ocean (Eggman)", "Lost Colony (Eggman)", "Weapons Bed (Eggman)", "Cosmic Wall (Eggman)", "Cannon's Core (Eggman)", "Dry Lagoon (Rouge)", "Egg Quarters (Rouge)", "Security Hall (Rouge)", "Route 280 (Rouge)", "Mad Space (Rouge)", "Cannon's Core (Rouge)" });
+            clbSonicAdventure2.Location = new Point(12, 2023);
+            clbSonicAdventure2.Name = "clbSonicAdventure2";
+            clbSonicAdventure2.Size = new Size(443, 92);
+            clbSonicAdventure2.TabIndex = 39;
+            clbSonicAdventure2.SelectedIndexChanged += clbSonicAdventure2_SelectedIndexChanged;
+            // 
+            // lblSonicAdventure2
+            // 
+            lblSonicAdventure2.AutoSize = true;
+            lblSonicAdventure2.Font = new Font("Roboto Medium", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSonicAdventure2.Location = new Point(12, 1991);
+            lblSonicAdventure2.Margin = new Padding(0, 0, 3, 0);
+            lblSonicAdventure2.Name = "lblSonicAdventure2";
+            lblSonicAdventure2.Size = new Size(226, 29);
+            lblSonicAdventure2.TabIndex = 38;
+            lblSonicAdventure2.Text = "Sonic Adventure 2";
+            // 
+            // progBarSonicAdventure
+            // 
+            progBarSonicAdventure.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            progBarSonicAdventure.Location = new Point(12, 1965);
+            progBarSonicAdventure.Name = "progBarSonicAdventure";
+            progBarSonicAdventure.Size = new Size(443, 23);
+            progBarSonicAdventure.TabIndex = 37;
+            // 
+            // clbSonicAdventure
+            // 
+            clbSonicAdventure.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            clbSonicAdventure.CheckOnClick = true;
+            clbSonicAdventure.Font = new Font("Roboto", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            clbSonicAdventure.FormattingEnabled = true;
+            clbSonicAdventure.HorizontalScrollbar = true;
+            clbSonicAdventure.Items.AddRange(new object[] { "Emerald Coast (Sonic)", "Windy Valley (Sonic)", "Casinopolis (Sonic)", "Icecap (Sonic)", "Twinkle Park (Sonic)", "Speed Highway (Sonic)", "Red Mountain (Sonic)", "Sky Deck (Sonic)", "Lost World (Sonic)", "Final Egg (Sonic)", "Windy Valley (Tails)", "Casinopolis (Tails)", "Icecap (Tails)", "Speed Highway (Tails)", "Sky Deck (Tails)", "Casinopolis (Knuckles)", "Speed Highway (Knuckles)", "Red Mountain (Knuckles)", "Sky Deck (Knuckles)", "Lost World (Knuckles)", "Twinkle Park (Amy)", "Hot Shelter (Amy)", "Final Egg (Amy)", "Emerald Coast (Big)", "Icecap (Big)", "Twinkle Park (Big)", "Hot Shelter (Big)", "Emerald Coast (Gamma)", "Windy Valley (Gamma)", "Red Mountain (Gamma)", "Final Egg (Gamma)", "Hot Shelter (Gamma)" });
+            clbSonicAdventure.Location = new Point(12, 1867);
+            clbSonicAdventure.Name = "clbSonicAdventure";
+            clbSonicAdventure.Size = new Size(443, 92);
+            clbSonicAdventure.TabIndex = 36;
+            clbSonicAdventure.SelectedIndexChanged += clbSonicAdventure_SelectedIndexChanged;
+            // 
+            // lblSonicAdventure
+            // 
+            lblSonicAdventure.AutoSize = true;
+            lblSonicAdventure.Font = new Font("Roboto Medium", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSonicAdventure.Location = new Point(12, 1835);
+            lblSonicAdventure.Margin = new Padding(0, 0, 3, 0);
+            lblSonicAdventure.Name = "lblSonicAdventure";
+            lblSonicAdventure.Size = new Size(204, 29);
+            lblSonicAdventure.TabIndex = 35;
+            lblSonicAdventure.Text = "Sonic Adventure";
+            // 
+            // progBarSonicPocketAdventure
+            // 
+            progBarSonicPocketAdventure.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            progBarSonicPocketAdventure.Location = new Point(12, 1809);
+            progBarSonicPocketAdventure.Name = "progBarSonicPocketAdventure";
+            progBarSonicPocketAdventure.Size = new Size(443, 23);
+            progBarSonicPocketAdventure.TabIndex = 34;
+            // 
+            // clbSonicPocketAdventure
+            // 
+            clbSonicPocketAdventure.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            clbSonicPocketAdventure.CheckOnClick = true;
+            clbSonicPocketAdventure.Font = new Font("Roboto", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            clbSonicPocketAdventure.FormattingEnabled = true;
+            clbSonicPocketAdventure.HorizontalScrollbar = true;
+            clbSonicPocketAdventure.Items.AddRange(new object[] { "Neo South Island Zone (Act 1)", "Neo South Island Zone (Act 2)", "Secret Plant Zone (Act 1)", "Secret Plant Zone (Act 2)", "Cosmic Casino Zone (Act 1)", "Cosmic Casino Zone (Act 2)", "Aquatic Relix Zone (Act 1)", "Aquatic Relix Zone (Act 2)", "Sky Chase Zone (Act 1)", "Aerobase Zone (Act 1)", "Gigantic Angel Zone (Act 1)", "Gigantic Angel Zone (Act 2)", "Last Utopia Zone (Act 1)", "Chaotic Space Zone (Act 1)" });
+            clbSonicPocketAdventure.Location = new Point(12, 1711);
+            clbSonicPocketAdventure.Name = "clbSonicPocketAdventure";
+            clbSonicPocketAdventure.Size = new Size(443, 92);
+            clbSonicPocketAdventure.TabIndex = 33;
+            clbSonicPocketAdventure.SelectedIndexChanged += clbSonicPocketAdventure_SelectedIndexChanged;
+            // 
+            // lblSonicPocketAdventure
+            // 
+            lblSonicPocketAdventure.AutoSize = true;
+            lblSonicPocketAdventure.Font = new Font("Roboto Medium", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSonicPocketAdventure.Location = new Point(12, 1679);
+            lblSonicPocketAdventure.Margin = new Padding(0, 0, 3, 0);
+            lblSonicPocketAdventure.Name = "lblSonicPocketAdventure";
+            lblSonicPocketAdventure.Size = new Size(293, 29);
+            lblSonicPocketAdventure.TabIndex = 32;
+            lblSonicPocketAdventure.Text = "Sonic Pocket Adventure";
             // 
             // progBarSonic3DBlast
             // 
@@ -643,5 +1189,47 @@
         private Label lblSonic3DBlast;
         private PictureBox btnSettings;
         private PictureBox btnInfo;
+        private ProgressBar progBarSonicPocketAdventure;
+        private CheckedListBox clbSonicPocketAdventure;
+        private Label lblSonicPocketAdventure;
+        private ProgressBar progBarSonicAdventure;
+        private CheckedListBox clbSonicAdventure;
+        private Label lblSonicAdventure;
+        private ProgressBar progBarSonicAdventure2;
+        private CheckedListBox clbSonicAdventure2;
+        private Label lblSonicAdventure2;
+        private ProgressBar progBarSonicAdvance;
+        private CheckedListBox clbSonicAdvance;
+        private Label lblSonicAdvance;
+        private ProgressBar progBarSonicAdvance2;
+        private CheckedListBox clbSonicAdvance2;
+        private Label lblSonicAdvance2;
+        private ProgressBar progBarSonicHeroes;
+        private CheckedListBox clbSonicHeroes;
+        private Label lblSonicHeroes;
+        private ProgressBar progBarSonicAdvance3;
+        private CheckedListBox clbSonicAdvance3;
+        private Label lblSonicAdvance3;
+        private ProgressBar progBarSonicRush;
+        private CheckedListBox clbSonicRush;
+        private Label lblSonicRush;
+        private ProgressBar progBarShadowTheHedgehog;
+        private CheckedListBox clbShadowTheHedgehog;
+        private Label lblShadowTheHedgehog;
+        private ProgressBar progBarSonic06;
+        private CheckedListBox clbSonic06;
+        private Label lblSonic06;
+        private ProgressBar progBarSonicRushAdventure;
+        private CheckedListBox clbSonicRushAdventure;
+        private Label lblSonicRushAdventure;
+        private ProgressBar progBarSonicSecretRings;
+        private CheckedListBox clbSonicSecretRings;
+        private Label lblSonicSecretRings;
+        private ProgressBar progBarSonicUnleashedPS2;
+        private CheckedListBox clbSonicUnleashedPS2;
+        private Label lblSonicUnleashedPS2;
+        private ProgressBar progBarSonicUnleashedPS3;
+        private CheckedListBox clbSonicUnleashedPS3;
+        private Label lblSonicUnleashedPS3;
     }
 }
