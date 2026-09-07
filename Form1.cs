@@ -189,7 +189,7 @@ namespace SonicTracker
             UpdateProgress(clbSonic06, progBarSonic06, lblSonic06, "Sonic the Hedgehog // Sonic '06");
             UpdateProgress(clbSonicSecretRings, progBarSonicSecretRings, lblSonicSecretRings, "Sonic and the Secret Rings");
             UpdateProgress(clbSonicRushAdventure, progBarSonicRushAdventure, lblSonicRushAdventure, "Sonic Rush Adventure");
-            UpdateProgress(clbSonicUnleashedPS2, progBarSonicUnleashedPS2, lblSonicUnleashedPS2, "Sonic Unleashed (PS2/Wii");
+            UpdateProgress(clbSonicUnleashedPS2, progBarSonicUnleashedPS2, lblSonicUnleashedPS2, "Sonic Unleashed (PS2/Wii)");
             UpdateProgress(clbSonicUnleashedPS3, progBarSonicUnleashedPS3, lblSonicUnleashedPS3, "Sonic Unleashed (PS3/X360)");
         }
 
