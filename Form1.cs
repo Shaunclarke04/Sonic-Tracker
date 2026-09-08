@@ -10,7 +10,7 @@ namespace SonicTracker
         {
             InitializeComponent();
 
-            //Initialize the list of searchable labels
+            //Define the list of searchable labels
             searchableLabels = new List<Label>
             {
                 lblSonic1,
@@ -37,17 +37,30 @@ namespace SonicTracker
                 lblSonicRushAdventure,
                 lblSonicUnleashedPS2,
                 lblSonicUnleashedPS3,
+                lblSonicBlackNight,
+                lblSonic4E1,
+                lblSonicColors,
+                lblSonicGenerations,
+                lblSonic4E2,
+                lblSonicLostWorld,
+                lblSonicBoomLyric,
+                lblSonicBoomShatteredCrystal,
             };
 
             //update UI based on saved settings
             FinalizeLoad();
         }
+        //Initialize the list of searchable labels
+        public List<Label> searchableLabels;
 
+        //open settings form when the settings button is clicked
         private void btnSettings_Click(object sender, EventArgs e)
         {
             Form2 form = new Form2(this);
             form.Show();
         }
+
+        //display information about the application when the info button is clicked
         private void btnInfo_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Sonic Tracker v0.1\n\nDeveloped by: Shaun Clarke\n\nThis application is a personal project and is not affiliated with or endorsed by SEGA, Sonic Team or any other company.\n\nAll rights to the Sonic the Hedgehog franchise and its characters are owned by SEGA.\n\nSee footer links for more details", "About Sonic Tracker", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -163,6 +176,14 @@ namespace SonicTracker
             LoadCheckedItems(clbSonicRushAdventure, Properties.Settings.Default.SonicRushAdventureCheckedItems);
             LoadCheckedItems(clbSonicUnleashedPS2, Properties.Settings.Default.SonicUnleashedPS2CheckedItems);
             LoadCheckedItems(clbSonicUnleashedPS3, Properties.Settings.Default.SonicUnleashedPS3CheckedItems);
+            LoadCheckedItems(clbSonicBlackNight, Properties.Settings.Default.SonicBlackNightCheckedItems);
+            LoadCheckedItems(clbSonic4E1, Properties.Settings.Default.Sonic4E1CheckedItems);
+            LoadCheckedItems(clbSonicColors, Properties.Settings.Default.SonicColorsCheckedItems);
+            LoadCheckedItems(clbSonicGenerations, Properties.Settings.Default.SonicGenerationsCheckedItems);
+            LoadCheckedItems(clbSonic4E2, Properties.Settings.Default.Sonic4E2CheckedItems);
+            LoadCheckedItems(clbSonicLostWorld, Properties.Settings.Default.SonicLostWorldCheckedItems);
+            LoadCheckedItems(clbSonicBoomLyric, Properties.Settings.Default.SonicBoomLyricCheckedItems);
+            LoadCheckedItems(clbSonicBoomShatteredCrystal, Properties.Settings.Default.SonicBoomShatteredCrystalCheckedItems);
 
             //update progress 
             UpdateProgress(clbSonicTheHedgehog1, progBarSonicTheHedgehog1, lblSonic1, "Sonic the Hedgehog");
@@ -187,8 +208,16 @@ namespace SonicTracker
             UpdateProgress(clbSonic06, progBarSonic06, lblSonic06, "Sonic the Hedgehog // Sonic '06");
             UpdateProgress(clbSonicSecretRings, progBarSonicSecretRings, lblSonicSecretRings, "Sonic and the Secret Rings");
             UpdateProgress(clbSonicRushAdventure, progBarSonicRushAdventure, lblSonicRushAdventure, "Sonic Rush Adventure");
-            UpdateProgress(clbSonicUnleashedPS2, progBarSonicUnleashedPS2, lblSonicUnleashedPS2, "Sonic Unleashed (PS2/Wii)");
-            UpdateProgress(clbSonicUnleashedPS3, progBarSonicUnleashedPS3, lblSonicUnleashedPS3, "Sonic Unleashed (PS3/X360)");
+            UpdateProgress(clbSonicUnleashedPS2, progBarSonicUnleashedPS2, lblSonicUnleashedPS2, "Sonic Unleashed (EU/US) (PS2/Wii)\nSonic World Adventure (JP)");
+            UpdateProgress(clbSonicUnleashedPS3, progBarSonicUnleashedPS3, lblSonicUnleashedPS3, "Sonic Unleashed (EU/US) (PS3/X360)\nSonic World Adventure (JP)");
+            UpdateProgress(clbSonicBlackNight, progBarSonicBlackNight, lblSonicBlackNight, "Sonic and the Black Knight");
+            UpdateProgress(clbSonic4E1, progBarSonic4E1, lblSonic4E1, "Sonic the Hedgehog 4: Episode I");
+            UpdateProgress(clbSonicColors, progBarSonicColors, lblSonicColors, "Sonic Colors");
+            UpdateProgress(clbSonicGenerations, progBarSonicGenerations, lblSonicGenerations, "Sonic Generations");
+            UpdateProgress(clbSonic4E2, progBarSonic4E2, lblSonic4E2, "Sonic the Hedgehog 4: Episode II");
+            UpdateProgress(clbSonicLostWorld, progBarSonicLostWorld, lblSonicLostWorld, "Sonic Lost World");
+            UpdateProgress(clbSonicBoomLyric, progBarSonicBoomLyric, lblSonicBoomLyric, "Sonic Boom: Rise of Lyric");
+            UpdateProgress(clbSonicBoomShatteredCrystal, progBarSonicBoomShatteredCrystal, lblSonicBoomShatteredCrystal, "Sonic Boom: Shattered Crystal");
         }
 
         //save checked items to settings when a checked list box item is changed
@@ -351,14 +380,70 @@ namespace SonicTracker
             var checkedItems = clbSonicUnleashedPS2.CheckedIndices.Cast<int>().ToArray();
             Properties.Settings.Default.SonicUnleashedPS2CheckedItems = string.Join(",", checkedItems);
             Properties.Settings.Default.Save();
-            UpdateProgress(clbSonicUnleashedPS2, progBarSonicUnleashedPS2, lblSonicUnleashedPS2, "Sonic Unleashed (PS2/Wii)");
+            UpdateProgress(clbSonicUnleashedPS2, progBarSonicUnleashedPS2, lblSonicUnleashedPS2, "Sonic Unleashed (EU/US) (PS2/Wii)\nSonic World Adventure (JP)");
         }
         private void clbSonicUnleashedPS3_SelectedIndexChanged(object sender, EventArgs e)
         {
             var checkedItems = clbSonicUnleashedPS3.CheckedIndices.Cast<int>().ToArray();
             Properties.Settings.Default.SonicUnleashedPS3CheckedItems = string.Join(",", checkedItems);
             Properties.Settings.Default.Save();
-            UpdateProgress(clbSonicUnleashedPS3, progBarSonicUnleashedPS3, lblSonicUnleashedPS3, "Sonic Unleashed (PS3/X360)");
+            UpdateProgress(clbSonicUnleashedPS3, progBarSonicUnleashedPS3, lblSonicUnleashedPS3, "Sonic Unleashed (EU/US) (PS3/X360)\nSonic World Adventure (JP)");
+        }
+        private void clbSonicBlackNight_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var checkedItems = clbSonicBlackNight.CheckedIndices.Cast<int>().ToArray();
+            Properties.Settings.Default.SonicBlackNightCheckedItems = string.Join(",", checkedItems);
+            Properties.Settings.Default.Save();
+            UpdateProgress(clbSonicBlackNight, progBarSonicBlackNight, lblSonicBlackNight, "Sonic and the Black Knight");
+        }
+        private void clbSonic4E1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var checkedItems = clbSonic4E1.CheckedIndices.Cast<int>().ToArray();
+            Properties.Settings.Default.Sonic4E1CheckedItems = string.Join(",", checkedItems);
+            Properties.Settings.Default.Save();
+            UpdateProgress(clbSonic4E1, progBarSonic4E1, lblSonic4E1, "Sonic the Hedgehog 4: Episode I");
+        }
+        private void clbSonicColors_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var checkedItems = clbSonicColors.CheckedIndices.Cast<int>().ToArray();
+            Properties.Settings.Default.SonicColorsCheckedItems = string.Join(",", checkedItems);
+            Properties.Settings.Default.Save();
+            UpdateProgress(clbSonicColors, progBarSonicColors, lblSonicColors, "Sonic Colors");
+        }
+        private void clbSonicGenerations_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var checkedItems = clbSonicGenerations.CheckedIndices.Cast<int>().ToArray();
+            Properties.Settings.Default.SonicGenerationsCheckedItems = string.Join(",", checkedItems);
+            Properties.Settings.Default.Save();
+            UpdateProgress(clbSonicGenerations, progBarSonicGenerations, lblSonicGenerations, "Sonic Generations");
+        }
+        private void clbSonic4E2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var checkedItems = clbSonic4E2.CheckedIndices.Cast<int>().ToArray();
+            Properties.Settings.Default.Sonic4E2CheckedItems = string.Join(",", checkedItems);
+            Properties.Settings.Default.Save();
+            UpdateProgress(clbSonic4E2, progBarSonic4E2, lblSonic4E2, "Sonic the Hedgehog 4: Episode II");
+        }
+        private void clbSonicLostWorld_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var checkedItems = clbSonicLostWorld.CheckedIndices.Cast<int>().ToArray();
+            Properties.Settings.Default.SonicLostWorldCheckedItems = string.Join(",", checkedItems);
+            Properties.Settings.Default.Save();
+            UpdateProgress(clbSonicLostWorld, progBarSonicLostWorld, lblSonicLostWorld, "Sonic Lost World");
+        }
+        private void clbSonicBoomLyric_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var checkedItems = clbSonicBoomLyric.CheckedIndices.Cast<int>().ToArray();
+            Properties.Settings.Default.SonicBoomLyricCheckedItems = string.Join(",", checkedItems);
+            Properties.Settings.Default.Save();
+            UpdateProgress(clbSonicBoomLyric, progBarSonicBoomLyric, lblSonicBoomLyric, "Sonic Boom: Rise of Lyric");
+        }
+        private void clbSonicBoomShatteredCrystal_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var checkedItems = clbSonicBoomShatteredCrystal.CheckedIndices.Cast<int>().ToArray();
+            Properties.Settings.Default.SonicBoomShatteredCrystalCheckedItems = string.Join(",", checkedItems);
+            Properties.Settings.Default.Save();
+            UpdateProgress(clbSonicBoomShatteredCrystal, progBarSonicBoomShatteredCrystal, lblSonicBoomShatteredCrystal, "Sonic Boom: Shattered Crystal");
         }
     }
 }

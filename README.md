@@ -28,7 +28,15 @@ Track your progress in Sonic games with SonicTracker! This tool tracks which sta
 - Sonic The Hedgehog // Sonic '06
 - Sonic and the Secret Rings
 - Sonic Rush Adventure
-- Sonic Unleashed (both versions are seperate game lists, PlayStation versioning is used internally; lists are kinda messy - see [Act list changes](#act-list-changes))
+- Sonic Unleashed // Sonic World Adventure (both versions are seperate game lists, PlayStation versioning is used internally; lists are kinda messy - see [Act list changes](#act-list-changes))
+- Sonic and the Black Knight
+- Sonic the Hedgehog 4: Episode I
+- Sonic Colors
+- Sonic Generations
+- Sonic the Hedgehog 4: Episode II
+- Sonic Lost World
+- Sonic Boom: Rise of Lyric
+- Sonic Boom: Shattered Crystal
 
 ### more games coming soon
 
@@ -75,3 +83,47 @@ To do this, press Win + R, type `%appdata%/../local/SonicTracker`, then open the
 9. Run the app, make some changes and relaunch to make sure the data saves.
 
 ###### Please Note: Windows SmartScreen may prevent the app from running depending on your system security settings. This is to be expected as this is a new app in active development which hasnt yet been added to microsofts database. simply click "more info" and then "run anyway". You should only need to do this once.
+
+## Adding new Games
+
+1. in `Form1.cs [design]`, duplicate the label, checklistbox and progress bar from the bottom of the list and drag it underneath and ensure its lined up
+
+2. rename the elements using the same format as existing games (for example, Sonic the Hedgehog 2 uses `lblSonic2`, `clbSonic2`, and `progBarSonic2`)
+
+3. set default label text to the name of the game, if there are different names in each region, put each name on a different line and put the regions in brackets `(EU/US/JP)`, look at `Sonic Chaos // Sonic & Tails` as an example.
+
+4. open Settings.settings and add a new string setting with the name of the game and "CheckedItems" at the end (for example, `Sonic2CheckedItems`) and set the default value to an empty string
+
+5. open Form1.cs and add the following:
+   
+   a. in `searchableLabels` on line 14, add the name of your label to the bottom of the list
+   
+   a. in `FinalizeLoad()` on line 152, add a new `LoadCheckedItems()`call containing
+      
+      i. your checklistbox name
+      
+      ii. a reference to your new setting
+   
+   c. add an `UpdateProgress` Call containing
+      
+      i. your checklistbox name
+      
+      ii. your progress bar name
+      
+      iii. your label name
+      
+      iv. the name of your game as it appears in the label text
+   
+   d. add a new private `SelectedIndexChanged` method to the bottom of `Form1.cs` and use the same template as the previous function. ensure you update the following
+      
+      i. your checklistbox reference on linr ~1
+      
+      ii. your setting on line ~2
+      
+      iii. the `UpdateProgress()` method on Line ~4; copy the one you made earlier
+
+6. Open Form1.Designer.cs and locate the checklistbox you made in step 1/2
+
+7. add a the reference to the SelectedIndexChanged method you made in 5.a (e.g. `clbSonicCD.SelectedIndexChanged += clbSonicCD_SelectedIndexChanged;`)
+
+8. add the full game title to the bottom of the game list in README.md

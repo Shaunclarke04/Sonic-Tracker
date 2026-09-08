@@ -322,5 +322,101 @@ namespace SonicTracker.Properties {
                 this["SonicUnleashedPS3CheckedItems"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string SonicBlackNightCheckedItems {
+            get {
+                return ((string)(this["SonicBlackNightCheckedItems"]));
+            }
+            set {
+                this["SonicBlackNightCheckedItems"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Sonic4E1CheckedItems {
+            get {
+                return ((string)(this["Sonic4E1CheckedItems"]));
+            }
+            set {
+                this["Sonic4E1CheckedItems"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string SonicColorsCheckedItems {
+            get {
+                return ((string)(this["SonicColorsCheckedItems"]));
+            }
+            set {
+                this["SonicColorsCheckedItems"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string SonicGenerationsCheckedItems {
+            get {
+                return ((string)(this["SonicGenerationsCheckedItems"]));
+            }
+            set {
+                this["SonicGenerationsCheckedItems"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Sonic4E2CheckedItems {
+            get {
+                return ((string)(this["Sonic4E2CheckedItems"]));
+            }
+            set {
+                this["Sonic4E2CheckedItems"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string SonicLostWorldCheckedItems {
+            get {
+                return ((string)(this["SonicLostWorldCheckedItems"]));
+            }
+            set {
+                this["SonicLostWorldCheckedItems"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string SonicBoomLyricCheckedItems {
+            get {
+                return ((string)(this["SonicBoomLyricCheckedItems"]));
+            }
+            set {
+                this["SonicBoomLyricCheckedItems"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string SonicBoomShatteredCrystalCheckedItems {
+            get {
+                return ((string)(this["SonicBoomShatteredCrystalCheckedItems"]));
+            }
+            set {
+                this["SonicBoomShatteredCrystalCheckedItems"] = value;
+            }
+        }
     }
 }
