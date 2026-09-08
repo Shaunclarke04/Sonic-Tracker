@@ -116,7 +116,7 @@ To do this, press Win + R, type `%appdata%/../local/SonicTracker`, then open the
    
    d. add a new private `SelectedIndexChanged` method to the bottom of `Form1.cs` and use the same template as the previous function. ensure you update the following
       
-         i. your checklistbox reference on linr ~1
+         i. your checklistbox reference on line ~1
       
          ii. your setting on line ~2
       
