@@ -53,7 +53,6 @@ namespace SonicTracker
             MessageBox.Show("Sonic Tracker v0.1\n\nDeveloped by: Shaun Clarke\n\nThis application is a personal project and is not affiliated with or endorsed by SEGA, Sonic Team or any other company.\n\nAll rights to the Sonic the Hedgehog franchise and its characters are owned by SEGA.\n\nSee footer links for more details", "About Sonic Tracker", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        public List<Label> searchableLabels;
         //initialise search results flow layout panel
         private void tbSearch_TextChanged(object sender, EventArgs e)
         {
@@ -127,7 +126,6 @@ namespace SonicTracker
             //update label text with game title and progress readout
             label.Text = gameTitle + " - " + progressReadout;
         }
-
 
         //update progress bars based on checked items in the checked list boxes
         public void updateProgessBars(CheckedListBox listBox, ProgressBar progressBar)
