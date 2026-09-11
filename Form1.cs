@@ -71,7 +71,7 @@ namespace SonicTracker
         //display information about the application when the info button is clicked
         private void btnInfo_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Sonic Tracker v0.2\n\nDeveloped by: Shaun Clarke\n\nThis application is a personal project and is not affiliated with or endorsed by SEGA, Sonic Team or any other company.\n\nAll rights to the Sonic the Hedgehog franchise and its characters are owned by SEGA.\n\nSee footer links for more details", "About Sonic Tracker", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Sonic Tracker v0.2-beta.2\n\nDeveloped by: Shaun Clarke\n\nThis application is a personal project and is not affiliated with or endorsed by SEGA, Sonic Team or any other company.\n\nAll rights to the Sonic the Hedgehog franchise and its characters are owned by SEGA.\n\nSee footer links for more details", "About Sonic Tracker", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         //initialise search results flow layout panel
