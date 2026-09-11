@@ -35,8 +35,16 @@ Track your progress in Sonic games with SonicTracker! This tool tracks which sta
 - Sonic Generations
 - Sonic the Hedgehog 4: Episode II
 - Sonic Lost World
-- Sonic Boom: Rise of Lyric
-- Sonic Boom: Shattered Crystal
+- Sonic Boom: Rise of Lyric // Sonic Toon: Ancient Treasure
+- Sonic Boom: Shattered Crystal // Sonic Toon: Island Adventure
+- Sonic Boom: Fire & Ice // Sonic Toon: Fire & Ice
+- Sonic Mania
+- Sonic Forces
+- Sonic Colors: Ultimate
+- Sonic Frontiers
+- Sonic Superstars
+- Sonic Dream Team
+- Sonic X Shadow Generations
 
 ### more games coming soon
 
@@ -81,6 +89,8 @@ To do this, press Win + R, type `%appdata%/../local/SonicTracker`, then open the
    3. Create Shortcut (to create a shortcut which can be dragged to your desktop or another location)
 
 9. Run the app, make some changes and relaunch to make sure the data saves.
+
+### Pull udates from repo and build again to update.
 
 ###### Please Note: Windows SmartScreen may prevent the app from running depending on your system security settings. This is to be expected as this is a new app in active development which hasnt yet been added to microsofts database. simply click "more info" and then "run anyway". You should only need to do this once.
 

@@ -45,6 +45,14 @@ namespace SonicTracker
                 lblSonicLostWorld,
                 lblSonicBoomLyric,
                 lblSonicBoomShatteredCrystal,
+                lblSonicBoomFireIce,
+                lblSonicMania,
+                lblSonicForces,
+                lblSonicColorsUltimate,
+                lblSonicFrontiers,
+                lblSonicSuperstars,
+                lblSonicDreamTeam,
+                lblSonicShadowGenerations
             };
 
             //update UI based on saved settings
@@ -184,6 +192,14 @@ namespace SonicTracker
             LoadCheckedItems(clbSonicLostWorld, Properties.Settings.Default.SonicLostWorldCheckedItems);
             LoadCheckedItems(clbSonicBoomLyric, Properties.Settings.Default.SonicBoomLyricCheckedItems);
             LoadCheckedItems(clbSonicBoomShatteredCrystal, Properties.Settings.Default.SonicBoomShatteredCrystalCheckedItems);
+            LoadCheckedItems(clbSonicBoomFireIce, Properties.Settings.Default.SonicBoomFireIceCheckedItems);
+            LoadCheckedItems(clbSonicMania, Properties.Settings.Default.SonicManiaCheckedItems);
+            LoadCheckedItems(clbSonicForces, Properties.Settings.Default.SonicForcesCheckedItems);
+            LoadCheckedItems(clbSonicColorsUltimate, Properties.Settings.Default.SonicColorsUltimateCheckedItems);
+            LoadCheckedItems(clbSonicFrontiers, Properties.Settings.Default.SonicFrontiersCheckedItems);
+            LoadCheckedItems(clbSonicSuperstars, Properties.Settings.Default.SonicSuperstarsCheckedItems);
+            LoadCheckedItems(clbSonicDreamTeam, Properties.Settings.Default.SonicDreamTeamCheckedItems);
+            LoadCheckedItems(clbSonicShadowGenerations, Properties.Settings.Default.SonicShadowGenerationsCheckedItems);
 
             //update progress 
             UpdateProgress(clbSonicTheHedgehog1, progBarSonicTheHedgehog1, lblSonic1, "Sonic the Hedgehog");
@@ -216,8 +232,16 @@ namespace SonicTracker
             UpdateProgress(clbSonicGenerations, progBarSonicGenerations, lblSonicGenerations, "Sonic Generations");
             UpdateProgress(clbSonic4E2, progBarSonic4E2, lblSonic4E2, "Sonic the Hedgehog 4: Episode II");
             UpdateProgress(clbSonicLostWorld, progBarSonicLostWorld, lblSonicLostWorld, "Sonic Lost World");
-            UpdateProgress(clbSonicBoomLyric, progBarSonicBoomLyric, lblSonicBoomLyric, "Sonic Boom: Rise of Lyric");
-            UpdateProgress(clbSonicBoomShatteredCrystal, progBarSonicBoomShatteredCrystal, lblSonicBoomShatteredCrystal, "Sonic Boom: Shattered Crystal");
+            UpdateProgress(clbSonicBoomLyric, progBarSonicBoomLyric, lblSonicBoomLyric, "Sonic Boom: Rise of Lyric (EU/US)\nSonic Toon: Ancient Treasure (JP)");
+            UpdateProgress(clbSonicBoomShatteredCrystal, progBarSonicBoomShatteredCrystal, lblSonicBoomShatteredCrystal, "Sonic Boom: Shattered Crystal (EU/US)\nSonic Toon: Island Adventure (JP)");
+            UpdateProgress(clbSonicBoomFireIce, progBarSonicBoomFireIce, lblSonicBoomFireIce, "Sonic Boom: Fire && Ice (EU/US)\nSonic Toon: Fire && Ice (JP)");
+            UpdateProgress(clbSonicMania, progBarSonicMania, lblSonicMania, "Sonic Mania");
+            UpdateProgress(clbSonicForces, progBarSonicForces, lblSonicForces, "Sonic Forces");
+            UpdateProgress(clbSonicColorsUltimate, progBarSonicColorsUltimate, lblSonicColorsUltimate, "Sonic Colors: Ultimate");
+            UpdateProgress(clbSonicFrontiers, progBarSonicFrontiers, lblSonicFrontiers, "Sonic Frontiers");
+            UpdateProgress(clbSonicSuperstars, progBarSonicSuperstars, lblSonicSuperstars, "Sonic Superstars");
+            UpdateProgress(clbSonicDreamTeam, progBarSonicDreamTeam, lblSonicDreamTeam, "Sonic Dream Team");
+            UpdateProgress(clbSonicShadowGenerations, progBarSonicShadowGenerations, lblSonicShadowGenerations, "Sonic X Shadow Generations");
         }
 
         //save checked items to settings when a checked list box item is changed
@@ -436,14 +460,70 @@ namespace SonicTracker
             var checkedItems = clbSonicBoomLyric.CheckedIndices.Cast<int>().ToArray();
             Properties.Settings.Default.SonicBoomLyricCheckedItems = string.Join(",", checkedItems);
             Properties.Settings.Default.Save();
-            UpdateProgress(clbSonicBoomLyric, progBarSonicBoomLyric, lblSonicBoomLyric, "Sonic Boom: Rise of Lyric");
+            UpdateProgress(clbSonicBoomLyric, progBarSonicBoomLyric, lblSonicBoomLyric, "Sonic Boom: Rise of Lyric (EU/US)\nSonic Toon: Ancient Treasure (JP)");
         }
         private void clbSonicBoomShatteredCrystal_SelectedIndexChanged(object sender, EventArgs e)
         {
             var checkedItems = clbSonicBoomShatteredCrystal.CheckedIndices.Cast<int>().ToArray();
             Properties.Settings.Default.SonicBoomShatteredCrystalCheckedItems = string.Join(",", checkedItems);
             Properties.Settings.Default.Save();
-            UpdateProgress(clbSonicBoomShatteredCrystal, progBarSonicBoomShatteredCrystal, lblSonicBoomShatteredCrystal, "Sonic Boom: Shattered Crystal");
+            UpdateProgress(clbSonicBoomShatteredCrystal, progBarSonicBoomShatteredCrystal, lblSonicBoomShatteredCrystal, "Sonic Boom: Shattered Crystal (EU/US)\nSonic Toon: Island Adventure (JP)");
+        }
+        private void clbSonicBoomFireIce_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var checkedItems = clbSonicBoomFireIce.CheckedIndices.Cast<int>().ToArray();
+            Properties.Settings.Default.SonicBoomFireIceCheckedItems = string.Join(",", checkedItems);
+            Properties.Settings.Default.Save();
+            UpdateProgress(clbSonicBoomFireIce, progBarSonicBoomFireIce, lblSonicBoomFireIce, "Sonic Boom: Fire && Ice (EU/US)\nSonic Toon: Fire && Ice (JP)");
+        }
+        private void clbSonicMania_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var checkedItems = clbSonicMania.CheckedIndices.Cast<int>().ToArray();
+            Properties.Settings.Default.SonicManiaCheckedItems = string.Join(",", checkedItems);
+            Properties.Settings.Default.Save();
+            UpdateProgress(clbSonicMania, progBarSonicMania, lblSonicMania, "Sonic Mania");
+        }
+        private void clbSonicForces_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var checkedItems = clbSonicForces.CheckedIndices.Cast<int>().ToArray();
+            Properties.Settings.Default.SonicForcesCheckedItems = string.Join(",", checkedItems);
+            Properties.Settings.Default.Save();
+            UpdateProgress(clbSonicForces, progBarSonicForces, lblSonicForces, "Sonic Forces");
+        }
+        private void clbSonicColorsUltimate_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var checkedItems = clbSonicColorsUltimate.CheckedIndices.Cast<int>().ToArray();
+            Properties.Settings.Default.SonicColorsUltimateCheckedItems = string.Join(",", checkedItems);
+            Properties.Settings.Default.Save();
+            UpdateProgress(clbSonicColorsUltimate, progBarSonicColorsUltimate, lblSonicColorsUltimate, "Sonic Colors: Ultimate");
+        }
+        private void clbSonicFrontiers_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var checkedItems = clbSonicFrontiers.CheckedIndices.Cast<int>().ToArray();
+            Properties.Settings.Default.SonicFrontiersCheckedItems = string.Join(",", checkedItems);
+            Properties.Settings.Default.Save();
+            UpdateProgress(clbSonicFrontiers, progBarSonicFrontiers, lblSonicFrontiers, "Sonic Frontiers");
+        }
+        private void clbSonicSuperstars_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var checkedItems = clbSonicSuperstars.CheckedIndices.Cast<int>().ToArray();
+            Properties.Settings.Default.SonicSuperstarsCheckedItems = string.Join(",", checkedItems);
+            Properties.Settings.Default.Save();
+            UpdateProgress(clbSonicSuperstars, progBarSonicSuperstars, lblSonicSuperstars, "Sonic Superstars");
+        }
+        private void clbSonicDreamTeam_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var checkedItems = clbSonicDreamTeam.CheckedIndices.Cast<int>().ToArray();
+            Properties.Settings.Default.SonicDreamTeamCheckedItems = string.Join(",", checkedItems);
+            Properties.Settings.Default.Save();
+            UpdateProgress(clbSonicDreamTeam, progBarSonicDreamTeam, lblSonicDreamTeam, "Sonic Dream Team");
+        }
+        private void clbSonicShadowGenerations_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var checkedItems = clbSonicShadowGenerations.CheckedIndices.Cast<int>().ToArray();
+            Properties.Settings.Default.SonicShadowGenerationsCheckedItems = string.Join(",", checkedItems);
+            Properties.Settings.Default.Save();
+            UpdateProgress(clbSonicShadowGenerations, progBarSonicShadowGenerations, lblSonicShadowGenerations, "Sonic X Shadow Generations");
         }
     }
 }
