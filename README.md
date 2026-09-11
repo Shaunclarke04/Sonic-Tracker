@@ -82,11 +82,11 @@ To do this, press Win + R, type `%appdata%/../local/SonicTracker`, then open the
 
 8. go to the location you chose in step 5 and go to `\bin\Debug\net10.0-windows`, right click SonicTracker.exe and choose one of the following options:
    
-   1. Pin to Start (to have the app in your start menu)
+   a. Pin to Start (to have the app in your start menu)
    
-   2. Pin to Taskbar (to have the app on your taskbar)
+   b. Pin to Taskbar (to have the app on your taskbar)
    
-   3. Create Shortcut (to create a shortcut which can be dragged to your desktop or another location)
+   c. Create Shortcut (to create a shortcut which can be dragged to your desktop or another location)
 
 9. Run the app, make some changes and relaunch to make sure the data saves.
 
@@ -108,32 +108,32 @@ To do this, press Win + R, type `%appdata%/../local/SonicTracker`, then open the
    
    a. in `searchableLabels` on line 14, add the name of your label to the bottom of the list
    
-   a. in `FinalizeLoad()` on line 152, add a new `LoadCheckedItems()`call containing
+   b. in `FinalizeLoad()` on line 152, add a new `LoadCheckedItems()`call containing
+
+         i. your checklistbox name
       
-      i. your checklistbox name
-      
-      ii. a reference to your new setting
+         ii. a reference to your new setting
    
    c. add an `UpdateProgress` Call containing
       
-      i. your checklistbox name
+         i. your checklistbox name
       
-      ii. your progress bar name
+         ii. your progress bar name
       
-      iii. your label name
+         iii. your label name
       
-      iv. the name of your game as it appears in the label text
+         iv. the name of your game as it appears in the label text
    
    d. add a new private `SelectedIndexChanged` method to the bottom of `Form1.cs` and use the same template as the previous function. ensure you update the following
       
-      i. your checklistbox reference on linr ~1
+         i. your checklistbox reference on line ~1
       
-      ii. your setting on line ~2
+         ii. your setting on line ~2
       
-      iii. the `UpdateProgress()` method on Line ~4; copy the one you made earlier
+         iii. the `UpdateProgress()` method on Line ~4; copy the one you made earlier
 
-6. Open Form1.Designer.cs and locate the checklistbox you made in step 1/2
+7. Open Form1.Designer.cs and locate the checklistbox you made in step 1/2
 
-7. add a the reference to the SelectedIndexChanged method you made in 5.a (e.g. `clbSonicCD.SelectedIndexChanged += clbSonicCD_SelectedIndexChanged;`)
+8. add a the reference to the SelectedIndexChanged method you made in 5.a (e.g. `clbSonicCD.SelectedIndexChanged += clbSonicCD_SelectedIndexChanged;`)
 
-8. add the full game title to the bottom of the game list in README.md
+9. add the full game title to the bottom of the game list in README.md
