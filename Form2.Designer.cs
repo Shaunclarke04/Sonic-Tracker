@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             radBtnSettingsProgDispPercent = new RadioButton();
             radBtnSettingsProgDispFraction = new RadioButton();
             panel1 = new Panel();
@@ -104,6 +105,7 @@
             ClientSize = new Size(384, 361);
             Controls.Add(label1);
             Controls.Add(panel1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form2";
             Text = "Sonic Tracker Settings";
             panel1.ResumeLayout(false);

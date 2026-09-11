@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             lblTitle = new Label();
             lblSonic1 = new Label();
             clbSonicTheHedgehog1 = new CheckedListBox();
@@ -1755,6 +1756,7 @@
             Controls.Add(PanelContent);
             Controls.Add(PanelFooter);
             Controls.Add(PanelHeader);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MinimumSize = new Size(450, 500);
             Name = "Form1";
             Text = "  Sonic Tracker";
