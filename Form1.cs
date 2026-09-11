@@ -96,20 +96,22 @@ namespace SonicTracker
                         AutoSize = true
                     };
 
+                    //add result button to search results flow layout panel
+                    flpSearchResults.Controls.Add(result);
+
                     //jump to label and hide search results when result is clicked
                     result.Click += (s, e) =>
                     {
-                        label.Focus();
-
-                        if (label.Parent is ScrollableControl scrollableParent)
-                        {
-                            scrollableParent.AutoScrollPosition = new Point(0, label.Top);
-                        }
                         flpSearchResults.Visible = false;
-                    };
+                        tbSearch.Text = null;
 
-                    //add result button to search results flow layout panel
-                    flpSearchResults.Controls.Add(result);
+                        PanelContent.AutoScrollPosition = new Point(0, 0);
+
+                        PanelContent.BeginInvoke(() =>
+                        {
+                            PanelContent.AutoScrollPosition = new Point(0, label.Top);
+                        });
+                    };
                 }
             }
         }
