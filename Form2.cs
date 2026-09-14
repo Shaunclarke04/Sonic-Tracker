@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
@@ -44,6 +45,11 @@ namespace SonicTracker
 
                 mainForm.FinalizeLoad();
             }
+        }
+
+        private void btnCheckUpdate_Click(object sender, EventArgs e)
+        {
+            Process.Start(Path.Combine(AppContext.BaseDirectory, "Updater.exe"));
         }
     }
 }

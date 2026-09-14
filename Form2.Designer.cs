@@ -34,6 +34,7 @@
             panel1 = new Panel();
             lblSonic1 = new Label();
             label1 = new Label();
+            btnCheckUpdate = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -98,11 +99,23 @@
             label1.TabIndex = 3;
             label1.Text = "Sonic Tracker Settings";
             // 
+            // btnCheckUpdate
+            // 
+            btnCheckUpdate.Font = new Font("Roboto", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnCheckUpdate.Location = new Point(12, 139);
+            btnCheckUpdate.Name = "btnCheckUpdate";
+            btnCheckUpdate.Size = new Size(157, 35);
+            btnCheckUpdate.TabIndex = 4;
+            btnCheckUpdate.Text = "Check for Updates";
+            btnCheckUpdate.UseVisualStyleBackColor = true;
+            btnCheckUpdate.Click += btnCheckUpdate_Click;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(384, 361);
+            ClientSize = new Size(307, 188);
+            Controls.Add(btnCheckUpdate);
             Controls.Add(label1);
             Controls.Add(panel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -121,5 +134,6 @@
         private Panel panel1;
         private Label lblSonic1;
         private Label label1;
+        private Button btnCheckUpdate;
     }
 }
