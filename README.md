@@ -55,7 +55,7 @@ Track your progress in Sonic games with SonicTracker! This tool tracks which sta
 - Locally saved data in `%appdata%/../local/SonicTracker`
 - Quickly search for and jump to any game
 - Resizable and responsive UI
-- automatic updates (on full release)
+- buld-in updates (settings > check for updates)
 
 ## Act List Changes
 
