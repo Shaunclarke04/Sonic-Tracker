@@ -49,7 +49,12 @@ namespace SonicTracker
 
         private void btnCheckUpdate_Click(object sender, EventArgs e)
         {
-            Process.Start(Path.Combine(AppContext.BaseDirectory, "Updater.exe"));
+            mainForm.checkForUpdates();
+        }
+
+        private void btnResetSaveData_Click(object sender, EventArgs e)
+        {
+            mainForm.resetSaveData();
         }
     }
 }

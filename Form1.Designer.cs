@@ -153,16 +153,33 @@
             lblSonicCD = new Label();
             flpSearchResults = new FlowLayoutPanel();
             PanelHeader = new Panel();
+            menuStrip1 = new MenuStrip();
+            fileToolStripMenuItem = new ToolStripMenuItem();
+            openSaveFileToolStripMenuItem = new ToolStripMenuItem();
+            resetSaveDataToolStripMenuItem = new ToolStripMenuItem();
+            helpToolStripMenuItem = new ToolStripMenuItem();
+            aboutToolStripMenuItem = new ToolStripMenuItem();
+            toolStripSeparator1 = new ToolStripSeparator();
+            checkForUpdatesToolStripMenuItem = new ToolStripMenuItem();
+            toolStripSeparator2 = new ToolStripSeparator();
+            websiteToolStripMenuItem = new ToolStripMenuItem();
+            githubToolStripMenuItem = new ToolStripMenuItem();
+            sonicToolStripMenuItem = new ToolStripMenuItem();
+            transcendBinaryToolStripMenuItem = new ToolStripMenuItem();
             btnInfo = new PictureBox();
             btnSettings = new PictureBox();
             tbSearch = new TextBox();
             PanelFooter = new Panel();
-            linkLabel3 = new LinkLabel();
-            linkLabel2 = new LinkLabel();
+            linkLabelGithub = new LinkLabel();
+            linkLabelSonic = new LinkLabel();
             label1 = new Label();
-            linkLabel1 = new LinkLabel();
+            linkLabelWebsite = new LinkLabel();
+            productPageToolStripMenuItem = new ToolStripMenuItem();
+            toolStripSeparator3 = new ToolStripSeparator();
+            toolStripSeparator4 = new ToolStripSeparator();
             PanelContent.SuspendLayout();
             PanelHeader.SuspendLayout();
+            menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnInfo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnSettings).BeginInit();
             PanelFooter.SuspendLayout();
@@ -173,7 +190,7 @@
             lblTitle.Anchor = AnchorStyles.None;
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Roboto Black", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitle.Location = new Point(110, 0);
+            lblTitle.Location = new Point(112, 29);
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new Size(312, 58);
             lblTitle.TabIndex = 0;
@@ -371,9 +388,9 @@
             PanelContent.Controls.Add(progBarSonicTheHedgehog1);
             PanelContent.Controls.Add(progBarSonicTheHedgehog2);
             PanelContent.Dock = DockStyle.Fill;
-            PanelContent.Location = new Point(0, 90);
+            PanelContent.Location = new Point(0, 120);
             PanelContent.Name = "PanelContent";
-            PanelContent.Size = new Size(530, 469);
+            PanelContent.Size = new Size(530, 439);
             PanelContent.TabIndex = 8;
             // 
             // progBarSonicShadowGenerations
@@ -391,7 +408,7 @@
             clbSonicShadowGenerations.Font = new Font("Roboto", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             clbSonicShadowGenerations.FormattingEnabled = true;
             clbSonicShadowGenerations.HorizontalScrollbar = true;
-            clbSonicShadowGenerations.Items.AddRange(new object[] { "[stage] Green Hill (Act 1) - Sonic Generations", "[stage] Green Hill (Act 2) - Sonic Generations", "[challenge] Doppelganger Race! (Green Hill Act 1) - Sonic Generations", "[challenge] The Buzz Bombers' Revenge! (Green Hill Act 1) - Sonic Generations", "[challenge] Knuckles: Horde of Enemies (Green Hill Act 1) - Sonic Generations", "[challenge] Swingset Circus (Green Hill Act 1) - Sonic Generations", "[challenge] High Speed Challenge (Green Hill Act 1) - Sonic Generations", "[challenge] Look Out Below! (Green Hill Act 2) - Sonic Generations", "[challenge] Tails: Way Past Fast (Green Hill Act 2) - Sonic Generations", "[challenge] Doppelganger Race! (Green Hill Act 2) - Sonic Generations", "[challenge] Jump Rush (Green Hill Act 2) - Sonic Generations", "[challenge] 300% Boost Gauge Challenge (Green Hill Act 2) - Sonic Generations", "[stage] Chemical Plant (Act 1) - Sonic Generations", "[stage] Chemical Plant (Act 2) - Sonic Generations", "[challenge] Tails: Toxic Skies (Chemical Plant Act 1) - Sonic Generations", "[challenge] Which Switch is Which? (Chemical Plant Act 1) - Sonic Generations", "[challenge] Aqua Shield Challenge (Chemical Plant Act 1) - Sonic Generations", "[challenge] Doppelganger Race! (Chemical Plant Act 1) - Sonic Generations", "[challenge] Invincibility Challenge (Chemical Plant Act 1) - Sonic Generations", "[challenge] One Ring Challenge (Chemical Plant Act 2) - Sonic Generations", "[challenge] Doppelganger Race! (Chemical Plant Act 2) - Sonic Generations", "[challenge] Amy: Taking the Leap Together! (Chemical Plant Act 2) - Sonic Generations", "[challenge] Grappling with Grabbers (Chemical Plant Act 2) - Sonic Generations", "[challenge] Underwater Ring Machine (Chemical Plant Act 2) - Sonic Generations", "[stage] Sky Sanctuary (Act 1) - Sonic Generations", "[stage] Sky Sanctuary (Act 2) - Sonic Generations", "[challenge] Doppelganger Race! (Sky Sanctuary Act 1) - Sonic Generations", "[challenge] Eggrobo Rush (Sky Sanctuary Act 1) - Sonic Generations", "[challenge] Aerial Paradise (Sky Sanctuary Act 1) - Sonic Generations", "[challenge] Ring Time Challenge (Sky Sanctuary Act 1) - Sonic Generations", "[challenge] Amy: Topsy Turvy (Sky Sanctuary Act 1) - Sonic Generations", "[challenge] Knuckles: Buried Treasure (Sky Sanctuary Act 2) - Sonic Generations", "[challenge] 200% Boost Gauge Challenge (Sky Sanctuary Act 2) - Sonic Generations", "[challenge] Balloon Bonanza (Sky Sanctuary Act 2) - Sonic Generations", "[challenge] Doppelganger Race! (Sky Sanctuary Act 2) - Sonic Generations", "[challenge] High-Speed Hijinks (Sky Sanctuary Act 2) - Sonic Generations", "[rival] Metal Sonic - Sonic Generations", "[boss] Death Egg Robot - Sonic Generations", "[stage] Speed Highway (Act 1) - Sonic Generations", "[stage] Speed Highway (Act 2) - Sonic Generations", "[challenge] Cream: Chao Hunt (Speed Highway Act 1) - Sonic Generations", "[challenge] Hot Pursuit (Speed Highway Act 1) - Sonic Generations", "[challenge] High Speed Challenge 2 (Speed Highway Act 1) - Sonic Generations", "[challenge] Resisting Arrest (Speed Highway Act 1) - Sonic Generations", "[challenge] Doppelganger Race! (Speed Highway Act 1) - Sonic Generations", "[challenge] Overdrift (Speed Highway Act 2) - Sonic Generations", "[challenge] Hot Pursuit (Speed Highway Act 2) - Sonic Generations", "[challenge] Doppelganger Race! (Speed Highway Act 2) - Sonic Generations", "[challenge] Drill Baby Drill (Speed Highway Act 2) - Sonic Generations", "[challenge] Espio: Master of Camouflage (Speed Highway Act 2) - Sonic Generations", "[stage] City Escape (Act 1) - Sonic Generations", "[stage] City Escape (Act 2) - Sonic Generations", "[challenge] Lord of the Board (City Escape Act 1) - Sonic Generations", "[challenge] Thunder Shield Challenge (City Escape Act 1) - Sonic Generations", "[challenge] Rouge: The Bombardier (City Escape Act 1) - Sonic Generations", "[challenge] Doppelganger Race! (City Escape Act 1) - Sonic Generations", "[challenge] Rite of Spring (City Escape Act 1) - Sonic Generations", "[challenge] Cream: Helping Hand (City Escape Act 2) - Sonic Generations", "[challenge] Dash Ring 1-2-3 (City Escape Act 2) - Sonic Generations", "[challenge] Topsy-Turvy (City Escape Act 2) - Sonic Generations", "[challenge] High-Speed Hijinks 2 (City Escape Act 2) - Sonic Generations", "[challenge] Doppelganger Race! (City Escape Act 2) - Sonic Generations", "[stage] Seaside Hill (Act 1) - Sonic Generations", "[stage] Seaside Hill (Act 2) - Sonic Generations", "[challenge] Rescue the Animals! (Seaside Hill Act 1) - Sonic Generations", "[challenge] Doppelganger Race! (Seaside Hill Act 1) - Sonic Generations", "[challenge] Espio: Way of the Ninja (Seaside Hill Act 1) - Sonic Generations", "[challenge] High-Speed Hijinks (Seaside Hill Act 1) - Sonic Generations", "[challenge] Underwater Challenge (Seaside Hill Act 1) - Sonic Generations", "[challenge] Rouge: The Temptress (Seaside Hill Act 2) - Sonic Generations", "[challenge] Doppelganger Race! (Seaside Hill Act 2) - Sonic Generations", "[challenge] Trick Island (Seaside Hill Act 2) - Sonic Generations", "[challenge] Surf, Sea, and Sand (Seaside Hill Act 2) - Sonic Generations", "[challenge] Terror From the Deep (Seaside Hill Act 2) - Sonic Generations", "[rival] Shadow - Sonic Generations", "[boss] Perfect Chaos - Sonic Generations", "[stage] Crisis City (Act 1) - Sonic Generations", "[stage] Crisis City (Act 2) - Sonic Generations", "[challenge] Doppelganger Race! (Crisis City Act 1) - Sonic Generations", "[challenge] Goal Post Juggle (Crisis City Act 1) - Sonic Generations", "[challenge] Vector: Through the Storm (Crisis City Act 1) - Sonic Generations", "[challenge] Flame Shield Challenge (Crisis City Act 1) - Sonic Generations", "[challenge] Ring Time Challenge 2 (Crisis City Act 1) - Sonic Generations", "[challenge] Power Stomp Challenge (Crisis City Act 2) - Sonic Generations", "[challenge] Doppelganger Race! (Crisis City Act 2) - Sonic Generations", "[challenge] Switcheroo (Crisis City Act 2) - Sonic Generations", "[challenge] Blaze: Piercing the Flames (Crisis City Act 2) - Sonic Generations", "[challenge] Four-way Cannon Cavalcade (Crisis City Act 2) - Sonic Generations", "[stage] Rooftop Run (Act 1) - Sonic Generations", "[stage] Rooftop Run (Act 2) - Sonic Generations", "[challenge] Doppelganger Race! (Rooftop Run Act 1) - Sonic Generations", "[challenge] High-Rise Balloon Climb (Rooftop Run Act 1) - Sonic Generations", "[challenge] Dash Ring 1-2-3 (Rooftop Run Act 1) - Sonic Generations", "[challenge] Charmy: Don't Bug Me! (Rooftop Run Act 1) - Sonic Generations", "[challenge] One Ring Challenge 2 (Rooftop Run Act 1) - Sonic Generations", "[challenge] Barrel Ring Bonus (Rooftop Run Act 2) - Sonic Generations", "[challenge] Doppelganger Race! (Rooftop Run Act 2) - Sonic Generations", "[challenge] Rooftop Rail Grind (Rooftop Run Act 2) - Sonic Generations", "[challenge] Endless Boost (Rooftop Run Act 2) - Sonic Generations", "[challenge] Vector: Pick Up the Beat (Rooftop Run Act 2) - Sonic Generations", "[stage] Planet Wisp (Act 1) - Sonic Generations", "[stage] Planet Wisp (Act 2) - Sonic Generations", "[challenge] With Your Powers Combined (Planet Wisp Act 1) - Sonic Generations", "[challenge] Doppelganger Race! (Planet Wisp Act 1) - Sonic Generations", "[challenge] Goal Post Juggle 2 (Planet Wisp Act 1) - Sonic Generations", "[challenge] Chase After Blaze (Planet Wisp Act 1) - Sonic Generations", "[challenge] Rescue the Animals 2! (Planet Wisp Act 1) - Sonic Generations", "[challenge] Doppelganger Race! (Planet Wisp Act 2) - Sonic Generations", "[challenge] Cart Challenge (Planet Wisp Act 2) - Sonic Generations", "[challenge] Charmy: High in the Sky (Planet Wisp Act 2) - Sonic Generations", "[challenge] Action Master (Planet Wisp Act 2) - Sonic Generations", "[challenge] Orange Rocket, Blast Off! (Planet Wisp Act 2) - Sonic Generations", "[rival] Silver - Sonic Generations", "[boss] Egg Dragoon - Sonic Generations", "[boss] Time Eater - Sonic Generations", "[stage] Space Colony ARK (Act 1) - Shadow Generations", "[stage] Space Colony ARK (Act 2) - Shadow Generations", "[challenge] Artificial Chaos Counter (Space Colony ARK Act 1) - Shadow Generations", "[challenge] One Ring Challenge Lv1 (Space Colony ARK Act 1) - Shadow Generations", "[challenge] Artificial Chaos Counter (HARD) (Space Colony ARK Act 1) - Shadow Generations", "[challenge] Crush with Doom Blast! (Space Colony ARK Act 2) - Shadow Generations", "[challenge] Chaos Control Master Lv1 (Space Colony ARK Act 2) - Shadow Generations", "[challenge] Crush with Doom Blast! (HARD) (Space Colony ARK Act 2) - Shadow Generations", "[boss] Biolizard - Shadow Generations", "[stage] Rail Canyon (Act 1) - Shadow Generations", "[stage] Rail Canyon (Act 2) - Shadow Generations", "[challenge] Aim and Fire with Chaos Spear! (Rail Canyon Act 1) - Shadow Generations", "[challenge] Ring Collector Lv1 (Rail Canyon Act 1) - Shadow Generations", "[challenge] Aim and Fire with Chaos Spear! (HARD) (Rail Canyon Act 1) - Shadow Generations", "[challenge] Chaos Control Master Lv2 (Rail Canyon Act 2) - Shadow Generations", "[challenge] Dash Ring Rush Lv1 (Rail Canyon Act 2) - Shadow Generations", "[challenge] Chaos Control Master Lv2 (HARD) (Rail Canyon Act 2) - Shadow Generations", "[boss] Metal Overlord - Shadow Generations", "[stage] Kingdom Valley (Act 1) - Shadow Generations", "[stage] Kingdom Valley (Act 2) - Shadow Generations", "[challenge] Crush with Surf Spin! (Kingdom Valley Act 1) - Shadow Generations", "[challenge] Ring Collector Lv2 (Kingdom Valley Act 1) - Shadow Generations", "[challenge] Crush with Surf Spin! (HARD) (Kingdom Valley Act 1) - Shadow Generations", "[challenge] Beware of Pillars That Pop Up! (Kingdom Valley Act 2) - Shadow Generations", "[challenge] Destroy the Egg Gunners! (Kingdom Valley Act 2) - Shadow Generations", "[challenge] Beware of Pillars That Pop Up! (HARD) (Kingdom Valley Act 2) - Shadow Generations", "[boss] Mephiles the Dark - Shadow Generations", "[stage] Sunset Heights (Act 1) - Shadow Generations", "[stage] Sunset Heights (Act 2) - Shadow Generations", "[challenge] Beware of Spinning Spikes! (Sunset Heights Act 1) - Shadow Generations", "[challenge] One Ring Challenge Lv2 (Sunset Heights Act 1) - Shadow Generations", "[challenge] Beware of Spinning Spikes! (HARD) (Sunset Heights Act 1) - Shadow Generations", "[challenge] Death Egg Robot Panic! (Sunset Heights Act 2) - Shadow Generations", "[challenge] Dash Ring Rush Lv2 (Sunset Heights Act 2) - Shadow Generations", "[challenge] Death Egg Robot Panic! (HARD) (Sunset Heights Act 2) - Shadow Generations", "[stage] Chaos Island (Act 1) - Shadow Generations", "[stage] Chaos Island (Act 2) - Shadow Generations", "[challenge] Cross Over with Doom Morph! (Chaos Island Act 1) - Shadow Generations", "[challenge] Chaos Control Master Lv3 (Chaos Island Act 1) - Shadow Generations", "[challenge] Cross Over with Doom Morph! (HARD) (Chaos Island Act 1) - Shadow Generations", "[challenge] Gondola Master (Chaos Island Act 2) - Shadow Generations", "[challenge] Destroy the Cyclones! (Chaos Island Act 2) - Shadow Generations", "[challenge] Gondola Master (HARD) (Chaos Island Act 2) - Shadow Generations", "[stage] Radical Highway (Act 1) - Shadow Generations", "[stage] Radical Highway (Act 2) - Shadow Generations", "[boss] Devil Doom - Shadow Generations", "[boss] Neo Devil Doom - Shadow Generations" });
+            clbSonicShadowGenerations.Items.AddRange(new object[] { "Green Hill (Act 1) - Sonic Generations", "Green Hill (Act 2) - Sonic Generations", "Chemical Plant (Act 1) - Sonic Generations", "Chemical Plant (Act 2) - Sonic Generations", "Sky Sanctuary (Act 1) - Sonic Generations", "Sky Sanctuary (Act 2) - Sonic Generations", "Metal Sonic - Sonic Generations", "Death Egg Robot - Sonic Generations", "Speed Highway (Act 1) - Sonic Generations", "Speed Highway (Act 2) - Sonic Generations", "City Escape (Act 1) - Sonic Generations", "City Escape (Act 2) - Sonic Generations", "Seaside Hill (Act 1) - Sonic Generations", "Seaside Hill (Act 2) - Sonic Generations", "Shadow - Sonic Generations", "Perfect Chaos - Sonic Generations", "Crisis City (Act 1) - Sonic Generations", "Crisis City (Act 2) - Sonic Generations", "Rooftop Run (Act 1) - Sonic Generations", "Rooftop Run (Act 2) - Sonic Generations", "Planet Wisp (Act 1) - Sonic Generations", "Planet Wisp (Act 2) - Sonic Generations", "Silver - Sonic Generations", "Egg Dragoon - Sonic Generations", "Time Eater - Sonic Generations", "Space Colony ARK (Act 1) - Shadow Generations", "Space Colony ARK (Act 2) - Shadow Generations", "Biolizard - Shadow Generations", "Rail Canyon (Act 1) - Shadow Generations", "Rail Canyon (Act 2) - Shadow Generations", "Metal Overlord - Shadow Generations", "Kingdom Valley (Act 1) - Shadow Generations", "Kingdom Valley (Act 2) - Shadow Generations", "Mephiles the Dark - Shadow Generations", "Sunset Heights (Act 1) - Shadow Generations", "Sunset Heights (Act 2) - Shadow Generations", "Chaos Island (Act 1) - Shadow Generations", "Chaos Island (Act 2) - Shadow Generations", "Radical Highway (Act 1) - Shadow Generations", "Radical Highway (Act 2) - Shadow Generations", "Devil Doom - Shadow Generations", "Neo Devil Doom - Shadow Generations" });
             clbSonicShadowGenerations.Location = new Point(9, 6385);
             clbSonicShadowGenerations.Name = "clbSonicShadowGenerations";
             clbSonicShadowGenerations.Size = new Size(489, 92);
@@ -490,7 +507,7 @@
             clbSonicFrontiers.Font = new Font("Roboto", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             clbSonicFrontiers.FormattingEnabled = true;
             clbSonicFrontiers.HorizontalScrollbar = true;
-            clbSonicFrontiers.Items.AddRange(new object[] { "Kronos Island", "Asura", "Ninja", "Tower", "Squid", "1-1", "1-2", "1-3", "1-4", "1-5", "1-6", "1-7", "Ares Island", "Sumo", "Shark", "Strider", "Tank", "2-1", "2-2", "2-3", "2-4", "2-5", "2-6", "2-7", "Chaos Island", "Fortress", "Shinobi", "Excavator", "Spider", "3-1", "3-2", "3-3", "3-4", "3-5", "3-6", "3-7", "Rhea Island", "Ouranos Island", "Caterpillar", "Ghost", "Kunoichi", "Master Ninja", "Red Pillar", "Silver Hammer", "4-1", "4-2", "4-3", "4-4", "4-5", "4-6", "4-7", "4-8", "4-9" });
+            clbSonicFrontiers.Items.AddRange(new object[] { "Kronos Island", "1-1", "1-2", "1-3", "1-4", "1-5", "1-6", "1-7", "Ares Island", "2-1", "2-2", "2-3", "2-4", "2-5", "2-6", "2-7", "Chaos Island", "3-1", "3-2", "3-3", "3-4", "3-5", "3-6", "3-7", "Rhea Island", "Ouranos Island", "4-1", "4-2", "4-3", "4-4", "4-5", "4-6", "4-7", "4-8", "4-9" });
             clbSonicFrontiers.Location = new Point(9, 5917);
             clbSonicFrontiers.Name = "clbSonicFrontiers";
             clbSonicFrontiers.Size = new Size(489, 92);
@@ -787,7 +804,7 @@
             clbSonicGenerations.Font = new Font("Roboto", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             clbSonicGenerations.FormattingEnabled = true;
             clbSonicGenerations.HorizontalScrollbar = true;
-            clbSonicGenerations.Items.AddRange(new object[] { "[stage] Green Hill (Act 1)", "[stage] Green Hill (Act 2)", "[challenge] Doppelganger Race! (Green Hill Act 1)", "[challenge] The Buzz Bombers' Revenge! (Green Hill Act 1)", "[challenge] Knuckles: Horde of Enemies (Green Hill Act 1)", "[challenge] Swingset Circus (Green Hill Act 1)", "[challenge] High Speed Challenge (Green Hill Act 1)", "[challenge] Look Out Below! (Green Hill Act 2)", "[challenge] Tails: Way Past Fast (Green Hill Act 2)", "[challenge] Doppelganger Race! (Green Hill Act 2)", "[challenge] Jump Rush (Green Hill Act 2)", "[challenge] 300% Boost Gauge Challenge (Green Hill Act 2)", "[stage] Chemical Plant (Act 1)", "[stage] Chemical Plant (Act 2)", "[challenge] Tails: Toxic Skies (Chemical Plant Act 1)", "[challenge] Which Switch is Which? (Chemical Plant Act 1)", "[challenge] Aqua Shield Challenge (Chemical Plant Act 1)", "[challenge] Doppelganger Race! (Chemical Plant Act 1)", "[challenge] Invincibility Challenge (Chemical Plant Act 1)", "[challenge] One Ring Challenge (Chemical Plant Act 2)", "[challenge] Doppelganger Race! (Chemical Plant Act 2)", "[challenge] Amy: Taking the Leap Together! (Chemical Plant Act 2)", "[challenge] Grappling with Grabbers (Chemical Plant Act 2)", "[challenge] Underwater Ring Machine (Chemical Plant Act 2)", "[stage] Sky Sanctuary (Act 1)", "[stage] Sky Sanctuary (Act 2)", "[challenge] Doppelganger Race! (Sky Sanctuary Act 1)", "[challenge] Eggrobo Rush (Sky Sanctuary Act 1)", "[challenge] Aerial Paradise (Sky Sanctuary Act 1)", "[challenge] Ring Time Challenge (Sky Sanctuary Act 1)", "[challenge] Amy: Topsy Turvy (Sky Sanctuary Act 1)", "[challenge] Knuckles: Buried Treasure (Sky Sanctuary Act 2)", "[challenge] 200% Boost Gauge Challenge (Sky Sanctuary Act 2)", "[challenge] Balloon Bonanza (Sky Sanctuary Act 2)", "[challenge] Doppelganger Race! (Sky Sanctuary Act 2)", "[challenge] High-Speed Hijinks (Sky Sanctuary Act 2)", "[rival] Metal Sonic", "[boss] Death Egg Robot", "[stage] Speed Highway (Act 1)", "[stage] Speed Highway (Act 2)", "[challenge] Cream: Chao Hunt (Speed Highway Act 1)", "[challenge] Hot Pursuit (Speed Highway Act 1)", "[challenge] High Speed Challenge 2 (Speed Highway Act 1)", "[challenge] Resisting Arrest (Speed Highway Act 1)", "[challenge] Doppelganger Race! (Speed Highway Act 1)", "[challenge] Overdrift (Speed Highway Act 2)", "[challenge] Hot Pursuit (Speed Highway Act 2)", "[challenge] Doppelganger Race! (Speed Highway Act 2)", "[challenge] Drill Baby Drill (Speed Highway Act 2)", "[challenge] Espio: Master of Camouflage (Speed Highway Act 2)", "[stage] City Escape (Act 1)", "[stage] City Escape (Act 2)", "[challenge] Lord of the Board (City Escape Act 1)", "[challenge] Thunder Shield Challenge (City Escape Act 1)", "[challenge] Rouge: The Bombardier (City Escape Act 1)", "[challenge] Doppelganger Race! (City Escape Act 1)", "[challenge] Rite of Spring (City Escape Act 1)", "[challenge] Cream: Helping Hand (City Escape Act 2)", "[challenge] Dash Ring 1-2-3 (City Escape Act 2)", "[challenge] Topsy-Turvy (City Escape Act 2)", "[challenge] High-Speed Hijinks 2 (City Escape Act 2)", "[challenge] Doppelganger Race! (City Escape Act 2)", "[stage] Seaside Hill (Act 1)", "[stage] Seaside Hill (Act 2)", "[challenge] Rescue the Animals! (Seaside Hill Act 1)", "[challenge] Doppelganger Race! (Seaside Hill Act 1)", "[challenge] Espio: Way of the Ninja (Seaside Hill Act 1)", "[challenge] High-Speed Hijinks (Seaside Hill Act 1)", "[challenge] Underwater Challenge (Seaside Hill Act 1)", "[challenge] Rouge: The Temptress (Seaside Hill Act 2)", "[challenge] Doppelganger Race! (Seaside Hill Act 2)", "[challenge] Trick Island (Seaside Hill Act 2)", "[challenge] Surf, Sea, and Sand (Seaside Hill Act 2)", "[challenge] Terror From the Deep (Seaside Hill Act 2)", "[rival] Shadow", "[boss] Perfect Chaos", "[stage] Crisis City (Act 1)", "[stage] Crisis City (Act 2)", "[challenge] Doppelganger Race! (Crisis City Act 1)", "[challenge] Goal Post Juggle (Crisis City Act 1)", "[challenge] Vector: Through the Storm (Crisis City Act 1)", "[challenge] Flame Shield Challenge (Crisis City Act 1)", "[challenge] Ring Time Challenge 2 (Crisis City Act 1)", "[challenge] Power Stomp Challenge (Crisis City Act 2)", "[challenge] Doppelganger Race! (Crisis City Act 2)", "[challenge] Switcheroo (Crisis City Act 2)", "[challenge] Blaze: Piercing the Flames (Crisis City Act 2)", "[challenge] Four-way Cannon Cavalcade (Crisis City Act 2)", "[stage] Rooftop Run (Act 1)", "[stage] Rooftop Run (Act 2)", "[challenge] Doppelganger Race! (Rooftop Run Act 1)", "[challenge] High-Rise Balloon Climb (Rooftop Run Act 1)", "[challenge] Dash Ring 1-2-3 (Rooftop Run Act 1)", "[challenge] Charmy: Don't Bug Me! (Rooftop Run Act 1)", "[challenge] One Ring Challenge 2 (Rooftop Run Act 1)", "[challenge] Barrel Ring Bonus (Rooftop Run Act 2)", "[challenge] Doppelganger Race! (Rooftop Run Act 2)", "[challenge] Rooftop Rail Grind (Rooftop Run Act 2)", "[challenge] Endless Boost (Rooftop Run Act 2)", "[challenge] Vector: Pick Up the Beat (Rooftop Run Act 2)", "[stage] Planet Wisp (Act 1)", "[stage] Planet Wisp (Act 2)", "[challenge] With Your Powers Combined (Planet Wisp Act 1)", "[challenge] Doppelganger Race! (Planet Wisp Act 1)", "[challenge] Goal Post Juggle 2 (Planet Wisp Act 1)", "[challenge] Chase After Blaze (Planet Wisp Act 1)", "[challenge] Rescue the Animals 2! (Planet Wisp Act 1)", "[challenge] Doppelganger Race! (Planet Wisp Act 2)", "[challenge] Cart Challenge (Planet Wisp Act 2)", "[challenge] Charmy: High in the Sky (Planet Wisp Act 2)", "[challenge] Action Master (Planet Wisp Act 2)", "[challenge] Orange Rocket, Blast Off! (Planet Wisp Act 2)", "[rival] Silver", "[boss] Egg Dragoon", "[boss] Time Eater" });
+            clbSonicGenerations.Items.AddRange(new object[] { "Green Hill (Act 1)", "Green Hill (Act 2)", "Chemical Plant (Act 1)", "Chemical Plant (Act 2)", "Sky Sanctuary (Act 1)", "Sky Sanctuary (Act 2)", "Metal Sonic", "Death Egg Robot", "Speed Highway (Act 1)", "Speed Highway (Act 2)", "City Escape (Act 1)", "City Escape (Act 2)", "Seaside Hill (Act 1)", "Seaside Hill (Act 2)", "Shadow", "Perfect Chaos", "Crisis City (Act 1)", "Crisis City (Act 2)", "Rooftop Run (Act 1)", "Rooftop Run (Act 2)", "Planet Wisp (Act 1)", "Planet Wisp (Act 2)", "Silver", "Egg Dragoon", "Time Eater" });
             clbSonicGenerations.Location = new Point(9, 4421);
             clbSonicGenerations.Name = "clbSonicGenerations";
             clbSonicGenerations.Size = new Size(489, 92);
@@ -1645,6 +1662,7 @@
             // 
             // PanelHeader
             // 
+            PanelHeader.Controls.Add(menuStrip1);
             PanelHeader.Controls.Add(btnInfo);
             PanelHeader.Controls.Add(btnSettings);
             PanelHeader.Controls.Add(tbSearch);
@@ -1652,13 +1670,102 @@
             PanelHeader.Dock = DockStyle.Top;
             PanelHeader.Location = new Point(0, 0);
             PanelHeader.Name = "PanelHeader";
-            PanelHeader.Size = new Size(530, 90);
+            PanelHeader.Size = new Size(530, 120);
             PanelHeader.TabIndex = 9;
+            // 
+            // menuStrip1
+            // 
+            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, helpToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(530, 24);
+            menuStrip1.TabIndex = 122;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { openSaveFileToolStripMenuItem, resetSaveDataToolStripMenuItem });
+            fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            fileToolStripMenuItem.Size = new Size(37, 20);
+            fileToolStripMenuItem.Text = "File";
+            // 
+            // openSaveFileToolStripMenuItem
+            // 
+            openSaveFileToolStripMenuItem.Name = "openSaveFileToolStripMenuItem";
+            openSaveFileToolStripMenuItem.Size = new Size(180, 22);
+            openSaveFileToolStripMenuItem.Text = "Open Save File";
+            openSaveFileToolStripMenuItem.Click += openSaveFileToolStripMenuItem_Click;
+            // 
+            // resetSaveDataToolStripMenuItem
+            // 
+            resetSaveDataToolStripMenuItem.Name = "resetSaveDataToolStripMenuItem";
+            resetSaveDataToolStripMenuItem.Size = new Size(180, 22);
+            resetSaveDataToolStripMenuItem.Text = "Reset Save Data";
+            resetSaveDataToolStripMenuItem.Click += resetSaveDataToolStripMenuItem_Click;
+            // 
+            // helpToolStripMenuItem
+            // 
+            helpToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aboutToolStripMenuItem, toolStripSeparator1, checkForUpdatesToolStripMenuItem, toolStripSeparator3, productPageToolStripMenuItem, githubToolStripMenuItem, toolStripSeparator2, websiteToolStripMenuItem, transcendBinaryToolStripMenuItem, toolStripSeparator4, sonicToolStripMenuItem });
+            helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            helpToolStripMenuItem.Size = new Size(44, 20);
+            helpToolStripMenuItem.Text = "Help";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            aboutToolStripMenuItem.Size = new Size(180, 22);
+            aboutToolStripMenuItem.Text = "About";
+            aboutToolStripMenuItem.Click += aboutToolStripMenuItem_Click;
+            // 
+            // toolStripSeparator1
+            // 
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(177, 6);
+            // 
+            // checkForUpdatesToolStripMenuItem
+            // 
+            checkForUpdatesToolStripMenuItem.Name = "checkForUpdatesToolStripMenuItem";
+            checkForUpdatesToolStripMenuItem.Size = new Size(180, 22);
+            checkForUpdatesToolStripMenuItem.Text = "Check For Updates";
+            checkForUpdatesToolStripMenuItem.Click += checkForUpdatesToolStripMenuItem_Click;
+            // 
+            // toolStripSeparator2
+            // 
+            toolStripSeparator2.Name = "toolStripSeparator2";
+            toolStripSeparator2.Size = new Size(177, 6);
+            // 
+            // websiteToolStripMenuItem
+            // 
+            websiteToolStripMenuItem.Name = "websiteToolStripMenuItem";
+            websiteToolStripMenuItem.Size = new Size(180, 22);
+            websiteToolStripMenuItem.Text = "My Website";
+            websiteToolStripMenuItem.Click += websiteToolStripMenuItem_Click;
+            // 
+            // githubToolStripMenuItem
+            // 
+            githubToolStripMenuItem.Name = "githubToolStripMenuItem";
+            githubToolStripMenuItem.Size = new Size(180, 22);
+            githubToolStripMenuItem.Text = "Project Github";
+            githubToolStripMenuItem.Click += githubToolStripMenuItem_Click;
+            // 
+            // sonicToolStripMenuItem
+            // 
+            sonicToolStripMenuItem.Name = "sonicToolStripMenuItem";
+            sonicToolStripMenuItem.Size = new Size(180, 22);
+            sonicToolStripMenuItem.Text = "Sonic's Website";
+            sonicToolStripMenuItem.Click += sonicToolStripMenuItem_Click;
+            // 
+            // transcendBinaryToolStripMenuItem
+            // 
+            transcendBinaryToolStripMenuItem.Name = "transcendBinaryToolStripMenuItem";
+            transcendBinaryToolStripMenuItem.Size = new Size(180, 22);
+            transcendBinaryToolStripMenuItem.Text = "Transcend Binary";
+            transcendBinaryToolStripMenuItem.Click += transcendBinaryToolStripMenuItem_Click;
             // 
             // btnInfo
             // 
             btnInfo.Image = Properties.Resources.ic_fluent_info_24_filled;
-            btnInfo.Location = new Point(12, 12);
+            btnInfo.Location = new Point(15, 49);
             btnInfo.Name = "btnInfo";
             btnInfo.Size = new Size(35, 35);
             btnInfo.SizeMode = PictureBoxSizeMode.Zoom;
@@ -1670,7 +1777,7 @@
             // 
             btnSettings.Anchor = AnchorStyles.Right;
             btnSettings.Image = Properties.Resources.ic_fluent_settings_24_filled;
-            btnSettings.Location = new Point(483, 12);
+            btnSettings.Location = new Point(475, 49);
             btnSettings.Name = "btnSettings";
             btnSettings.Size = new Size(35, 35);
             btnSettings.SizeMode = PictureBoxSizeMode.Zoom;
@@ -1681,7 +1788,7 @@
             // tbSearch
             // 
             tbSearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            tbSearch.Location = new Point(12, 58);
+            tbSearch.Location = new Point(12, 90);
             tbSearch.Name = "tbSearch";
             tbSearch.PlaceholderText = "Search";
             tbSearch.Size = new Size(498, 23);
@@ -1690,39 +1797,39 @@
             // 
             // PanelFooter
             // 
-            PanelFooter.Controls.Add(linkLabel3);
-            PanelFooter.Controls.Add(linkLabel2);
+            PanelFooter.Controls.Add(linkLabelGithub);
+            PanelFooter.Controls.Add(linkLabelSonic);
             PanelFooter.Controls.Add(label1);
-            PanelFooter.Controls.Add(linkLabel1);
+            PanelFooter.Controls.Add(linkLabelWebsite);
             PanelFooter.Dock = DockStyle.Bottom;
             PanelFooter.Location = new Point(0, 559);
             PanelFooter.Name = "PanelFooter";
             PanelFooter.Size = new Size(530, 132);
             PanelFooter.TabIndex = 8;
             // 
-            // linkLabel3
+            // linkLabelGithub
             // 
-            linkLabel3.Anchor = AnchorStyles.Bottom;
-            linkLabel3.AutoSize = true;
-            linkLabel3.Location = new Point(203, 109);
-            linkLabel3.Name = "linkLabel3";
-            linkLabel3.Size = new Size(129, 15);
-            linkLabel3.TabIndex = 3;
-            linkLabel3.TabStop = true;
-            linkLabel3.Text = "View Source On Github";
-            linkLabel3.LinkClicked += linkLabel3_LinkClicked;
+            linkLabelGithub.Anchor = AnchorStyles.Bottom;
+            linkLabelGithub.AutoSize = true;
+            linkLabelGithub.Location = new Point(203, 109);
+            linkLabelGithub.Name = "linkLabelGithub";
+            linkLabelGithub.Size = new Size(129, 15);
+            linkLabelGithub.TabIndex = 3;
+            linkLabelGithub.TabStop = true;
+            linkLabelGithub.Text = "View Source On Github";
+            linkLabelGithub.LinkClicked += linkLabelGithub_LinkClicked;
             // 
-            // linkLabel2
+            // linkLabelSonic
             // 
-            linkLabel2.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            linkLabel2.AutoSize = true;
-            linkLabel2.Location = new Point(385, 87);
-            linkLabel2.Name = "linkLabel2";
-            linkLabel2.Size = new Size(133, 15);
-            linkLabel2.TabIndex = 2;
-            linkLabel2.TabStop = true;
-            linkLabel2.Text = "sonicthehedgehog.com";
-            linkLabel2.LinkClicked += linkLabel2_LinkClicked;
+            linkLabelSonic.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            linkLabelSonic.AutoSize = true;
+            linkLabelSonic.Location = new Point(385, 87);
+            linkLabelSonic.Name = "linkLabelSonic";
+            linkLabelSonic.Size = new Size(133, 15);
+            linkLabelSonic.TabIndex = 2;
+            linkLabelSonic.TabStop = true;
+            linkLabelSonic.Text = "sonicthehedgehog.com";
+            linkLabelSonic.LinkClicked += linkLabelSonic_LinkClicked;
             // 
             // label1
             // 
@@ -1735,17 +1842,34 @@
             label1.Text = "Not affiliated with SEGA or Sonic Team.\r\n\r\nSonic The Hedgehog is a trademark of SEGA.\r\n";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // linkLabel1
+            // linkLabelWebsite
             // 
-            linkLabel1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            linkLabel1.AutoSize = true;
-            linkLabel1.Location = new Point(12, 87);
-            linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(102, 15);
-            linkLabel1.TabIndex = 1;
-            linkLabel1.TabStop = true;
-            linkLabel1.Text = "shaunclarke.co.uk";
-            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
+            linkLabelWebsite.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            linkLabelWebsite.AutoSize = true;
+            linkLabelWebsite.Location = new Point(12, 87);
+            linkLabelWebsite.Name = "linkLabelWebsite";
+            linkLabelWebsite.Size = new Size(102, 15);
+            linkLabelWebsite.TabIndex = 1;
+            linkLabelWebsite.TabStop = true;
+            linkLabelWebsite.Text = "shaunclarke.co.uk";
+            linkLabelWebsite.LinkClicked += linkLabelWebsite_LinkClicked;
+            // 
+            // productPageToolStripMenuItem
+            // 
+            productPageToolStripMenuItem.Name = "productPageToolStripMenuItem";
+            productPageToolStripMenuItem.Size = new Size(180, 22);
+            productPageToolStripMenuItem.Text = "Product Page";
+            productPageToolStripMenuItem.Click += productPageToolStripMenuItem_Click;
+            // 
+            // toolStripSeparator3
+            // 
+            toolStripSeparator3.Name = "toolStripSeparator3";
+            toolStripSeparator3.Size = new Size(177, 6);
+            // 
+            // toolStripSeparator4
+            // 
+            toolStripSeparator4.Name = "toolStripSeparator4";
+            toolStripSeparator4.Size = new Size(177, 6);
             // 
             // Form1
             // 
@@ -1757,6 +1881,7 @@
             Controls.Add(PanelFooter);
             Controls.Add(PanelHeader);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MainMenuStrip = menuStrip1;
             MinimumSize = new Size(450, 500);
             Name = "Form1";
             Text = "  Sonic Tracker";
@@ -1764,6 +1889,8 @@
             PanelContent.PerformLayout();
             PanelHeader.ResumeLayout(false);
             PanelHeader.PerformLayout();
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)btnInfo).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnSettings).EndInit();
             PanelFooter.ResumeLayout(false);
@@ -1785,9 +1912,9 @@
         private Panel PanelHeader;
         private Panel PanelFooter;
         private Label label1;
-        private LinkLabel linkLabel1;
-        private LinkLabel linkLabel2;
-        private LinkLabel linkLabel3;
+        private LinkLabel linkLabelWebsite;
+        private LinkLabel linkLabelSonic;
+        private LinkLabel linkLabelGithub;
         private CheckedListBox clbSonicCD;
         private Label lblSonicCD;
         private ProgressBar progBarSonicCD;
@@ -1906,5 +2033,21 @@
         private ProgressBar progBarSonicShadowGenerations;
         private CheckedListBox clbSonicShadowGenerations;
         private Label lblSonicShadowGenerations;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem fileToolStripMenuItem;
+        private ToolStripMenuItem openSaveFileToolStripMenuItem;
+        private ToolStripMenuItem resetSaveDataToolStripMenuItem;
+        private ToolStripMenuItem helpToolStripMenuItem;
+        private ToolStripMenuItem aboutToolStripMenuItem;
+        private ToolStripSeparator toolStripSeparator1;
+        private ToolStripMenuItem checkForUpdatesToolStripMenuItem;
+        private ToolStripSeparator toolStripSeparator2;
+        private ToolStripMenuItem websiteToolStripMenuItem;
+        private ToolStripMenuItem githubToolStripMenuItem;
+        private ToolStripMenuItem sonicToolStripMenuItem;
+        private ToolStripMenuItem transcendBinaryToolStripMenuItem;
+        private ToolStripSeparator toolStripSeparator3;
+        private ToolStripMenuItem productPageToolStripMenuItem;
+        private ToolStripSeparator toolStripSeparator4;
     }
 }

@@ -57,6 +57,11 @@ Track your progress in Sonic games with SonicTracker! This tool tracks which sta
 - Resizable and responsive UI
 - buld-in updates (settings > check for updates)
 
+## Error Codes
+
+-001: File Not Found - Trying to delete a save file when none exists
+-002: FIle Not Found - Trying to open a save file when none exists
+
 ## Act List Changes
 
 If anything in an Act List is incorrect or could be better organised, please submit an Issue or Pull Request and provide sources for the corrected list.

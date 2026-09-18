@@ -1,5 +1,7 @@
+using System.Diagnostics;
 using System.DirectoryServices;
 using System.Reflection.Emit;
+using static System.Net.WebRequestMethods;
 using Label = System.Windows.Forms.Label;
 
 namespace SonicTracker
@@ -11,8 +13,8 @@ namespace SonicTracker
             InitializeComponent();
 
             //Define the list of searchable labels
-            searchableLabels = new List<Label>
-            {
+            searchableLabels =
+            [
                 lblSonic1,
                 lblSonic2,
                 lblSonicCD,
@@ -53,13 +55,69 @@ namespace SonicTracker
                 lblSonicSuperstars,
                 lblSonicDreamTeam,
                 lblSonicShadowGenerations
-            };
+            ];
 
             //update UI based on saved settings
             FinalizeLoad();
         }
         //Initialize the list of searchable labels
         public List<Label> searchableLabels;
+
+        //Link Definitions
+        public string website = "https://www.shaunclarke.co.uk";
+        public string sonic = "https://www.sonicthehedgehog.com";
+        public string github = "https://github.com/Shaunclarke04/Sonic-Tracker";
+        public string tb = "https://www.transcendbinary.co.uk";
+        public string download = "https://www.transcendbinary.co.uk/gamesApps/sonicTracker/";
+
+        //Link Calls
+        public void linkWebsite()
+        {
+            System.Diagnostics.Process.Start(
+           new System.Diagnostics.ProcessStartInfo
+           {
+               FileName = website,
+               UseShellExecute = true
+           });
+        }
+
+        public void linkSonic()
+        {
+            System.Diagnostics.Process.Start(
+           new System.Diagnostics.ProcessStartInfo
+           {
+               FileName = sonic,
+               UseShellExecute = true
+           });
+        }
+
+        public void linkGithub()
+        {
+            System.Diagnostics.Process.Start(
+           new System.Diagnostics.ProcessStartInfo
+           {
+               FileName = github,
+               UseShellExecute = true
+           });
+        }
+        public void linkTB()
+        {
+            System.Diagnostics.Process.Start(
+           new System.Diagnostics.ProcessStartInfo
+           {
+               FileName = tb,
+               UseShellExecute = true
+           });
+        }
+        public void linkDownload()
+        {
+            System.Diagnostics.Process.Start(
+           new System.Diagnostics.ProcessStartInfo
+           {
+               FileName = download,
+               UseShellExecute = true
+           });
+        }
 
         //open settings form when the settings button is clicked
         private void btnSettings_Click(object sender, EventArgs e)
@@ -71,7 +129,7 @@ namespace SonicTracker
         //display information about the application when the info button is clicked
         private void btnInfo_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Sonic Tracker v1.0.0\n\nDeveloped by: Shaun Clarke\n\nThis application is a personal project and is not affiliated with or endorsed by SEGA, Sonic Team or any other company.\n\nAll rights to the Sonic the Hedgehog franchise and its characters are owned by SEGA.\n\nSee footer links for more details", "About Sonic Tracker", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            displayInfoBox();
         }
 
         //initialise search results flow layout panel
@@ -245,6 +303,134 @@ namespace SonicTracker
             UpdateProgress(clbSonicDreamTeam, progBarSonicDreamTeam, lblSonicDreamTeam, "Sonic Dream Team");
             UpdateProgress(clbSonicShadowGenerations, progBarSonicShadowGenerations, lblSonicShadowGenerations, "Sonic X Shadow Generations");
         }
+
+        //Display Info Box
+        public void displayInfoBox()
+        {
+            MessageBox.Show("Sonic Tracker v1.1.0\n\nDeveloped by: Shaun Clarke\n\nPublished by: Transcend Binary\n\nThis application is a personal project and is not affiliated with or endorsed by SEGA, Sonic Team or any other company.\n\nAll rights to the Sonic the Hedgehog franchise and its characters are owned by SEGA.\n\nSee footer links for more details", "About Sonic Tracker", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        //Footer Link Calls
+        private void linkLabelWebsite_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            linkWebsite();
+        }
+        private void linkLabelGithub_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            linkGithub();
+        }
+        private void linkLabelSonic_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            linkSonic();
+        }
+
+        //Reset Save Data
+        public void resetSaveData()
+        {
+            if (MessageBox.Show(
+                "Are you sure you want to reset save data?",
+                "Sonic Tracker",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning
+            ) == DialogResult.Yes)
+            {
+                if (Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData)
+                    + "/SonicTracker/"))
+                {
+                    Directory.Delete(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData)
+                    + "/SonicTracker/", true);
+                    Application.Restart();
+                }
+                else
+                {
+                    MessageBox.Show
+                    (
+                        "No File Found",
+                        "Error_001",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error
+                    );
+                }
+            }
+            else
+            {
+                return;
+            }
+
+        }
+
+        //Check for Updates
+        public void checkForUpdates()
+        {
+            #if DEBUG
+                MessageBox.Show(
+                    "Exception: Debug mode - Did not check for updates",
+                    "SonicTracker",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                    );
+            #else
+                Process.Start(Path.Combine(AppContext.BaseDirectory, "Updater.exe"));
+            #endif
+        }
+
+        //Menu Bar
+        private void checkForUpdatesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            checkForUpdates();
+        }
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            displayInfoBox();
+        }
+        private void resetSaveDataToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            resetSaveData();
+        }
+        private void openSaveFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string? config = Directory.GetFiles(
+                Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "SonicTracker"),
+                "User.Config",
+                SearchOption.AllDirectories
+            ).FirstOrDefault();
+
+            if (config != null)
+            {
+                Process.Start("explorer.exe", $"\"{config}\"");
+            }
+            else
+            {
+                MessageBox.Show
+                    (
+                        "No File Found",
+                        "Error_002",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error
+                    );
+            }
+        }
+        private void websiteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            linkWebsite();
+        }
+        private void githubToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            linkGithub();
+        }
+        private void sonicToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            linkSonic();
+        }
+        private void transcendBinaryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            linkTB();
+        }
+        private void productPageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            linkDownload();
+        }
+
 
         //save checked items to settings when a checked list box item is changed
         private void clbSonicTheHedgehog1_SelectedIndexChanged(object sender, EventArgs e)

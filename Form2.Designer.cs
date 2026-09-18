@@ -35,6 +35,7 @@
             lblSonic1 = new Label();
             label1 = new Label();
             btnCheckUpdate = new Button();
+            btnResetSaveData = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -72,7 +73,7 @@
             panel1.Controls.Add(radBtnSettingsProgDispPercent);
             panel1.Location = new Point(9, 50);
             panel1.Name = "panel1";
-            panel1.Size = new Size(157, 83);
+            panel1.Size = new Size(160, 83);
             panel1.TabIndex = 2;
             // 
             // lblSonic1
@@ -110,11 +111,23 @@
             btnCheckUpdate.UseVisualStyleBackColor = true;
             btnCheckUpdate.Click += btnCheckUpdate_Click;
             // 
+            // btnResetSaveData
+            // 
+            btnResetSaveData.Font = new Font("Roboto", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnResetSaveData.Location = new Point(175, 139);
+            btnResetSaveData.Name = "btnResetSaveData";
+            btnResetSaveData.Size = new Size(157, 35);
+            btnResetSaveData.TabIndex = 5;
+            btnResetSaveData.Text = "Reset Save Data";
+            btnResetSaveData.UseVisualStyleBackColor = true;
+            btnResetSaveData.Click += btnResetSaveData_Click;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(307, 188);
+            ClientSize = new Size(352, 192);
+            Controls.Add(btnResetSaveData);
             Controls.Add(btnCheckUpdate);
             Controls.Add(label1);
             Controls.Add(panel1);
@@ -135,5 +148,6 @@
         private Label lblSonic1;
         private Label label1;
         private Button btnCheckUpdate;
+        private Button btnResetSaveData;
     }
 }
