@@ -46,8 +46,6 @@ Track your progress in Sonic games with SonicTracker! This tool tracks which sta
 - Sonic Dream Team
 - Sonic X Shadow Generations
 
-### more games coming soon
-
 ## More Features
 
 - Dynamic progress bar with Percentage/Fractional readout of completed stages in each game; configurable in settings
@@ -55,7 +53,7 @@ Track your progress in Sonic games with SonicTracker! This tool tracks which sta
 - Locally saved data in `%appdata%/../local/SonicTracker`
 - Quickly search for and jump to any game
 - Resizable and responsive UI
-- buld-in updates (settings > check for updates)
+- built-in updates (settings > check for updates)
 
 ## Error Codes
 
