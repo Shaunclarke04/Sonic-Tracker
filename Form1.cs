@@ -329,7 +329,7 @@ namespace SonicTracker
         //Display Info Box
         public void displayInfoBox()
         {
-            MessageBox.Show("Sonic Tracker v1.1.0\n\nDeveloped by: Shaun Clarke\n\nPublished by: Transcend Binary\n\nThis application is a personal project and is not affiliated with or endorsed by SEGA, Sonic Team or any other company.\n\nAll rights to the Sonic the Hedgehog franchise and its characters are owned by SEGA.\n\nSee footer links for more details", "About Sonic Tracker", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Sonic Tracker v1.2.0\n\nDeveloped by: Shaun Clarke\n\nPublished by: Transcend Binary\n\nThis application is a personal project and is not affiliated with or endorsed by SEGA, Sonic Team or any other company.\n\nAll rights to the Sonic the Hedgehog franchise and its characters are owned by SEGA.\n\nSee footer links for more details", "About Sonic Tracker", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         //Footer Link Calls
