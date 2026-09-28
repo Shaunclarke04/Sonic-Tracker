@@ -161,12 +161,14 @@
             aboutToolStripMenuItem = new ToolStripMenuItem();
             toolStripSeparator1 = new ToolStripSeparator();
             checkForUpdatesToolStripMenuItem = new ToolStripMenuItem();
+            toolStripSeparator3 = new ToolStripSeparator();
+            productPageToolStripMenuItem = new ToolStripMenuItem();
+            githubToolStripMenuItem = new ToolStripMenuItem();
             toolStripSeparator2 = new ToolStripSeparator();
             websiteToolStripMenuItem = new ToolStripMenuItem();
-            githubToolStripMenuItem = new ToolStripMenuItem();
-            sonicToolStripMenuItem = new ToolStripMenuItem();
             transcendBinaryToolStripMenuItem = new ToolStripMenuItem();
-            btnInfo = new PictureBox();
+            toolStripSeparator4 = new ToolStripSeparator();
+            sonicToolStripMenuItem = new ToolStripMenuItem();
             btnSettings = new PictureBox();
             tbSearch = new TextBox();
             PanelFooter = new Panel();
@@ -174,13 +176,9 @@
             linkLabelSonic = new LinkLabel();
             label1 = new Label();
             linkLabelWebsite = new LinkLabel();
-            productPageToolStripMenuItem = new ToolStripMenuItem();
-            toolStripSeparator3 = new ToolStripSeparator();
-            toolStripSeparator4 = new ToolStripSeparator();
             PanelContent.SuspendLayout();
             PanelHeader.SuspendLayout();
             menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)btnInfo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnSettings).BeginInit();
             PanelFooter.SuspendLayout();
             SuspendLayout();
@@ -190,7 +188,7 @@
             lblTitle.Anchor = AnchorStyles.None;
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Roboto Black", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitle.Location = new Point(112, 29);
+            lblTitle.Location = new Point(111, 27);
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new Size(312, 58);
             lblTitle.TabIndex = 0;
@@ -1651,9 +1649,11 @@
             // flpSearchResults
             // 
             flpSearchResults.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            flpSearchResults.AutoScroll = true;
             flpSearchResults.AutoSize = true;
             flpSearchResults.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            flpSearchResults.Location = new Point(15, 90);
+            flpSearchResults.Location = new Point(15, 115);
+            flpSearchResults.MaximumSize = new Size(0, 250);
             flpSearchResults.MinimumSize = new Size(350, 0);
             flpSearchResults.Name = "flpSearchResults";
             flpSearchResults.Size = new Size(350, 0);
@@ -1663,7 +1663,6 @@
             // PanelHeader
             // 
             PanelHeader.Controls.Add(menuStrip1);
-            PanelHeader.Controls.Add(btnInfo);
             PanelHeader.Controls.Add(btnSettings);
             PanelHeader.Controls.Add(tbSearch);
             PanelHeader.Controls.Add(lblTitle);
@@ -1729,6 +1728,25 @@
             checkForUpdatesToolStripMenuItem.Text = "Check For Updates";
             checkForUpdatesToolStripMenuItem.Click += checkForUpdatesToolStripMenuItem_Click;
             // 
+            // toolStripSeparator3
+            // 
+            toolStripSeparator3.Name = "toolStripSeparator3";
+            toolStripSeparator3.Size = new Size(177, 6);
+            // 
+            // productPageToolStripMenuItem
+            // 
+            productPageToolStripMenuItem.Name = "productPageToolStripMenuItem";
+            productPageToolStripMenuItem.Size = new Size(180, 22);
+            productPageToolStripMenuItem.Text = "Product Page";
+            productPageToolStripMenuItem.Click += productPageToolStripMenuItem_Click;
+            // 
+            // githubToolStripMenuItem
+            // 
+            githubToolStripMenuItem.Name = "githubToolStripMenuItem";
+            githubToolStripMenuItem.Size = new Size(180, 22);
+            githubToolStripMenuItem.Text = "Project Github";
+            githubToolStripMenuItem.Click += githubToolStripMenuItem_Click;
+            // 
             // toolStripSeparator2
             // 
             toolStripSeparator2.Name = "toolStripSeparator2";
@@ -1741,12 +1759,17 @@
             websiteToolStripMenuItem.Text = "My Website";
             websiteToolStripMenuItem.Click += websiteToolStripMenuItem_Click;
             // 
-            // githubToolStripMenuItem
+            // transcendBinaryToolStripMenuItem
             // 
-            githubToolStripMenuItem.Name = "githubToolStripMenuItem";
-            githubToolStripMenuItem.Size = new Size(180, 22);
-            githubToolStripMenuItem.Text = "Project Github";
-            githubToolStripMenuItem.Click += githubToolStripMenuItem_Click;
+            transcendBinaryToolStripMenuItem.Name = "transcendBinaryToolStripMenuItem";
+            transcendBinaryToolStripMenuItem.Size = new Size(180, 22);
+            transcendBinaryToolStripMenuItem.Text = "Transcend Binary";
+            transcendBinaryToolStripMenuItem.Click += transcendBinaryToolStripMenuItem_Click;
+            // 
+            // toolStripSeparator4
+            // 
+            toolStripSeparator4.Name = "toolStripSeparator4";
+            toolStripSeparator4.Size = new Size(177, 6);
             // 
             // sonicToolStripMenuItem
             // 
@@ -1755,31 +1778,13 @@
             sonicToolStripMenuItem.Text = "Sonic's Website";
             sonicToolStripMenuItem.Click += sonicToolStripMenuItem_Click;
             // 
-            // transcendBinaryToolStripMenuItem
-            // 
-            transcendBinaryToolStripMenuItem.Name = "transcendBinaryToolStripMenuItem";
-            transcendBinaryToolStripMenuItem.Size = new Size(180, 22);
-            transcendBinaryToolStripMenuItem.Text = "Transcend Binary";
-            transcendBinaryToolStripMenuItem.Click += transcendBinaryToolStripMenuItem_Click;
-            // 
-            // btnInfo
-            // 
-            btnInfo.Image = Properties.Resources.ic_fluent_info_24_filled;
-            btnInfo.Location = new Point(15, 49);
-            btnInfo.Name = "btnInfo";
-            btnInfo.Size = new Size(35, 35);
-            btnInfo.SizeMode = PictureBoxSizeMode.Zoom;
-            btnInfo.TabIndex = 3;
-            btnInfo.TabStop = false;
-            btnInfo.Click += btnInfo_Click;
-            // 
             // btnSettings
             // 
             btnSettings.Anchor = AnchorStyles.Right;
             btnSettings.Image = Properties.Resources.ic_fluent_settings_24_filled;
-            btnSettings.Location = new Point(475, 49);
+            btnSettings.Location = new Point(464, 27);
             btnSettings.Name = "btnSettings";
-            btnSettings.Size = new Size(35, 35);
+            btnSettings.Size = new Size(54, 55);
             btnSettings.SizeMode = PictureBoxSizeMode.Zoom;
             btnSettings.TabIndex = 2;
             btnSettings.TabStop = false;
@@ -1854,23 +1859,6 @@
             linkLabelWebsite.Text = "shaunclarke.co.uk";
             linkLabelWebsite.LinkClicked += linkLabelWebsite_LinkClicked;
             // 
-            // productPageToolStripMenuItem
-            // 
-            productPageToolStripMenuItem.Name = "productPageToolStripMenuItem";
-            productPageToolStripMenuItem.Size = new Size(180, 22);
-            productPageToolStripMenuItem.Text = "Product Page";
-            productPageToolStripMenuItem.Click += productPageToolStripMenuItem_Click;
-            // 
-            // toolStripSeparator3
-            // 
-            toolStripSeparator3.Name = "toolStripSeparator3";
-            toolStripSeparator3.Size = new Size(177, 6);
-            // 
-            // toolStripSeparator4
-            // 
-            toolStripSeparator4.Name = "toolStripSeparator4";
-            toolStripSeparator4.Size = new Size(177, 6);
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1891,7 +1879,6 @@
             PanelHeader.PerformLayout();
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)btnInfo).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnSettings).EndInit();
             PanelFooter.ResumeLayout(false);
             PanelFooter.PerformLayout();
@@ -1942,7 +1929,6 @@
         private CheckedListBox clbSonic3DBlast;
         private Label lblSonic3DBlast;
         private PictureBox btnSettings;
-        private PictureBox btnInfo;
         private ProgressBar progBarSonicPocketAdventure;
         private CheckedListBox clbSonicPocketAdventure;
         private Label lblSonicPocketAdventure;

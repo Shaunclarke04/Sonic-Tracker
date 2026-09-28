@@ -8,9 +8,11 @@ namespace SonicTracker
 {
     public partial class Form1 : Form
     {
+        private Form2 form2;
         public Form1()
         {
             InitializeComponent();
+            form2 = new Form2(this);
 
             //Define the list of searchable labels
             searchableLabels =
@@ -62,6 +64,9 @@ namespace SonicTracker
         }
         //Initialize the list of searchable labels
         public List<Label> searchableLabels;
+
+        //init timer
+        private System.Windows.Forms.Timer searchTimer = new System.Windows.Forms.Timer();
 
         //Link Definitions
         public string website = "https://www.shaunclarke.co.uk";
@@ -122,8 +127,7 @@ namespace SonicTracker
         //open settings form when the settings button is clicked
         private void btnSettings_Click(object sender, EventArgs e)
         {
-            Form2 form = new Form2(this);
-            form.Show();
+            form2.Show();
         }
 
         //display information about the application when the info button is clicked
@@ -132,17 +136,35 @@ namespace SonicTracker
             displayInfoBox();
         }
 
-        //initialise search results flow layout panel
+        //initialise search results flow layout panel & start timer
         private void tbSearch_TextChanged(object sender, EventArgs e)
         {
             flpSearchResults.Visible = tbSearch.Text != "";
             flpSearchResults.Controls.Clear();
+
+            searchTimer.Stop();
+            searchTimer.Interval = form2.SearchDelay;
+            searchTimer.Tick -= SearchTimer_Tick;
+            searchTimer.Tick += SearchTimer_Tick;
+            searchTimer.Start();
+        }
+
+        //init search string
+        private void SearchTimer_Tick(object sender, EventArgs e)
+        {
+            searchTimer.Stop();
 
             string search = tbSearch.Text.Trim();
 
             if (string.IsNullOrEmpty(search))
                 return;
 
+            Search(search);
+        }
+
+        //start search
+        private void Search(string search)
+        {
             //check each label for a match and create a button for each match
             foreach (Label label in searchableLabels)
             {

@@ -31,11 +31,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             radBtnSettingsProgDispPercent = new RadioButton();
             radBtnSettingsProgDispFraction = new RadioButton();
-            panel1 = new Panel();
+            progDisplayPanel = new Panel();
             lblSonic1 = new Label();
+            lblProgInfo = new Label();
             label1 = new Label();
             btnCheckUpdate = new Button();
             btnResetSaveData = new Button();
+            panel1 = new Panel();
+            tbSearchDelay = new TextBox();
+            lblDelayInfo = new Label();
+            label2 = new Label();
+            progDisplayPanel.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -65,16 +71,17 @@
             radBtnSettingsProgDispFraction.UseVisualStyleBackColor = true;
             radBtnSettingsProgDispFraction.CheckedChanged += radBtnSettingsProgDispFraction_CheckedChanged;
             // 
-            // panel1
+            // progDisplayPanel
             // 
-            panel1.BorderStyle = BorderStyle.Fixed3D;
-            panel1.Controls.Add(lblSonic1);
-            panel1.Controls.Add(radBtnSettingsProgDispFraction);
-            panel1.Controls.Add(radBtnSettingsProgDispPercent);
-            panel1.Location = new Point(9, 50);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(160, 83);
-            panel1.TabIndex = 2;
+            progDisplayPanel.BorderStyle = BorderStyle.Fixed3D;
+            progDisplayPanel.Controls.Add(lblSonic1);
+            progDisplayPanel.Controls.Add(lblProgInfo);
+            progDisplayPanel.Controls.Add(radBtnSettingsProgDispFraction);
+            progDisplayPanel.Controls.Add(radBtnSettingsProgDispPercent);
+            progDisplayPanel.Location = new Point(9, 41);
+            progDisplayPanel.Name = "progDisplayPanel";
+            progDisplayPanel.Size = new Size(160, 83);
+            progDisplayPanel.TabIndex = 2;
             // 
             // lblSonic1
             // 
@@ -87,6 +94,17 @@
             lblSonic1.Size = new Size(130, 19);
             lblSonic1.TabIndex = 3;
             lblSonic1.Text = "Progress Display";
+            // 
+            // lblProgInfo
+            // 
+            lblProgInfo.AutoSize = true;
+            lblProgInfo.Font = new Font("Webdings", 12F, FontStyle.Bold, GraphicsUnit.Point, 2);
+            lblProgInfo.Location = new Point(127, 1);
+            lblProgInfo.Name = "lblProgInfo";
+            lblProgInfo.Size = new Size(26, 19);
+            lblProgInfo.TabIndex = 4;
+            lblProgInfo.Text = "i";
+            lblProgInfo.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
@@ -102,10 +120,11 @@
             // 
             // btnCheckUpdate
             // 
+            btnCheckUpdate.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             btnCheckUpdate.Font = new Font("Roboto", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnCheckUpdate.Location = new Point(12, 139);
+            btnCheckUpdate.Location = new Point(9, 141);
             btnCheckUpdate.Name = "btnCheckUpdate";
-            btnCheckUpdate.Size = new Size(157, 35);
+            btnCheckUpdate.Size = new Size(147, 35);
             btnCheckUpdate.TabIndex = 4;
             btnCheckUpdate.Text = "Check for Updates";
             btnCheckUpdate.UseVisualStyleBackColor = true;
@@ -113,27 +132,75 @@
             // 
             // btnResetSaveData
             // 
+            btnResetSaveData.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnResetSaveData.Font = new Font("Roboto", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnResetSaveData.Location = new Point(175, 139);
+            btnResetSaveData.Location = new Point(169, 141);
             btnResetSaveData.Name = "btnResetSaveData";
-            btnResetSaveData.Size = new Size(157, 35);
+            btnResetSaveData.Size = new Size(145, 35);
             btnResetSaveData.TabIndex = 5;
             btnResetSaveData.Text = "Reset Save Data";
             btnResetSaveData.UseVisualStyleBackColor = true;
             btnResetSaveData.Click += btnResetSaveData_Click;
             // 
+            // panel1
+            // 
+            panel1.BorderStyle = BorderStyle.Fixed3D;
+            panel1.Controls.Add(tbSearchDelay);
+            panel1.Controls.Add(lblDelayInfo);
+            panel1.Controls.Add(label2);
+            panel1.Location = new Point(175, 41);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(134, 65);
+            panel1.TabIndex = 4;
+            // 
+            // tbSearchDelay
+            // 
+            tbSearchDelay.Location = new Point(3, 32);
+            tbSearchDelay.Name = "tbSearchDelay";
+            tbSearchDelay.Size = new Size(124, 23);
+            tbSearchDelay.TabIndex = 4;
+            tbSearchDelay.TextChanged += tbSearchDelay_TextChanged;
+            // 
+            // lblDelayInfo
+            // 
+            lblDelayInfo.AutoSize = true;
+            lblDelayInfo.BackColor = Color.Transparent;
+            lblDelayInfo.Font = new Font("Webdings", 12F, FontStyle.Bold, GraphicsUnit.Point, 2);
+            lblDelayInfo.Location = new Point(101, 1);
+            lblDelayInfo.Name = "lblDelayInfo";
+            lblDelayInfo.Size = new Size(26, 19);
+            lblDelayInfo.TabIndex = 5;
+            lblDelayInfo.Text = "i";
+            lblDelayInfo.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Roboto Medium", 12F);
+            label2.ImageAlign = ContentAlignment.TopCenter;
+            label2.Location = new Point(0, 1);
+            label2.Margin = new Padding(0, 0, 3, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(104, 19);
+            label2.TabIndex = 3;
+            label2.Text = "Search Delay";
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(352, 192);
+            ClientSize = new Size(326, 188);
+            Controls.Add(panel1);
             Controls.Add(btnResetSaveData);
             Controls.Add(btnCheckUpdate);
             Controls.Add(label1);
-            Controls.Add(panel1);
+            Controls.Add(progDisplayPanel);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form2";
             Text = "Sonic Tracker Settings";
+            KeyDown += Form2_KeyDown;
+            progDisplayPanel.ResumeLayout(false);
+            progDisplayPanel.PerformLayout();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -144,10 +211,15 @@
 
         private RadioButton radBtnSettingsProgDispPercent;
         private RadioButton radBtnSettingsProgDispFraction;
-        private Panel panel1;
+        private Panel progDisplayPanel;
         private Label lblSonic1;
         private Label label1;
         private Button btnCheckUpdate;
         private Button btnResetSaveData;
+        private Panel panel1;
+        private TextBox tbSearchDelay;
+        private Label label2;
+        private Label lblProgInfo;
+        private Label lblDelayInfo;
     }
 }

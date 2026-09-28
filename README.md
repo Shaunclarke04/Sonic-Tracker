@@ -59,8 +59,9 @@ Track your progress in Sonic games with SonicTracker! This tool tracks which sta
 
 ## Error Codes
 
--001: File Not Found - Trying to delete a save file when none exists
--002: FIle Not Found - Trying to open a save file when none exists
+-001: File Not Found - Trying to delete a file where none exists
+-002: FIle Not Found - Trying to open a file where none exists
+-003: Must be an integer - Entered a string where integer is required.
 
 ## Act List Changes
 
