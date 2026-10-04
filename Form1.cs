@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using System.DirectoryServices;
+using System.Linq;
 using System.Reflection.Emit;
 using static System.Net.WebRequestMethods;
 using Label = System.Windows.Forms.Label;
@@ -15,58 +16,49 @@ namespace SonicTracker
             form2 = new Form2(this);
 
             //Define the list of searchable labels
-            searchableLabels =
-            [
-                lblSonic1,
-                lblSonic2,
-                lblSonicCD,
-                lblSonic3AndKnuckles,
-                lblSonicAndTails,
-                lblSonicAndTails2,
-                lblKnucklesChaotix,
-                lblTailsAdventure,
-                lblSonicBlast,
-                lblSonic3DBlast,
-                lblSonicPocketAdventure,
-                lblSonicAdventure,
-                lblSonicAdventure2,
-                lblSonicAdvance,
-                lblSonicAdvance2,
-                lblSonicHeroes,
-                lblSonicAdvance3,
-                lblSonicRush,
-                lblShadowTheHedgehog,
-                lblSonic06,
-                lblSonicSecretRings,
-                lblSonicRushAdventure,
-                lblSonicUnleashedPS2,
-                lblSonicUnleashedPS3,
-                lblSonicBlackNight,
-                lblSonic4E1,
-                lblSonicColors,
-                lblSonicGenerations,
-                lblSonic4E2,
-                lblSonicLostWorld,
-                lblSonicBoomLyric,
-                lblSonicBoomShatteredCrystal,
-                lblSonicBoomFireIce,
-                lblSonicMania,
-                lblSonicForces,
-                lblSonicColorsUltimate,
-                lblSonicFrontiers,
-                lblSonicSuperstars,
-                lblSonicDreamTeam,
-                lblSonicShadowGenerations
-            ];
+            searchableLabels = new List<Label>
+                {
+                    lblSonic1, lblSonic2, lblSonicCD, lblSonic3AndKnuckles, lblSonicAndTails,
+                    lblSonicAndTails2, lblKnucklesChaotix, lblTailsAdventure, lblSonicBlast, lblSonic3DBlast,
+                    lblSonicPocketAdventure, lblSonicAdventure, lblSonicAdventure2, lblSonicAdvance, lblSonicAdvance2,
+                    lblSonicHeroes, lblSonicAdvance3, lblSonicRush, lblShadowTheHedgehog, lblSonic06,
+                    lblSonicSecretRings, lblSonicRushAdventure, lblSonicUnleashedPS2, lblSonicUnleashedPS3, lblSonicBlackNight,
+                    lblSonic4E1, lblSonicColors, lblSonicGenerations, lblSonic4E2, lblSonicLostWorld,
+                    lblSonicBoomLyric, lblSonicBoomShatteredCrystal, lblSonicBoomFireIce, lblSonicMania, lblSonicForces,
+                    lblSonicColorsUltimate, lblSonicFrontiers, lblSonicSuperstars, lblSonicDreamTeam, lblSonicShadowGenerations
+                };
+
+            //collect all CheckedListBox controls on the form (including nested containers) for overall progress calculations
+            checkListBoxes = GetAllControls(this)
+                .OfType<CheckedListBox>()
+                .ToList();
 
             //update UI based on saved settings
             FinalizeLoad();
         }
+
+        string version = "v1.2.2";
         //Initialize the list of searchable labels
         public List<Label> searchableLabels;
+        private List<CheckedListBox> checkListBoxes = new List<CheckedListBox>();
 
         //init timer
         private System.Windows.Forms.Timer searchTimer = new System.Windows.Forms.Timer();
+
+        // Recursively enumerate controls so nested CheckedListBox instances are found
+        private IEnumerable<Control> GetAllControls(Control parent)
+        {
+            foreach (Control c in parent.Controls)
+            {
+                yield return c;
+
+                if (c.HasChildren)
+                {
+                    foreach (var child in GetAllControls(c))
+                        yield return child;
+                }
+            }
+        }
 
         //Link Definitions
         public string website = "https://www.shaunclarke.co.uk";
@@ -228,6 +220,18 @@ namespace SonicTracker
 
             //update label text with game title and progress readout
             label.Text = gameTitle + " - " + progressReadout;
+            updateOverallProgress();
+        }
+
+        //update overall progress bar based on total checked items across all checked list boxes
+        public void updateOverallProgress()
+        {
+            int totalCheckedItems = checkListBoxes.Sum(clb => clb.CheckedItems.Count);
+            int totalItems = checkListBoxes.Sum(clb => clb.Items.Count);
+
+            progBarOverall.Value = totalItems > 0 ? (totalCheckedItems * 100) / totalItems : 0;
+            lblOverallFraction.Text = totalCheckedItems.ToString() + "/" + totalItems.ToString();
+            lblOverallPercentage.Text = progBarOverall.Value.ToString() + "%";
         }
 
         //update progress bars based on checked items in the checked list boxes
@@ -329,7 +333,7 @@ namespace SonicTracker
         //Display Info Box
         public void displayInfoBox()
         {
-            MessageBox.Show("Sonic Tracker v1.2.1\n\nDeveloped by: Shaun Clarke\n\nPublished by: Transcend Binary\n\nThis application is a personal project and is not affiliated with or endorsed by SEGA, Sonic Team or any other company.\n\nAll rights to the Sonic the Hedgehog franchise and its characters are owned by SEGA.\n\nSee footer links for more details", "About Sonic Tracker", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Sonic Tracker " + version + "\n\nDeveloped by: Shaun Clarke\n\nPublished by: Transcend Binary\n\nThis application is a personal project and is not affiliated with or endorsed by SEGA, Sonic Team or any other company.\n\nAll rights to the Sonic the Hedgehog franchise and its characters are owned by SEGA.\n\nSee footer links for more details", "About Sonic Tracker", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         //Footer Link Calls

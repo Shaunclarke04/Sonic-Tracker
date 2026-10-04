@@ -66,7 +66,7 @@ Track your progress in Sonic games with SonicTracker! This tool tracks which sta
 If anything in an Act List is incorrect or could be better organised, please submit an Issue or Pull Request and provide sources for the corrected list.
 
 Please note: After an update to an existing app list, save data for the old list will need to be manually removed from the save file to avoid sync issues.
-To do this, press Win + R, type `%appdata%/../local/SonicTracker`, then open the subsequent folders until you find user.config. Open this file in a text editor and search for the game's title (for example, `<setting name="SonicCDCheckedItems" serializeAs="String">`). Below that line, replace `<value>x,y,z</value>` with `<value />`, save the file, and restart the program and recheck all your completed acts.
+Go to File > Open Save File; find the game whose act list has changed and delete <Setting> tags for that game. Save the file and relaunch the app to see the new act list.
 
 ## Build Instructions
 
