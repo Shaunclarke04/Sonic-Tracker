@@ -4,6 +4,7 @@ using System.Linq;
 using System.Reflection.Emit;
 using static System.Net.WebRequestMethods;
 using Label = System.Windows.Forms.Label;
+using System.IO;
 
 namespace SonicTracker
 {
@@ -333,7 +334,28 @@ namespace SonicTracker
         //Display Info Box
         public void displayInfoBox()
         {
-            MessageBox.Show("Sonic Tracker " + version + "\n\nDeveloped by: Shaun Clarke\n\nPublished by: Transcend Binary\n\nThis application is a personal project and is not affiliated with or endorsed by SEGA, Sonic Team or any other company.\n\nAll rights to the Sonic the Hedgehog franchise and its characters are owned by SEGA.\n\nSee footer links for more details", "About Sonic Tracker", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            TaskDialog.ShowDialog(new TaskDialogPage
+            {
+                Caption = "About Sonic Tracker",
+                Heading = "Sonic Tracker " + version,
+                Text = "Personal project by Shaun Clarke\n" +
+                       "Published by Transcend Binary\n\n" +
+                       "Not Affiliated with Sega or Sonic Team",
+                SizeToContent = true,
+
+                Icon = TaskDialogIcon.Information,
+
+                Expander = new TaskDialogExpander
+                {
+                    CollapsedButtonText = "Show licence details",
+                    ExpandedButtonText = "Hide licence details",
+                    Text = System.IO.File.ReadAllText(
+                        Path.Combine(AppContext.BaseDirectory, "LICENSE.txt")),
+                    Position = TaskDialogExpanderPosition.AfterText
+                },
+
+                Buttons = { TaskDialogButton.OK }
+            });
         }
 
         //Footer Link Calls
