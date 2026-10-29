@@ -182,6 +182,8 @@
             spacer = new ToolStripStatusLabel();
             lblOverallPercentage = new ToolStripStatusLabel();
             lblOverallFraction = new ToolStripStatusLabel();
+            exitToolStripMenuItem = new ToolStripMenuItem();
+            toolStripSeparator6 = new ToolStripSeparator();
             PanelContent.SuspendLayout();
             PanelHeader.SuspendLayout();
             menuStrip1.SuspendLayout();
@@ -1690,23 +1692,23 @@
             // 
             // fileToolStripMenuItem
             // 
-            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { openSaveFileToolStripMenuItem, resetSaveDataToolStripMenuItem });
+            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { resetSaveDataToolStripMenuItem, openSaveFileToolStripMenuItem, toolStripSeparator6, exitToolStripMenuItem });
             fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             fileToolStripMenuItem.Size = new Size(37, 20);
-            fileToolStripMenuItem.Text = "File";
+            fileToolStripMenuItem.Text = "&File";
             // 
             // openSaveFileToolStripMenuItem
             // 
             openSaveFileToolStripMenuItem.Name = "openSaveFileToolStripMenuItem";
             openSaveFileToolStripMenuItem.Size = new Size(156, 22);
-            openSaveFileToolStripMenuItem.Text = "Open Save File";
+            openSaveFileToolStripMenuItem.Text = "&Open Save File";
             openSaveFileToolStripMenuItem.Click += openSaveFileToolStripMenuItem_Click;
             // 
             // resetSaveDataToolStripMenuItem
             // 
             resetSaveDataToolStripMenuItem.Name = "resetSaveDataToolStripMenuItem";
             resetSaveDataToolStripMenuItem.Size = new Size(156, 22);
-            resetSaveDataToolStripMenuItem.Text = "Reset Save Data";
+            resetSaveDataToolStripMenuItem.Text = "&Reset Save Data";
             resetSaveDataToolStripMenuItem.Click += resetSaveDataToolStripMenuItem_Click;
             // 
             // helpToolStripMenuItem
@@ -1714,13 +1716,13 @@
             helpToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aboutToolStripMenuItem, toolStripSeparator1, checkForUpdatesToolStripMenuItem, toolStripSeparator3, productPageToolStripMenuItem, githubToolStripMenuItem, toolStripSeparator2, websiteToolStripMenuItem, transcendBinaryToolStripMenuItem, toolStripSeparator4, sonicToolStripMenuItem });
             helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             helpToolStripMenuItem.Size = new Size(44, 20);
-            helpToolStripMenuItem.Text = "Help";
+            helpToolStripMenuItem.Text = "&Help";
             // 
             // aboutToolStripMenuItem
             // 
             aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             aboutToolStripMenuItem.Size = new Size(173, 22);
-            aboutToolStripMenuItem.Text = "About";
+            aboutToolStripMenuItem.Text = "&About";
             aboutToolStripMenuItem.Click += aboutToolStripMenuItem_Click;
             // 
             // toolStripSeparator1
@@ -1732,7 +1734,7 @@
             // 
             checkForUpdatesToolStripMenuItem.Name = "checkForUpdatesToolStripMenuItem";
             checkForUpdatesToolStripMenuItem.Size = new Size(173, 22);
-            checkForUpdatesToolStripMenuItem.Text = "Check For Updates";
+            checkForUpdatesToolStripMenuItem.Text = "Check For &Updates";
             checkForUpdatesToolStripMenuItem.Click += checkForUpdatesToolStripMenuItem_Click;
             // 
             // toolStripSeparator3
@@ -1744,14 +1746,14 @@
             // 
             productPageToolStripMenuItem.Name = "productPageToolStripMenuItem";
             productPageToolStripMenuItem.Size = new Size(173, 22);
-            productPageToolStripMenuItem.Text = "Product Page";
+            productPageToolStripMenuItem.Text = "Product &Page";
             productPageToolStripMenuItem.Click += productPageToolStripMenuItem_Click;
             // 
             // githubToolStripMenuItem
             // 
             githubToolStripMenuItem.Name = "githubToolStripMenuItem";
             githubToolStripMenuItem.Size = new Size(173, 22);
-            githubToolStripMenuItem.Text = "Project Github";
+            githubToolStripMenuItem.Text = "Project &Github";
             githubToolStripMenuItem.Click += githubToolStripMenuItem_Click;
             // 
             // toolStripSeparator2
@@ -1763,14 +1765,14 @@
             // 
             websiteToolStripMenuItem.Name = "websiteToolStripMenuItem";
             websiteToolStripMenuItem.Size = new Size(173, 22);
-            websiteToolStripMenuItem.Text = "My Website";
+            websiteToolStripMenuItem.Text = "My &Website";
             websiteToolStripMenuItem.Click += websiteToolStripMenuItem_Click;
             // 
             // transcendBinaryToolStripMenuItem
             // 
             transcendBinaryToolStripMenuItem.Name = "transcendBinaryToolStripMenuItem";
             transcendBinaryToolStripMenuItem.Size = new Size(173, 22);
-            transcendBinaryToolStripMenuItem.Text = "Transcend Binary";
+            transcendBinaryToolStripMenuItem.Text = "&Transcend Binary";
             transcendBinaryToolStripMenuItem.Click += transcendBinaryToolStripMenuItem_Click;
             // 
             // toolStripSeparator4
@@ -1782,7 +1784,7 @@
             // 
             sonicToolStripMenuItem.Name = "sonicToolStripMenuItem";
             sonicToolStripMenuItem.Size = new Size(173, 22);
-            sonicToolStripMenuItem.Text = "Sonic's Website";
+            sonicToolStripMenuItem.Text = "&Sonic's Website";
             sonicToolStripMenuItem.Click += sonicToolStripMenuItem_Click;
             // 
             // btnSettings
@@ -1906,6 +1908,17 @@
             lblOverallFraction.Name = "lblOverallFraction";
             lblOverallFraction.Size = new Size(22, 17);
             lblOverallFraction.Text = "x/x";
+            // 
+            // exitToolStripMenuItem
+            // 
+            exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            exitToolStripMenuItem.Size = new Size(156, 22);
+            exitToolStripMenuItem.Text = "E&xit";
+            // 
+            // toolStripSeparator6
+            // 
+            toolStripSeparator6.Name = "toolStripSeparator6";
+            toolStripSeparator6.Size = new Size(153, 6);
             // 
             // Form1
             // 
@@ -2091,5 +2104,7 @@
         private ToolStripStatusLabel lblOverallPercentage;
         private ToolStripStatusLabel lblOverallFraction;
         private ToolStripStatusLabel spacer;
+        private ToolStripSeparator toolStripSeparator6;
+        private ToolStripMenuItem exitToolStripMenuItem;
     }
 }
