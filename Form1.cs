@@ -38,7 +38,7 @@ namespace SonicTracker
             FinalizeLoad();
         }
 
-        string version = "v1.2.3";
+        string version = "v1.2.4";
         //Initialize the list of searchable labels
         public List<Label> searchableLabels;
         private List<CheckedListBox> checkListBoxes = new List<CheckedListBox>();

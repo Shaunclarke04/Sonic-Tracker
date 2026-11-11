@@ -712,7 +712,7 @@
             clbSonicBoomLyric.Font = new Font("Roboto", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             clbSonicBoomLyric.FormattingEnabled = true;
             clbSonicBoomLyric.HorizontalScrollbar = true;
-            clbSonicBoomLyric.Items.AddRange(new object[] { "Lyric's Tomb", "Abandoned Research Facility", "Shadow", "Lyric's Weapon Facility", "River Rush", "The Pit", "Driller Worm", "Slowpoke Isle", "Metal Sonic", "Ocean Purification Plant", "Undersea Bolt", "Creeper Gorge", "Eggman", "Sky Citadel", "Lyric's Lair", "Lyric" });
+            clbSonicBoomLyric.Items.AddRange(new object[] { "Lyric's Tomb", "Cliff's Excavation Site (Visit 1)", "Abandoned Research Facility", "Lyric's Weapon Facility", "Cliff's Excavation Site (Visit 2)", "River Rush", "The Pit", "Cliff's Excavation Site (Visit 3)", "Bygone Island (visit 1)", "Crater Lake", "Slowpoke Isle", "Bygone Island (visit 2)", "Ocean Purification Plant", "Undersea Bolt", "Creeper Gorge", "Sky Citadel", "Lyric's Lair" });
             clbSonicBoomLyric.Location = new Point(9, 4918);
             clbSonicBoomLyric.Name = "clbSonicBoomLyric";
             clbSonicBoomLyric.Size = new Size(489, 92);
@@ -1700,26 +1700,26 @@
             // resetSaveDataToolStripMenuItem
             // 
             resetSaveDataToolStripMenuItem.Name = "resetSaveDataToolStripMenuItem";
-            resetSaveDataToolStripMenuItem.Size = new Size(180, 22);
+            resetSaveDataToolStripMenuItem.Size = new Size(156, 22);
             resetSaveDataToolStripMenuItem.Text = "&Reset Save Data";
             resetSaveDataToolStripMenuItem.Click += resetSaveDataToolStripMenuItem_Click;
             // 
             // openSaveFileToolStripMenuItem
             // 
             openSaveFileToolStripMenuItem.Name = "openSaveFileToolStripMenuItem";
-            openSaveFileToolStripMenuItem.Size = new Size(180, 22);
+            openSaveFileToolStripMenuItem.Size = new Size(156, 22);
             openSaveFileToolStripMenuItem.Text = "&Open Save File";
             openSaveFileToolStripMenuItem.Click += openSaveFileToolStripMenuItem_Click;
             // 
             // toolStripSeparator6
             // 
             toolStripSeparator6.Name = "toolStripSeparator6";
-            toolStripSeparator6.Size = new Size(177, 6);
+            toolStripSeparator6.Size = new Size(153, 6);
             // 
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(180, 22);
+            exitToolStripMenuItem.Size = new Size(156, 22);
             exitToolStripMenuItem.Text = "E&xit";
             // 
             // helpToolStripMenuItem
@@ -1732,69 +1732,69 @@
             // aboutToolStripMenuItem
             // 
             aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            aboutToolStripMenuItem.Size = new Size(180, 22);
+            aboutToolStripMenuItem.Size = new Size(173, 22);
             aboutToolStripMenuItem.Text = "&About";
             aboutToolStripMenuItem.Click += aboutToolStripMenuItem_Click;
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(177, 6);
+            toolStripSeparator1.Size = new Size(170, 6);
             // 
             // checkForUpdatesToolStripMenuItem
             // 
             checkForUpdatesToolStripMenuItem.Name = "checkForUpdatesToolStripMenuItem";
-            checkForUpdatesToolStripMenuItem.Size = new Size(180, 22);
+            checkForUpdatesToolStripMenuItem.Size = new Size(173, 22);
             checkForUpdatesToolStripMenuItem.Text = "Check For &Updates";
             checkForUpdatesToolStripMenuItem.Click += checkForUpdatesToolStripMenuItem_Click;
             // 
             // toolStripSeparator3
             // 
             toolStripSeparator3.Name = "toolStripSeparator3";
-            toolStripSeparator3.Size = new Size(177, 6);
+            toolStripSeparator3.Size = new Size(170, 6);
             // 
             // productPageToolStripMenuItem
             // 
             productPageToolStripMenuItem.Name = "productPageToolStripMenuItem";
-            productPageToolStripMenuItem.Size = new Size(180, 22);
+            productPageToolStripMenuItem.Size = new Size(173, 22);
             productPageToolStripMenuItem.Text = "Product &Page";
             productPageToolStripMenuItem.Click += productPageToolStripMenuItem_Click;
             // 
             // githubToolStripMenuItem
             // 
             githubToolStripMenuItem.Name = "githubToolStripMenuItem";
-            githubToolStripMenuItem.Size = new Size(180, 22);
+            githubToolStripMenuItem.Size = new Size(173, 22);
             githubToolStripMenuItem.Text = "Project &Github";
             githubToolStripMenuItem.Click += githubToolStripMenuItem_Click;
             // 
             // toolStripSeparator2
             // 
             toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(177, 6);
+            toolStripSeparator2.Size = new Size(170, 6);
             // 
             // websiteToolStripMenuItem
             // 
             websiteToolStripMenuItem.Name = "websiteToolStripMenuItem";
-            websiteToolStripMenuItem.Size = new Size(180, 22);
+            websiteToolStripMenuItem.Size = new Size(173, 22);
             websiteToolStripMenuItem.Text = "My &Website";
             websiteToolStripMenuItem.Click += websiteToolStripMenuItem_Click;
             // 
             // transcendBinaryToolStripMenuItem
             // 
             transcendBinaryToolStripMenuItem.Name = "transcendBinaryToolStripMenuItem";
-            transcendBinaryToolStripMenuItem.Size = new Size(180, 22);
+            transcendBinaryToolStripMenuItem.Size = new Size(173, 22);
             transcendBinaryToolStripMenuItem.Text = "&Transcend Binary";
             transcendBinaryToolStripMenuItem.Click += transcendBinaryToolStripMenuItem_Click;
             // 
             // toolStripSeparator4
             // 
             toolStripSeparator4.Name = "toolStripSeparator4";
-            toolStripSeparator4.Size = new Size(177, 6);
+            toolStripSeparator4.Size = new Size(170, 6);
             // 
             // sonicToolStripMenuItem
             // 
             sonicToolStripMenuItem.Name = "sonicToolStripMenuItem";
-            sonicToolStripMenuItem.Size = new Size(180, 22);
+            sonicToolStripMenuItem.Size = new Size(173, 22);
             sonicToolStripMenuItem.Text = "&Sonic's Website";
             sonicToolStripMenuItem.Click += sonicToolStripMenuItem_Click;
             // 
