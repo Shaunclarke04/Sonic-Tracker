@@ -1700,27 +1700,28 @@
             // resetSaveDataToolStripMenuItem
             // 
             resetSaveDataToolStripMenuItem.Name = "resetSaveDataToolStripMenuItem";
-            resetSaveDataToolStripMenuItem.Size = new Size(156, 22);
+            resetSaveDataToolStripMenuItem.Size = new Size(180, 22);
             resetSaveDataToolStripMenuItem.Text = "&Reset Save Data";
             resetSaveDataToolStripMenuItem.Click += resetSaveDataToolStripMenuItem_Click;
             // 
             // openSaveFileToolStripMenuItem
             // 
             openSaveFileToolStripMenuItem.Name = "openSaveFileToolStripMenuItem";
-            openSaveFileToolStripMenuItem.Size = new Size(156, 22);
+            openSaveFileToolStripMenuItem.Size = new Size(180, 22);
             openSaveFileToolStripMenuItem.Text = "&Open Save File";
             openSaveFileToolStripMenuItem.Click += openSaveFileToolStripMenuItem_Click;
             // 
             // toolStripSeparator6
             // 
             toolStripSeparator6.Name = "toolStripSeparator6";
-            toolStripSeparator6.Size = new Size(153, 6);
+            toolStripSeparator6.Size = new Size(177, 6);
             // 
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(156, 22);
+            exitToolStripMenuItem.Size = new Size(180, 22);
             exitToolStripMenuItem.Text = "E&xit";
+            exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
             // helpToolStripMenuItem
             // 

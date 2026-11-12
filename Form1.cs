@@ -410,16 +410,16 @@ namespace SonicTracker
         //Check for Updates
         public void checkForUpdates()
         {
-            #if DEBUG
+#if DEBUG
                 MessageBox.Show(
                     "Exception: Debug mode - Did not check for updates",
                     "SonicTracker",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information
                     );
-            #else
-                Process.Start(Path.Combine(AppContext.BaseDirectory, "Updater.exe"));
-            #endif
+#else
+            Process.Start(Path.Combine(AppContext.BaseDirectory, "Updater.exe"));
+#endif
         }
 
         //Menu Bar
@@ -457,6 +457,10 @@ namespace SonicTracker
                         MessageBoxIcon.Error
                     );
             }
+        }
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
         private void websiteToolStripMenuItem_Click(object sender, EventArgs e)
         {
