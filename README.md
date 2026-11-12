@@ -96,7 +96,7 @@ Go to File > Open Save File; find the game whose act list has changed and delete
 
 ### Pull udates from repo and build again to update.
 
-###### Please Note: Windows SmartScreen may prevent the app from running depending on your system security settings. This is to be expected as this is a new app in active development which hasnt yet been added to microsofts database. simply click "more info" and then "run anyway". You should only need to do this once.
+###### Please Note: Windows SmartScreen may prevent the app from running depending on your system security settings. This is to be expected as this is a rolling release.
 
 ## Adding new Games
 
