@@ -2,7 +2,7 @@
 
 ### Not affiliated with SEGA or Sonic Team. This is a fan-made project.
 
-Track your progress in Sonic games with SonicTracker! This tool tracks which stages you've completed in various Sonic Games
+Track your progress in Sonic games with SonicTracker! This tool tracks which stages you've completed in various Sonic Games. Download the current release from [Transcend Binary](https://transcendbinary.co.uk/gamesApps/sonicTracker/) or see [build instructions](#build-instructions) for the rolling release
 
 ## Currently Supported Games
 
